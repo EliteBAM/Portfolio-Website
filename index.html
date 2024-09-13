@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="modal" id="project-modal">
+        <div class="modal-content" id = "modal-content">
+            <span class="close">&times;</span>
+            <h2 id="project-title">Project Title</h2>
+            <p id="project-summary">This is where the full project details will be shown. You can add code examples and long descriptions here.</p>
+            <pre id="project-code">
+                // Example code
+                console.log("Hello, World!");
+            </pre>
+        </div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="header-left">
+                <h1>Robert Gehr</h1>
+                <h2 class="subtitle">Technical Designer & Engineer</h2>
+                <div class = "animated-border"></div>
+            </div>
+            <nav class="header-right">
+                <ul>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Art</a></li>
+                    <li><a href="#">Software</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="intro">
+            <div class="photo">
+                <img src="shot-linkedin.png" alt="Headshot">
+            </div>
+            <div class="experience">
+                <p>
+                    I am a game designer and engineer with a passion for creating immersive experiences. My expertise includes 3D rendering, procedural narrative design, and front-end development.
+                </p>
+            </div>
+        </section>
+
+        <section class="projects">
+            <div class="project-grid">
+                <!-- projects dynamically generated -->
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; Robert Gehr 2024</p>
+    </footer>
+
+    <script>
+
+        const modal = document.getElementById("project-modal");
+        const modalTitle = document.getElementById("project-title");
+        const modalSummary = document.getElementById("project-summary");
+        const modalCode = document.getElementById("project-code");
+        const closeModal = document.querySelector(".close");
+        const modalContent = document.getElementById("modal-content");
+
+        const projects = [
+            {
+                title: "Fighting Game Framework",
+                description: "Tools and APIs that convert Unity into the ultimate fighting game engine.",
+                staticImage: "fighting_game.png",
+                gifImage: "https://via.placeholder.com/400x300/000000/FFFFFF?text=GIF+Placeholder"
+            },
+            {
+                title: "Procedural Terrain",
+                description: "Procedurally generated open-world adventure.",
+                staticImage: "unity_craft.png",
+                gifImage: "https://via.placeholder.com/400x300/000000/FFFFFF?text=GIF+Placeholder"
+            },
+            {
+                title: "Boaty",
+                description: "Physics-based sailing game.",
+                staticImage: "https://via.placeholder.com/400x300",
+                gifImage: "https://via.placeholder.com/400x300/000000/FFFFFF?text=GIF+Placeholder"
+            },
+            {
+                title: "EMPATH",
+                description: "Short description of Project 1. Tools used: C++, OpenGL, Unity.",
+                staticImage: "empath.png",
+                gifImage: "https://via.placeholder.com/400x300/000000/FFFFFF?text=GIF+Placeholder"
+            },
+            {
+                title: "The Witch List",
+                description: "Short description of Project 1. Tools used: C++, OpenGL, Unity.",
+                staticImage: "witch_list.png",
+                gifImage: "https://via.placeholder.com/400x300/000000/FFFFFF?text=GIF+Placeholder"
+            }
+            // Add more projects as needed
+        ];
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const projectGrid = document.querySelector('.project-grid');
+
+            projects.forEach(project => {
+                // Create project element
+                const projectElement = document.createElement('div');
+                projectElement.classList.add('project');
+
+                // Create project-image div and images
+                const projectImageDiv = document.createElement('div');
+                projectImageDiv.classList.add('project-image');
+
+                const staticImage = document.createElement('img');
+                staticImage.src = project.staticImage;
+                staticImage.alt = project.title;
+                staticImage.classList.add('static-image');
+
+                const gifImage = document.createElement('img');
+                gifImage.src = project.gifImage;
+                gifImage.alt = project.title + " GIF";
+                gifImage.classList.add('gif-image');
+
+                // Append images to project-image div
+                projectImageDiv.appendChild(staticImage);
+                projectImageDiv.appendChild(gifImage);
+
+                // Create project-info div
+                const projectInfoDiv = document.createElement('div');
+                projectInfoDiv.classList.add('project-info');
+
+                const title = document.createElement('h3');
+                title.textContent = project.title;
+
+                const description = document.createElement('p');
+                description.textContent = project.description;
+
+                // Append title and description to project-info div
+                projectInfoDiv.appendChild(title);
+                projectInfoDiv.appendChild(description);
+
+                // Append image and info divs to project element
+                projectElement.appendChild(projectImageDiv);
+                projectElement.appendChild(projectInfoDiv);
+
+                // Append project element to the project grid
+                projectGrid.appendChild(projectElement);
+
+                projectElement.addEventListener('click', () => {
+                    // You can dynamically set the modal content based on the clicked project        
+                    modalTitle.innerText = project.title;
+                    modalSummary.innerText = project.description;
+                    modalCode.innerText = `// Example code for ${project.title}\nconsole.log("${project.title} clicked!");`;
+        
+                    modal.style.display = "flex"; // Show the modal
+                    setTimeout(() => {
+                        modal.style.opacity = 1;
+                        modalContent.style.transform = "scale(1)";
+                    }, 50); // Small delay to ensure smooth transition
+                });
+            });
+        });
+
+        // Close modal when the 'X' is clicked
+        closeModal.addEventListener('click', () => {
+            modal.style.opacity = 0;
+            setTimeout(() => {
+                modal.style.display = "none"; // Hide the modal after animation completes
+                modalContent.style.transform = "scale(0.8)";
+            }, 200); // Match this with the transition duration
+        });
+    
+        // Close modal when clicking outside of the modal content
+        window.addEventListener('click', (e) => {
+            if (e.target == modal) {
+                modal.style.opacity = 0;
+                setTimeout(() => {
+                    modal.style.display = "none";
+                    modalContent.style.transform = "scale(0.8)";
+                }, 200);
+            }
+        });
+
+
+    </script>
+
+    <script>
+        const animatedBorder = document.querySelector('.animated-border');
+        const introSection = document.querySelector('.intro');
+
+        let isMouseInArea = false;
+
+        const getIntroSectionHeight = () => {
+            const computedStyle = window.getComputedStyle(introSection);
+            const paddingTop = parseInt(computedStyle.paddingTop);
+            const paddingBottom = parseInt(computedStyle.paddingBottom);
+            const margins = 110;
+            return introSection.scrollHeight + paddingTop + paddingBottom + margins + 'px';
+        };
+
+        const showIntroSection = () => {
+
+             // Make sure the initial styles are applied before transitioning
+            introSection.style.maxHeight = '0px';
+            introSection.style.opacity = '0';
+            introSection.style.paddingBottom = '0';
+
+
+            // Force reflow to ensure the initial state is applied
+            introSection.offsetHeight; // Trigger a reflow, flushing the CSS changes
+
+            setTimeout(() => {
+                introSection.style.opacity = '1'; // Fade in
+                introSection.style.paddingBottom = '15px';
+                introSection.style.maxHeight = getIntroSectionHeight(); // Expand the height (set a reasonable max height)
+            }, 10);
+        };
+
+        const hideIntroSection = () => {
+            setTimeout(() => {
+                introSection.style.maxHeight = '0px'; // Expand the height (set a reasonable max height)
+                introSection.style.paddingBottom = '0px';
+                introSection.style.opacity = '0'; // Fade out
+            }, 20);
+        };
+
+        animatedBorder.addEventListener('mouseenter', () => {
+            isMouseInArea = true;
+            showIntroSection();
+        });
+        animatedBorder.addEventListener('mouseleave', () => {
+            isMouseInArea = false;
+            setTimeout(() => {
+                if(!isMouseInArea)
+                    hideIntroSection();
+            }, 100);
+        });
+        introSection.addEventListener('mouseenter', () => {
+            isMouseInArea = true;
+            showIntroSection();
+        });
+        introSection.addEventListener('mouseleave', () => {
+            isMouseInArea = false;
+
+            setTimeout(() => {
+                if(!isMouseInArea)
+                    hideIntroSection();
+            }, 100);
+        });
+
+        window.addEventListener('load', () => {
+            introSection.style.maxHeight = '0px';
+            introSection.style.opacity = '0';
+            introSection.style.paddingBottom = '0px';
+
+            introSection.offsetHeight; // Trigger initial reflow
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffdf7; /* Pastel Light Beige */
+    color: #333; /* Darker Text Color */
+}
+
+.container {
+    width: 63%; /* Reduced to 2/3 of the original spacing */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 8%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.header-left h1 {
+    font-weight: 500;
+    font-size: 30px;
+    color: #5A5A5A; /* Pastel Mocha */
+    margin: 0;
+}
+
+.header-left{
+    display: inline-block;
+    /* box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2); */
+    transform: scale(1);
+    border: 2px solid transparent; /* Start with no border (transparent) */
+    transition: transform 0.5s ease-in-out;
+    padding: 20px;
+}
+
+.animated-border{
+    z-index: 1000;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+
+    border: 2px solid #7d7d7d; /* Start with no border (transparent) */
+    border-radius: 8px;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 1;
+    animation: pulseAnimate 5s ease-out infinite;
+    animation-delay: 1s;
+}
+
+.animated-border:hover{
+    /*transform: scale(1.1); /* Slightly enlarge the border to give an interactive feel */
+    border-radius: 8px; /* Optional: Add rounded corners for the border */
+    border: 2px solid #7d7d7d; /* Start with no border (transparent) */
+    opacity: 1;
+    animation: none;
+}
+
+@keyframes pulseAnimate {
+    8% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    9%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    17%{
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    83% {
+        opacity: 0;
+    }
+}
+
+.subtitle {
+    font-weight: 300;
+    color: #7A7A7A; /* Lighter Mocha */
+    margin: 5px 0 0;
+}
+
+.header-right{
+    position: sticky;
+    top: 40px;
+}
+
+.header-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header-right ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.header-right ul li a {
+    text-decoration: none;
+    text-align: center;
+    color: #7A7A7A; /* Lighter Mocha */
+    font-weight: 500; /* Keep consistent font-weight */
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    display: inline-block;
+}
+
+.header-right ul li a:hover {
+    color: #5A5A5A; /* Slightly darker color on hover */
+    transform: scale(1.1); /* Slightly scale up to simulate boldness */
+    text-shadow: 0 0 1px #5A5A5A; /* Add a subtle shadow for bold effect */
+}
+
+.intro {
+    /*starts off hidden v*/
+    display: flex;
+    overflow: hidden; /* Ensure hidden content stays invisible */
+    max-height: 0px; /* Collapsed by default */
+    opacity: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+
+    z-index: 800;
+
+    transition: padding 0.5s ease-in-out, max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
+
+
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+.photo img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position:center;
+    border-radius: 50%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.experience p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: 20px;
+}
+
+.projects {
+    margin-bottom: 60px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Increased spacing between elements */
+    row-gap: 10px;
+    justify-content: center;
+    width: 100%; /* Expand grid to the full width of the container */
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+    padding-top: 75%; /* 4:3 aspect ratio */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.project:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Ensures the hovered element is on top */
+    background-color: #fffdf7; /* Pastel Light Beige */
+
+    cursor: pointer;
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%; /* Image section height */
+    overflow: hidden;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+    object-fit: cover;
+}
+
+.project-image img.static-image {
+    opacity: 1;
+    z-index: 1;
+}
+
+.project-image img.gif-image {
+    opacity: 0;
+    z-index: 2;
+}
+
+.project:hover .project-image img.static-image {
+    opacity: 0;
+}
+
+.project:hover .project-image img.gif-image {
+    opacity: 1;
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 29%; /* Takes up the remaining space of the project */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.project-info h3 {
+    font-weight: 600;
+    color: #5A5A5A; /* Pastel Mocha */
+    margin: 0;
+    padding-top: 5px;
+    line-height: 1.2;
+    font-size: 1.2em;
+}
+
+.project-info p {
+    font-weight: 300;
+    font-size: 1em;
+    color: #555;
+    opacity: 0;
+    margin-top: 5px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.project:hover .project-info p {
+    opacity: 1;
+}
+
+.details {
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    transform:translate(21%, 25%);
+    background-color: white;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Enable scrolling if the modal content is too large */
+
+    transition: opacity 0.2s ease; /* Ease in-out transition */
+    opacity: 0;
+
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 800px;
+    text-align: center;
+
+    transform: scale(0.6);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+pre {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: left;
+    overflow-x: auto;
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #7A7A7A; /* Lighter Mocha */
+    background-color: #fffdf7;
+    margin-top: 40px;
+}
+
