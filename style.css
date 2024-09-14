@@ -113,8 +113,6 @@ body {
     padding: 0;
     margin: 0;
 
-
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 2fr)); /* Horizontal until space runs out */
     column-gap: 2px;
