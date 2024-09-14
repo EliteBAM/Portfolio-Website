@@ -26,7 +26,7 @@ body {
 .header {
     width: 100%;
     position: sticky;
-    padding-top: 120px;
+    padding-top: 8%;
     top: 0px;
     background-color: #fffdf7; /* Pastel Light Beige */
     z-index: 2000;
@@ -102,29 +102,37 @@ body {
 }
 
 .header-right{
-    position: sticky;
     top: 40px;
+    width: 30%;
 }
 
 .header-right ul {
+    width: 100%; /* Expand grid to the full width of the container */
+
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
+
+
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 2fr)); /* Horizontal until space runs out */
+    column-gap: 2px;
+    row-gap: 15px;
+
 }
 
 .header-right ul li {
-    display: inline-block;
-    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .header-right ul li a {
     text-decoration: none;
-    text-align: center;
     color: #7A7A7A; /* Lighter Mocha */
     font-weight: 500; /* Keep consistent font-weight */
     transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
-    display: inline-block;
 }
 
 .header-right ul li a:hover {
