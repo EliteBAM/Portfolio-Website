@@ -10,14 +10,28 @@ body {
     width: 63%; /* Reduced to 2/3 of the original spacing */
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 8%;
+}
+
+.header-container {
+    width: 63%; /* Reduced to 2/3 of the original spacing */
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom:20px;
 }
 
 .header {
-    display: sticky;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
+    width: 100%;
+    position: sticky;
+    padding-top: 120px;
+    top: 0px;
+    background-color: #fffdf7; /* Pastel Light Beige */
+    z-index: 2000;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .header-left h1 {
@@ -122,7 +136,6 @@ body {
     overflow: hidden; /* Ensure hidden content stays invisible */
     max-height: 0px; /* Collapsed by default */
     opacity: 0;
-    padding-top: 0px;
     padding-bottom: 0px;
     margin: 0px;
 
@@ -133,7 +146,7 @@ body {
 
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 

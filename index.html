@@ -21,8 +21,8 @@
         </div>
     </div>
 
-    <div class="container">
-        <header class="header">
+    <header class="header">
+        <div class = "header-container">
             <div class="header-left">
                 <h1>Robert Gehr</h1>
                 <h2 class="subtitle">Technical Designer & Engineer</h2>
@@ -35,18 +35,22 @@
                     <li><a href="#">Software</a></li>
                 </ul>
             </nav>
-        </header>
+        </div>
+        <div class = "container">
+            <section class="intro">
+                <div class="photo">
+                    <img src="shot-linkedin.png" alt="Headshot">
+                </div>
+                <div class="experience">
+                    <p>
+                        I am a game designer and engineer with a passion for creating immersive experiences. My expertise includes 3D rendering, procedural narrative design, and front-end development.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </header>
 
-        <section class="intro">
-            <div class="photo">
-                <img src="shot-linkedin.png" alt="Headshot">
-            </div>
-            <div class="experience">
-                <p>
-                    I am a game designer and engineer with a passion for creating immersive experiences. My expertise includes 3D rendering, procedural narrative design, and front-end development.
-                </p>
-            </div>
-        </section>
+    <div class="container">
 
         <section class="projects">
             <div class="project-grid">
@@ -105,6 +109,58 @@
 
         window.addEventListener('DOMContentLoaded', () => {
             const projectGrid = document.querySelector('.project-grid');
+
+            /*projects.forEach(project => {
+                        // Create project element
+                        const projectElement = document.createElement('div');
+                        projectElement.classList.add('project');
+
+                        const projectImageDiv = document.createElement('div');
+                        projectImageDiv.classList.add('project-image');
+
+                        const staticImage = document.createElement('img');
+                        staticImage.src = project.staticImage;
+                        staticImage.alt = project.title;
+                        staticImage.classList.add('static-image');
+
+                        const gifImage = document.createElement('img');
+                        gifImage.src = project.gifImage;
+                        gifImage.alt = project.title + " GIF";
+                        gifImage.classList.add('gif-image');
+
+                        projectImageDiv.appendChild(staticImage);
+                        projectImageDiv.appendChild(gifImage);
+
+                        const projectInfoDiv = document.createElement('div');
+                        projectInfoDiv.classList.add('project-info');
+
+                        const title = document.createElement('h3');
+                        title.textContent = project.title;
+
+                        const description = document.createElement('p');
+                        description.textContent = project.description;
+
+                        projectInfoDiv.appendChild(title);
+                        projectInfoDiv.appendChild(description);
+
+                        projectElement.appendChild(projectImageDiv);
+                        projectElement.appendChild(projectInfoDiv);
+
+                        projectGrid.appendChild(projectElement);
+
+                        projectElement.addEventListener('click', () => {
+                            // You can dynamically set the modal content based on the clicked project        
+                            modalTitle.innerText = project.title;
+                            modalSummary.innerText = project.description;
+                            modalCode.innerText = `// Example code for ${project.title}\nconsole.log("${project.title} clicked!");`;
+                
+                            modal.style.display = "flex"; // Show the modal
+                            setTimeout(() => {
+                                modal.style.opacity = 1;
+                                modalContent.style.transform = "scale(1)";
+                            }, 50); // Small delay to ensure smooth transition
+                        });
+                    });*/
 
             // Fetch the project data from the API
             fetch('/api/projects')
