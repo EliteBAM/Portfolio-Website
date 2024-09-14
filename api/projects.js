@@ -14,12 +14,18 @@ export default async function handler(req, res) {
         const gif = files.find(file => file.endsWith('.gif'));
         const descriptionPath = path.join(folderPath, 'description.txt');
         const description = await fs.readFile(descriptionPath, 'utf-8');
+        const tagsPath = path.join(folderPath, 'tags.txt');
+        const tags = await fs.readFile(tagsPath, 'utf-8');
+        // Split tags by ',' and trim extra spaces
+        const tagList = tags.split(',').map(tag => tag.trim());
+
 
         projects.push({
             title: folder, // Folder name as project title
             staticImage: `/projects/${folder}/${image}`,
             gifImage: `/projects/${folder}/${gif}`,
-            description: description
+            description: description,
+            tags: tagList
         });
     }
 
