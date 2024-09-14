@@ -192,7 +192,7 @@ body {
 .project {
     /*settings to start hidden*/
     opacity: 0;
-    transform: translateY(200);
+    transform: translateY(20px);
 
     position: relative;
     overflow: hidden;
