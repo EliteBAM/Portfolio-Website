@@ -160,6 +160,11 @@
                                 modalContent.style.transform = "scale(1)";
                             }, 50); // Small delay to ensure smooth transition
                         });
+
+                        // animation after delay for each element
+                        setTimeout(() => {
+                            projectElement.classList.add('show');
+                        }, index * 100); // Staggered animation effect
                     });*/
 
             let allProjects = []; // Store all projects fetched from the server
