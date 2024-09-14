@@ -30,9 +30,9 @@
             </div>
             <nav class="header-right">
                 <ul>
-                    <li><a href="#" class = "nav-games">Games</a></li>
-                    <li><a href="#" class = "nav-art">Art</a></li>
-                    <li><a href="#" class = "nav-software">Software</a></li>
+                    <li><a href="#" id = "nav-games">Games</a></li>
+                    <li><a href="#" id = "nav-art">Art</a></li>
+                    <li><a href="#" id = "nav-software">Software</a></li>
                 </ul>
             </nav>
         </div>
@@ -110,7 +110,7 @@
         window.addEventListener('DOMContentLoaded', () => {
             const projectGrid = document.querySelector('.project-grid');
 
-            projects.forEach(project => {
+            /*projects.forEach(project => {
                         // Create project element
                         const projectElement = document.createElement('div');
                         projectElement.classList.add('project');
@@ -160,7 +160,7 @@
                                 modalContent.style.transform = "scale(1)";
                             }, 50); // Small delay to ensure smooth transition
                         });
-                    });
+                    });*/
 
             let allProjects = []; // Store all projects fetched from the server
 
@@ -205,6 +205,19 @@
                     projectElement.appendChild(projectInfoDiv);
 
                     projectGrid.appendChild(projectElement);
+
+                    projectElement.addEventListener('click', () => {
+                        // You can dynamically set the modal content based on the clicked project        
+                        modalTitle.innerText = project.title;
+                        modalSummary.innerText = project.description;
+                        modalCode.innerText = `// Example code for ${project.title}\nconsole.log("${project.title} clicked!");`;
+            
+                        modal.style.display = "flex"; // Show the modal
+                        setTimeout(() => {
+                            modal.style.opacity = 1;
+                            modalContent.style.transform = "scale(1)";
+                        }, 50); // Small delay to ensure smooth transition
+                    });
                 });
             };
 
@@ -224,9 +237,9 @@
                 .catch(error => console.error('Error fetching projects:', error));
 
             // Event listeners for buttons
-            document.querySelector('.nav-games').addEventListener('click', () => filterProjects('Games'));
-            document.querySelector('.nav-art').addEventListener('click', () => filterProjects('Art'));
-            document.querySelector('.nav-software').addEventListener('click', () => filterProjects('Software'));
+            document.getElementById('nav-games').addEventListener('click', () => filterProjects('Games'));
+            document.getElementById('nav-art').addEventListener('click', () => filterProjects('Art'));
+            document.getElementById('nav-software').addEventListener('click', () => filterProjects('Software'));
         });
 
         // Close modal when the 'X' is clicked
