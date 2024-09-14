@@ -229,18 +229,12 @@
 
             // Fetch all projects from the serverless function
             fetch('/api/projects')
-                .then(response => response.text()) // Get raw text instead of JSON
-                .then(data => {
-                    console.log('Server response:', data); // Log the raw server response
-                    try {
-                        const jsonData = JSON.parse(data); // Try to parse it as JSON
-                        console.log('Parsed JSON:', jsonData);
-                    } catch (error) {
-                        console.error('Error parsing JSON:', error);
-                    }
+                .then(response => response.json())
+                .then(projects => {
+                    allProjects = projects; // Store the fetched projects
+                    displayProjects(allProjects); // Display all projects initially
                 })
                 .catch(error => console.error('Error fetching projects:', error));
-
 
             // Event listeners for buttons
             document.getElementById('nav-games').addEventListener('click', () => filterProjects('Games'));
