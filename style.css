@@ -182,19 +182,28 @@ body {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 30px; /* Increased spacing between elements */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; 
     row-gap: 10px;
     justify-content: center;
-    width: 100%; /* Expand grid to the full width of the container */
+    width: 100%;
 }
 
 .project {
+    /*settings to start hidden*/
+    opacity: 0;
+    transform: translateY(20);
+
     position: relative;
     overflow: hidden;
     padding-top: 75%; /* 4:3 aspect ratio */
-    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
     z-index: 0;
+}
+
+.project.show {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset the position */
 }
 
 .project:hover {
