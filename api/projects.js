@@ -2,7 +2,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 export default async function handler(req, res) {
-    const projectsDir = path.join(process.cwd(), 'Projects');
+    const projectsDir = path.join(process.cwd(), 'projects');
     const projectFolders = await fs.readdir(projectsDir);
 
     const projects = [];
@@ -17,8 +17,8 @@ export default async function handler(req, res) {
 
         projects.push({
             title: folder, // Folder name as project title
-            staticImage: `/Projects/${folder}/${image}`,
-            gifImage: `/Projects/${folder}/${gif}`,
+            staticImage: `/projects/${folder}/${image}`,
+            gifImage: `/projects/${folder}/${gif}`,
             description: description
         });
     }
