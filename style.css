@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-    display: flex;
+    display: sticky;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
