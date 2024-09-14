@@ -110,7 +110,7 @@
         window.addEventListener('DOMContentLoaded', () => {
             const projectGrid = document.querySelector('.project-grid');
 
-            /*projects.forEach(project => {
+            projects.forEach(project => {
                         // Create project element
                         const projectElement = document.createElement('div');
                         projectElement.classList.add('project');
@@ -160,7 +160,7 @@
                                 modalContent.style.transform = "scale(1)";
                             }, 50); // Small delay to ensure smooth transition
                         });
-                    });*/
+                    });
 
             // Fetch the project data from the API
             fetch('/api/projects')
@@ -309,12 +309,35 @@
         });
 
         window.addEventListener('load', () => {
+
             introSection.style.maxHeight = '0px';
             introSection.style.opacity = '0';
             introSection.style.paddingBottom = '0px';
 
             introSection.offsetHeight; // Trigger initial reflow
+
         });
+
+        //force load site at top scroll position
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+
+        const headerElement = document.querySelector('.header');
+
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+            // Perform actions based on scroll position
+            if (scrollPosition > 0) {
+                headerElement.style.boxShadow ='0px 4px 20px rgba(0, 0, 0, 0.5)';
+            }
+            else {
+                headerElement.style.boxShadow = 'none';
+            }
+        });
+
     </script>
 </body>
 </html>
