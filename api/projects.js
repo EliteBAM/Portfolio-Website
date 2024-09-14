@@ -11,6 +11,7 @@ export default async function handler(req, res) {
         const folderPath = path.join(projectsDir, folder);
         const files = await fs.readdir(folderPath);
         const image = files.find(file => file.endsWith('.png'));
+        const gif = files.find(file => file.endsWith('.gif'));
         const descriptionPath = path.join(folderPath, 'description.txt');
         const description = await fs.readFile(descriptionPath, 'utf-8');
         const tagsPath = path.join(folderPath, 'tags.txt');
@@ -22,6 +23,7 @@ export default async function handler(req, res) {
         projects.push({
             title: folder, // Folder name as project title
             staticImage: `/projects/${folder}/${image}`,
+            gifImage: `/projects/${folder}/${gif}`,
             description: description,
             tags: tagList
         });
