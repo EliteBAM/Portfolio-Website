@@ -298,34 +298,36 @@ body {
 }
 
 /* Modal styling */
+/* Basic Modal Styling */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 9999; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+    background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
-    overflow: auto; /* Enable scrolling if the modal content is too large */
-
-    transition: opacity 0.2s ease; /* Ease in-out transition */
-    opacity: 0;
-
+    overflow-y: auto; /* Allow the modal to scroll if it's too tall */
 }
 
 .modal-content {
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    width: 60%;
-    max-width: 800px;
-    text-align: center;
-
-    transform: scale(0.6);
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    border-radius: 10px;
+    max-width: 90%;
+    width: 800px;
+    max-height: 90vh; 
+    overflow-y: auto; 
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 
@@ -359,6 +361,7 @@ pre {
 .single-media img {
     max-width: 100%;
     height: auto;
+    object-fit: contain; /* Ensures the image scales while maintaining aspect ratio */
     display: block;
     margin: 0 auto;
 }
@@ -369,22 +372,27 @@ pre {
     justify-content: center;
     align-items: center;
     position: relative;
+    max-width: 100%; /* Ensures gallery doesn't exceed modal width */
 }
 
 .gallery-container {
     display: flex;
     align-items: center;
+    width: 100%;
+    overflow: hidden; /* Prevent gallery items from overflowing */
 }
 
 .gallery-items {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 100%; /* Ensure that the gallery stays within bounds */
 }
 
 .main-image {
-    width: 600px;
-    height: 400px;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure the main image maintains its aspect ratio */
     margin-bottom: 10px;
 }
 
@@ -392,14 +400,17 @@ pre {
     display: flex;
     justify-content: center;
     gap: 10px;
+    overflow-x: auto; /* Allow horizontal scrolling for thumbnails if needed */
 }
 
 .thumbnail {
     width: 100px;
     height: 80px;
     cursor: pointer;
+    object-fit: cover;
 }
 
+/* Navigation buttons for the gallery */
 .gallery-nav {
     position: absolute;
     top: 50%;
@@ -408,14 +419,16 @@ pre {
     border: none;
     cursor: pointer;
     padding: 10px;
+    transform: translateY(-50%);
+    z-index: 1;
 }
 
 .left {
-    left: -50px;
+    left: 0;
 }
 
 .right {
-    right: -50px;
+    right: 0;
 }
 
 /* Dynamic Gallery */
@@ -423,11 +436,13 @@ pre {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
+    width: 100%;
 }
 
 .dynamic-gallery-grid img {
     width: 100%;
     height: auto;
+    object-fit: cover; /* Ensure that images maintain their aspect ratio */
     border-radius: 8px;
 }
 
