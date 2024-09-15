@@ -16,7 +16,7 @@
 
             <!-- Single Media Template -->
             <div class="template single-media">
-                <img id="single-media-image" src="" alt="Single Image" />
+                <img id="single-media-image" src="https://via.placeholder.com/800x450" alt="Single Image" />
             </div>
 
             <!-- Horizontal Gallery Template -->
@@ -24,8 +24,12 @@
                 <div class="gallery-container">
                     <button class="gallery-nav left">&lt;</button>
                     <div class="gallery-items">
-                        <img id="main-gallery-image" src="" alt="Main Image" class="main-image" />
-                        <div class="gallery-thumbnails" id="gallery-thumbnails"></div>
+                        <img id="main-gallery-image" src="https://via.placeholder.com/800x450" alt="Main Image" class="main-image" />
+                        <div class="gallery-thumbnails" id="gallery-thumbnails">
+                            <img src="https://via.placeholder.com/200x150" alt="Thumbnail 1" class="thumbnail" />
+                            <img src="https://via.placeholder.com/200x150" alt="Thumbnail 2" class="thumbnail" />
+                            <img src="https://via.placeholder.com/200x150" alt="Thumbnail 3" class="thumbnail" />
+                        </div>
                     </div>
                     <button class="gallery-nav right">&gt;</button>
                 </div>
@@ -34,15 +38,23 @@
             <!-- Dynamic Gallery Template -->
             <div class="template dynamic-gallery">
                 <div class="dynamic-gallery-grid" id="dynamic-gallery-grid">
-                    <!-- Dynamically insert images here -->
+                    <img src="https://via.placeholder.com/400x300" alt="Dynamic Image 1" />
+                    <img src="https://via.placeholder.com/400x300" alt="Dynamic Image 2" />
+                    <img src="https://via.placeholder.com/400x300" alt="Dynamic Image 3" />
+                    <img src="https://via.placeholder.com/400x300" alt="Dynamic Image 4" />
                 </div>
             </div>
 
             <!-- Code Example Template -->
             <div class="template code-example">
-                <p id="code-paragraph-1">This is the first paragraph explaining the code.</p>
-                <pre id="code-sample"></pre>
-                <p id="code-paragraph-2">This is the second paragraph providing additional context about the code.</p>
+                <p id="code-paragraph-1">This is the first paragraph explaining the code example shown below.</p>
+                <pre id="code-sample">
+                    // Placeholder Code Example
+                    function helloWorld() {
+                        console.log("Hello, World!");
+                    }
+                </pre>
+                <p id="code-paragraph-2">This is the second paragraph providing additional context about the code above.</p>
             </div>
 
         </div>
