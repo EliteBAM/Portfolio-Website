@@ -311,6 +311,9 @@ body {
     justify-content: center;
     align-items: center;
     overflow-y: auto; /* Allow the modal to scroll if it's too tall */
+
+    transition: opacity 0.2s ease; /* Ease in-out transition */
+    opacity: 0;
 }
 
 .modal-content {
@@ -324,7 +327,6 @@ body {
     box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
     transform: scale(0.8);
     transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
