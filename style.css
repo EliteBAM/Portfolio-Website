@@ -355,6 +355,97 @@ pre {
     overflow-x: auto;
 }
 
+/* Single Media Template */
+.single-media img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Horizontal Gallery */
+.horizontal-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+}
+
+.gallery-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-image {
+    width: 600px;
+    height: 400px;
+    margin-bottom: 10px;
+}
+
+.gallery-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.left {
+    left: -50px;
+}
+
+.right {
+    right: -50px;
+}
+
+/* Dynamic Gallery */
+.dynamic-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.dynamic-gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Code Example */
+.code-example p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.code-example pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
 /* Footer styling */
 .footer {
     text-align: center;

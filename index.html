@@ -9,15 +9,42 @@
 </head>
 <body>
 
+    <!-- Modal Structure -->
     <div class="modal" id="project-modal">
-        <div class="modal-content" id = "modal-content">
+        <div class="modal-content" id="modal-content">
             <span class="close">&times;</span>
-            <h2 id="project-title">Project Title</h2>
-            <p id="project-summary">This is where the full project details will be shown. You can add code examples and long descriptions here.</p>
-            <pre id="project-code">
-                // Example code
-                console.log("Hello, World!");
-            </pre>
+
+            <!-- Single Media Template -->
+            <div class="template single-media">
+                <img id="single-media-image" src="" alt="Single Image" />
+            </div>
+
+            <!-- Horizontal Gallery Template -->
+            <div class="template horizontal-gallery">
+                <div class="gallery-container">
+                    <button class="gallery-nav left">&lt;</button>
+                    <div class="gallery-items">
+                        <img id="main-gallery-image" src="" alt="Main Image" class="main-image" />
+                        <div class="gallery-thumbnails" id="gallery-thumbnails"></div>
+                    </div>
+                    <button class="gallery-nav right">&gt;</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Gallery Template -->
+            <div class="template dynamic-gallery">
+                <div class="dynamic-gallery-grid" id="dynamic-gallery-grid">
+                    <!-- Dynamically insert images here -->
+                </div>
+            </div>
+
+            <!-- Code Example Template -->
+            <div class="template code-example">
+                <p id="code-paragraph-1">This is the first paragraph explaining the code.</p>
+                <pre id="code-sample"></pre>
+                <p id="code-paragraph-2">This is the second paragraph providing additional context about the code.</p>
+            </div>
+
         </div>
     </div>
 
