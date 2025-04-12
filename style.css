@@ -361,7 +361,7 @@ pre {
 
 /* Single Media Template */
 .single-media img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     object-fit: contain; /* Ensures the image scales while maintaining aspect ratio */
     display: block;
