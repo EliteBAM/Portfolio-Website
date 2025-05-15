@@ -153,4 +153,6 @@ function generateModalContent(projectData) {
 
     });
 
+    projectData = [];
+
 }
