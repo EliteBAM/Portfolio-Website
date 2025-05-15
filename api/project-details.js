@@ -13,7 +13,7 @@ export default async function handler(req, res) {
 
     //Extracting order of template IDs, as they correlate to order of project-details content sub-folders
     const templateOrderFilePath = path.join(projectDetailsDir, 'templates.txt');
-    const templateIDs = null;
+    const templateIDs = [];
     const templateIDList = [];
     try{
         templateIDs = await fs.readFile(templateOrderFilePath, 'utf-8');
