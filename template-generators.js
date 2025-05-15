@@ -1,12 +1,5 @@
 function createSingleMediaTemplate(data) {
 
-    if (!data || !data.images?.length && !data.texts?.length) {
-        const fallback = document.createElement('div');
-        fallback.className = 'template fallback';
-        fallback.textContent = 'No details available.';
-        return fallback;
-    }
-
     const container = document.createElement('div');
     container.className = 'template single-media';
 
@@ -21,13 +14,6 @@ function createSingleMediaTemplate(data) {
 }
 
 function createHorizontalGalleryTemplate(data) {
-
-    if (!data || !data.images?.length && !data.texts?.length) {
-        const fallback = document.createElement('div');
-        fallback.className = 'template fallback';
-        fallback.textContent = 'No details available.';
-        return fallback;
-    }
 
     const container = document.createElement('div');
     container.className = 'template horizontal-gallery';
@@ -77,13 +63,6 @@ function createHorizontalGalleryTemplate(data) {
 
 function createDynamicGalleryTemplate(data) {
 
-    if (!data || !data.images?.length && !data.texts?.length) {
-        const fallback = document.createElement('div');
-        fallback.className = 'template fallback';
-        fallback.textContent = 'No details available.';
-        return fallback;
-    }
-
     const container = document.createElement('div');
     container.className = 'template dynamic-gallery';
 
@@ -102,13 +81,6 @@ function createDynamicGalleryTemplate(data) {
 }
 
 function createCodeExampleTemplate(data) {
-
-    if (!data || !data.images?.length && !data.texts?.length) {
-        const fallback = document.createElement('div');
-        fallback.className = 'template fallback';
-        fallback.textContent = 'No details available.';
-        return fallback;
-    }
 
     const container = document.createElement('div');
     container.className = 'template code-example';
@@ -145,28 +117,35 @@ document.addEventListener('DOMContentLoaded', () => {
 function generateModalContent(projectData) {
 
     //clear all previous modal content except the close button
-    const modcont = document.getElementById('modal-content');
-    [...modcont.children].forEach(child => {
+    [...modalContent.children].forEach(child => {
         if (!child.classList.contains('close')) {
-            modcont.removeChild(child);
+            modalContent.removeChild(child);
         }
     });
+
+    if (!Array.isArray(projectData) || projectData.length === 0) {
+        const fallback = document.createElement('div');
+        fallback.className = 'template fallback';
+        fallback.textContent = 'No details available.';
+        modalContent.appendChild(fallback);
+        return; //cut off the function
+    }
 
     //generate new modal content
     projectData.forEach(templateData => {
 
         switch (templateData.templateID) {
             case 1:
-                createSingleMediaTemplate(templateData.data);
+                modalContent.appendChild(createSingleMediaTemplate(templateData.data));
                 break;
             case 2:
-                createDynamicGalleryTemplate(templateData.data);
+                modalContent.appendChild(createDynamicGalleryTemplate(templateData.data));
                 break;
             case 3:
-                createHorizontalGalleryTemplate(templateData.data);
+                modalContent.appendChild(createHorizontalGalleryTemplate(templateData.data));
                 break;
             case 4:
-                createCodeExampleTemplate(templateData.data);
+                modalContent.appendChild(createCodeExampleTemplate(templateData.data));
                 break;
             default:
                 console.error('Unknown template ID:', templateData.templateID);

@@ -84,6 +84,9 @@ window.addEventListener('DOMContentLoaded', () => {
                 projectGrid.appendChild(projectElement);
 
                 projectElement.addEventListener('click', () => {
+
+                    const projectData = [];
+                    generateModalContent(projectData); // send project data directly to DOM construction function (no need to store)
                     // You can dynamically set the modal content based on the clicked project        
                     //modalTitle.innerText = project.title;
                     //modalSummary.innerText = project.description;
