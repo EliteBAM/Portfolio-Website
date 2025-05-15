@@ -11,7 +11,6 @@ export default async function handler(req, res) {
     const title = req.query.title;
     const projectDetailsDir = path.join(process.cwd(), 'projects/' + title + "/project-details/");
 
-
     try {
 
         await fs.access(projectDetailsDir); // throws if not found
