@@ -60,7 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 //modalCode.innerText = `// Example code for ${project.title}\nconsole.log("${project.title} clicked!");`;
     
                 // load template layout + data on-click from the serverless function
-                fetch('/api/project-details?title=${encodeURIComponent(project.title)}')
+                fetch(`/api/project-details?title=${encodeURIComponent(project.title)}`)
                     .then(response => response.json())
                     .then(projectData => {
                         generateModalContent(projectData); // send project data directly to DOM construction function (no need to store)
