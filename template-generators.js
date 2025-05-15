@@ -135,16 +135,16 @@ function generateModalContent(projectData) {
     projectData.forEach(templateData => {
 
         switch (templateData.templateID) {
-            case 1:
+            case '1':
                 modalContent.appendChild(createSingleMediaTemplate(templateData.data));
                 break;
-            case 2:
+            case '2':
                 modalContent.appendChild(createDynamicGalleryTemplate(templateData.data));
                 break;
-            case 3:
+            case '3':
                 modalContent.appendChild(createHorizontalGalleryTemplate(templateData.data));
                 break;
-            case 4:
+            case '4':
                 modalContent.appendChild(createCodeExampleTemplate(templateData.data));
                 break;
             default:
