@@ -1,5 +1,3 @@
-console.log("Script loaded");
-
 const modal = document.getElementById("project-modal");
 //const modalTitle = document.getElementById("project-title");
 //const modalSummary = document.getElementById("project-summary");
@@ -62,8 +60,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 //modalCode.innerText = `// Example code for ${project.title}\nconsole.log("${project.title} clicked!");`;
     
                 // load template layout + data on-click from the serverless function
-                console.log("Loading project:", project.title);
-
                 fetch(`/api/project-details?title=${encodeURIComponent(project.title)}`)
                     .then(response => response.json())
                     .then(projectData => {
