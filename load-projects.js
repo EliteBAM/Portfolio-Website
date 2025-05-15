@@ -1,3 +1,5 @@
+console.log("Script loaded");
+
 const modal = document.getElementById("project-modal");
 //const modalTitle = document.getElementById("project-title");
 //const modalSummary = document.getElementById("project-summary");
