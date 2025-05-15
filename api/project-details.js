@@ -32,9 +32,9 @@ export default async function handler(req, res) {
         //get content out of folder
 
             //find all images and gifs to add to data
-        const images = files.filter(file =>
-            ['.png', '.jpg', '.jpeg', '.gif'].some(ext => file.endsWith(ext))
-        );
+        const images = files
+            .filter(file => ['.png', '.jpg', '.jpeg', '.gif'].some(ext => file.endsWith(ext)))
+            .map(file => `/projects/${title}/project-details/${folder}/${file}`);
 
             //find all texts to add to data
         const textFiles = files.filter(file => file.endsWith('.txt'));
