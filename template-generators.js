@@ -4,7 +4,7 @@ function createSingleMediaTemplate(data) {
     container.className = 'template single-media';
 
     const img = document.createElement('img');
-    img.src = data.images[0]  || ''; //take first image if there are more than 1
+    img.src = data.images?.[0] || ''; //take first image if there are more than 1
     img.alt = 'Single Image';
     img.style.maxWidth = '100%';
     img.style.height = 'auto';
@@ -34,7 +34,7 @@ function createHorizontalGalleryTemplate(data) {
 
     const mainImage = document.createElement('img');
     mainImage.className = 'main-image';
-    mainImage.src = data.images[0] || '';
+    mainImage.src = data.images?.[0] || '';
     galleryItems.appendChild(mainImage);
 
     const thumbnails = document.createElement('div');
