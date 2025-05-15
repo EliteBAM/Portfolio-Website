@@ -68,5 +68,5 @@ export default async function handler(req, res) {
     } catch (err) {
         console.error('Error reading project details:', err);
         res.status(404).json({ error: 'Project not found or invalid structure' });
-    }   
+    }
 }
