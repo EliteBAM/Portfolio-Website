@@ -53,12 +53,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             projectGrid.appendChild(projectElement);
 
-            projectElement.addEventListener('click', () => {
-                // You can dynamically set the modal content based on the clicked project        
-                //modalTitle.innerText = project.title;
-                //modalSummary.innerText = project.description;
-                //modalCode.innerText = `// Example code for ${project.title}\nconsole.log("${project.title} clicked!");`;
-    
+            projectElement.addEventListener('click', () => {    
                 // load template layout + data on-click from the serverless function
                 console.log("Loading project:", project.title);
 
