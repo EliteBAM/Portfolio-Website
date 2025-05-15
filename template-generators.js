@@ -1,0 +1,177 @@
+function createSingleMediaTemplate(data) {
+
+    if (!data || !data.images?.length && !data.texts?.length) {
+        const fallback = document.createElement('div');
+        fallback.className = 'template fallback';
+        fallback.textContent = 'No details available.';
+        return fallback;
+    }
+
+    const container = document.createElement('div');
+    container.className = 'template single-media';
+
+    const img = document.createElement('img');
+    img.src = data.images[0]  || ''; //take first image if there are more than 1
+    img.alt = 'Single Image';
+    img.style.maxWidth = '100%';
+    img.style.height = 'auto';
+
+    container.appendChild(img);
+    return container;
+}
+
+function createHorizontalGalleryTemplate(data) {
+
+    if (!data || !data.images?.length && !data.texts?.length) {
+        const fallback = document.createElement('div');
+        fallback.className = 'template fallback';
+        fallback.textContent = 'No details available.';
+        return fallback;
+    }
+
+    const container = document.createElement('div');
+    container.className = 'template horizontal-gallery';
+
+    const galleryContainer = document.createElement('div');
+    galleryContainer.className = 'gallery-container';
+
+    const leftBtn = document.createElement('button');
+    leftBtn.className = 'gallery-nav left';
+    leftBtn.innerText = '<';
+
+    const rightBtn = document.createElement('button');
+    rightBtn.className = 'gallery-nav right';
+    rightBtn.innerText = '>';
+
+    const galleryItems = document.createElement('div');
+    galleryItems.className = 'gallery-items';
+
+    const mainImage = document.createElement('img');
+    mainImage.className = 'main-image';
+    mainImage.src = data.images[0] || '';
+    galleryItems.appendChild(mainImage);
+
+    const thumbnails = document.createElement('div');
+    thumbnails.className = 'gallery-thumbnails';
+    thumbnails.id = 'gallery-thumbnails';
+
+    data.images.forEach((src, index) => {
+        const thumb = document.createElement('img');
+        thumb.src = src;
+        thumb.alt = `Thumbnail ${index + 1}`;
+        thumb.className = 'thumbnail';
+        thumb.addEventListener('click', () => {
+            mainImage.src = src;
+        });
+        thumbnails.appendChild(thumb);
+    });
+
+    galleryItems.appendChild(thumbnails);
+    galleryContainer.appendChild(leftBtn);
+    galleryContainer.appendChild(galleryItems);
+    galleryContainer.appendChild(rightBtn);
+    container.appendChild(galleryContainer);
+
+    return container;
+}
+
+function createDynamicGalleryTemplate(data) {
+
+    if (!data || !data.images?.length && !data.texts?.length) {
+        const fallback = document.createElement('div');
+        fallback.className = 'template fallback';
+        fallback.textContent = 'No details available.';
+        return fallback;
+    }
+
+    const container = document.createElement('div');
+    container.className = 'template dynamic-gallery';
+
+    const grid = document.createElement('div');
+    grid.className = 'dynamic-gallery-grid';
+
+    data.images.forEach((src, index) => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = `Dynamic Image ${index + 1}`;
+        grid.appendChild(img);
+    });
+
+    container.appendChild(grid);
+    return container;
+}
+
+function createCodeExampleTemplate(data) {
+
+    if (!data || !data.images?.length && !data.texts?.length) {
+        const fallback = document.createElement('div');
+        fallback.className = 'template fallback';
+        fallback.textContent = 'No details available.';
+        return fallback;
+    }
+
+    const container = document.createElement('div');
+    container.className = 'template code-example';
+
+    const p1 = document.createElement('p');
+    p1.textContent = data.texts[0];
+
+    const pre = document.createElement('pre');
+    pre.textContent = data.texts[1];
+
+    const p2 = document.createElement('p');
+    p2.textContent = data.texts[2];
+
+    container.appendChild(p1);
+    container.appendChild(pre);
+    container.appendChild(p2);
+
+    return container;
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        const modcont = document.getElementById('modal-content');
+        if (modcont) {
+            modcont.appendChild(createSingleMediaTemplate("https://placehold.co/400x300/"));
+        } 
+        else {
+            console.warn('modal-content not found.');
+        }
+    }, 50);
+});
+
+function generateModalContent(projectData) {
+
+    //clear all previous modal content except the close button
+    const modcont = document.getElementById('modal-content');
+    [...modcont.children].forEach(child => {
+        if (!child.classList.contains('close')) {
+            modcont.removeChild(child);
+        }
+    });
+
+    //generate new modal content
+    projectData.forEach(templateData => {
+
+        switch (templateData.templateID) {
+            case 1:
+                createSingleMediaTemplate(templateData.data);
+                break;
+            case 2:
+                createDynamicGalleryTemplate(templateData.data);
+                break;
+            case 3:
+                createHorizontalGalleryTemplate(templateData.data);
+                break;
+            case 4:
+                createCodeExampleTemplate(templateData.data);
+                break;
+            default:
+                console.error('Unknown template ID:', templateData.templateID);
+        }
+
+    });
+
+}

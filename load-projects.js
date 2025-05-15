@@ -59,6 +59,14 @@ window.addEventListener('DOMContentLoaded', () => {
                 //modalSummary.innerText = project.description;
                 //modalCode.innerText = `// Example code for ${project.title}\nconsole.log("${project.title} clicked!");`;
     
+                // load template layout + data on-click from the serverless function
+                fetch('/api/project-details?title=${encodeURIComponent(project.title)}')
+                    .then(response => response.json())
+                    .then(projectData => {
+                        generateModalContent(projectData); // send project data directly to DOM construction function (no need to store)
+                    })
+                    .catch(error => console.error('Error project details:', error));
+
                 modal.style.display = "flex"; // Show the modal
                 setTimeout(() => {
                     modal.style.opacity = 1;

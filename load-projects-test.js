@@ -88,6 +88,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     //modalTitle.innerText = project.title;
                     //modalSummary.innerText = project.description;
                     //modalCode.innerText = `// Example code for ${project.title}\nconsole.log("${project.title} clicked!");`;
+                        // Fetch all projects from the serverless function
         
                     modal.style.display = "flex"; // Show the modal
                     setTimeout(() => {
