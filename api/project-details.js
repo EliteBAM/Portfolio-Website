@@ -13,10 +13,8 @@ export default async function handler(req, res) {
 
     //Extracting order of template IDs, as they correlate to order of project-details content sub-folders
     const templateOrderFilePath = path.join(projectDetailsDir, 'templates.txt');
-    const templateIDs = [];
-    const templateIDList = [];
-        templateIDs = await fs.readFile(templateOrderFilePath, 'utf-8');
-        templateIDList = templateIDs.split(',').map(templateID => templateID.trim()); //array of template ID order
+    const templateIDs = await fs.readFile(templateOrderFilePath, 'utf-8');
+    const templateIDList = templateIDs.split(',').map(templateID => templateID.trim()); //array of template ID order
 
 
     // Only get folders (ignore templates.txt and other files)
