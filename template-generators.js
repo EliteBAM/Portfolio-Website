@@ -123,13 +123,13 @@ function generateModalContent(projectData) {
         }
     });
 
-    if (!Array.isArray(projectData) || projectData.length === 0) {
+    /*if (!Array.isArray(projectData) || projectData.length === 0) {
         const fallback = document.createElement('div');
         fallback.className = 'template fallback';
         fallback.textContent = 'No details available.';
         modalContent.appendChild(fallback);
         return; //cut off the function
-    }
+    }*/
 
     //generate new modal content
     projectData.forEach(templateData => {
