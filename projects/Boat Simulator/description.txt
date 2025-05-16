@@ -1,1 +1,0 @@
-Boat simulator with physically accurate airfoil physics and controls.
