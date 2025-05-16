@@ -1,1 +1,0 @@
-Simple infinite run dungeon crawler made in Unity.
