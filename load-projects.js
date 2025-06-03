@@ -53,16 +53,28 @@ window.addEventListener('DOMContentLoaded', () => {
 
             projectGrid.appendChild(projectElement);
 
+            //LAST STEP OF CREATION -- ADD PROJECT TO MODAL MANAGER PROJECT MAP
+            addProjectEntry(project.title);
+
             projectElement.addEventListener('click', () => {    
-                // load template layout + data on-click from the serverless function
+                // load template layout + data on-click from the serverless function OR cache
                 console.log("Loading project:", project.title);
 
-                fetch(`/api/project-details?title=${encodeURIComponent(project.title)}`)
-                    .then(response => response.json())
-                    .then(projectData => {
-                        generateModalContent(projectData); // send project data directly to DOM construction function (no need to store)
-                    })
-                    .catch(error => console.error('Error project details:', error));
+                //CHECK IF MODAL HAS ALREADY BEEN STORED FROM THE SERVER
+                const cachedProjectData = projectModalMap.get(project.title);
+
+                if(cachedProjectData === null) { //downlaod data if never before retrieved, and SAVE it
+                    fetch(`/api/project-details?title=${encodeURIComponent(project.title)}`)
+                        .then(response => response.json())
+                        .then(projectData => {
+                            projectModalMap.set(project.title, projectData); //STORE the data for next time!!
+                            generateModalContent(projectData); // send project data directly to DOM construction function
+                        })
+                        .catch(error => console.error('Error project details:', error));
+                }else {
+                    generateModalContent(cachedProjectData); //generate modal layout from stored data in project map!
+                    console.log("project data loaded from local cache. Server not pinged")
+                }
 
                 modal.style.display = "flex"; // Show the modal
                 setTimeout(() => {

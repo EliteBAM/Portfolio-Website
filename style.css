@@ -379,6 +379,7 @@ pre {
 }
 
 .gallery-container {
+    justify-content: center;
     display: flex;
     align-items: center;
     width: 100%;
@@ -393,7 +394,6 @@ pre {
 }
 
 .main-image {
-    justify-content: center;
     width: 100%;
     height: auto;
     object-fit: cover; /* Ensure the main image maintains its aspect ratio */
@@ -416,9 +416,10 @@ pre {
 
 /* Navigation buttons for the gallery */
 .gallery-nav {
+    border-radius: 60px;
     position: absolute;
     top: 50%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.2);
     color: white;
     border: none;
     cursor: pointer;
