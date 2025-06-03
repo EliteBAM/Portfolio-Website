@@ -59,10 +59,12 @@ function createHorizontalGalleryTemplate(data) {
 
     //add event listeners to buttons
     rightBtn.addEventListener('click', () => {
-        mainImage.src = galleryImages[++imageIndex];
+        imageIndex = imageIndex + 1 > galleryImages.length - 1 ? 0 : imageIndex + 1; //cycle if out of bounds
+        mainImage.src = galleryImages[imageIndex];
     });
     leftBtn.addEventListener('click', () => {
-        mainImage.src = galleryImages[--imageIndex];
+        imageIndex = imageIndex - 1 < 0 ? galleryImages.length - 1 : imageIndex - 1; //cycle if out of bounds
+        mainImage.src = galleryImages[imageIndex];
     });
 
     galleryItems.appendChild(thumbnails);
