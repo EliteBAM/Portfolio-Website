@@ -393,7 +393,7 @@ pre {
 }
 
 .main-image {
-    align-items: center;
+    justify-content: center;
     width: 100%;
     height: auto;
     object-fit: cover; /* Ensure the main image maintains its aspect ratio */
