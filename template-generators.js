@@ -15,6 +15,9 @@ function createSingleMediaTemplate(data) {
 
 function createHorizontalGalleryTemplate(data) {
 
+    const galleryImages = data.images;
+    let imageIndex = 0;
+
     const container = document.createElement('div');
     container.className = 'template horizontal-gallery';
 
@@ -34,22 +37,32 @@ function createHorizontalGalleryTemplate(data) {
 
     const mainImage = document.createElement('img');
     mainImage.className = 'main-image';
-    mainImage.src = data.images?.[0] || '';
+    mainImage.src = galleryImages?.[0] || '';
     galleryItems.appendChild(mainImage);
 
     const thumbnails = document.createElement('div');
     thumbnails.className = 'gallery-thumbnails';
     thumbnails.id = 'gallery-thumbnails';
 
-    data.images.forEach((src, index) => {
+    galleryImages.forEach((src, index) => {
         const thumb = document.createElement('img');
         thumb.src = src;
         thumb.alt = `Thumbnail ${index + 1}`;
         thumb.className = 'thumbnail';
+        thumb.index = index;
         thumb.addEventListener('click', () => {
-            mainImage.src = src;
+            mainImage.src = galleryImages[thumb.index];
+            imageIndex = thumb.index;
         });
         thumbnails.appendChild(thumb);
+    });
+
+    //add event listeners to buttons
+    rightBtn.addEventListener('click', () => {
+        mainImage.src = galleryImages[++imageIndex];
+    });
+    leftBtn.addEventListener('click', () => {
+        mainImage.src = galleryImages[--imageIndex];
     });
 
     galleryItems.appendChild(thumbnails);
