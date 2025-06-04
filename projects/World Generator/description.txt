@@ -1,0 +1,1 @@
+World Generator that generates continental geography for a game world as well as biome data for each cell of the world.
