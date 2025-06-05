@@ -187,6 +187,7 @@ function generateModalContent(title, projectData) {
                 break;
             case '5':
                 modalContent.appendChild(createDescriptionTemplate(templateData.data));
+                break;
             default:
                 console.error('Unknown template ID:', templateData.templateID);
         }
