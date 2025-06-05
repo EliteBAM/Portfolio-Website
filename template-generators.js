@@ -9,6 +9,8 @@ function createTitle(data) {
     }
 
     container.textContent = key
+
+    return container;
 }
 
 function createSingleMediaTemplate(data) {
@@ -160,7 +162,7 @@ function generateModalContent(projectData) {
     }
 
     //generate title section
-    createTitle(projectData);
+    modalContent.appendChild(createTitle(projectData));
 
     //generate new modal content
     projectData.forEach(templateData => {
