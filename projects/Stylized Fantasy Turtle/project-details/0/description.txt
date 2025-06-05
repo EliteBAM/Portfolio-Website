@@ -1,4 +1,4 @@
-I created this assset for a game called Turtle Town, and it did not get used due to team dysfunction.
+I created this asset for a game called Turtle Town, and it did not get used due to team dysfunction.
 
 I sculpted and retopologized the turtle model in ZBrush, painted the textures in Substance Painter, and rigged it in Maya LT.
 
