@@ -130,8 +130,7 @@ function createDescriptionTemplate(data) {
     const container = document.createElement('div');
     container.className = 'template-description';
 
-    const p1 = document.createElement('p');
-    p1.textContent = data.texts[0];
+    container.textContent = data.texts[0];
 
     return container;
 }
