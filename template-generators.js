@@ -156,7 +156,7 @@ function generateModalContent(title, projectData) {
     }
 
     //generate title section
-    //modalContent.appendChild(createTitle(title));
+    modalContent.appendChild(createTitle(title));
 
     //generate new modal content
     projectData.forEach(templateData => {
@@ -174,8 +174,6 @@ function generateModalContent(title, projectData) {
             case '4':
                 modalContent.appendChild(createCodeExampleTemplate(templateData.data));
                 break;
-            case '5':
-                //create 'description template'
             default:
                 console.error('Unknown template ID:', templateData.templateID);
         }
