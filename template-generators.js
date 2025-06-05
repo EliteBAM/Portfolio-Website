@@ -156,7 +156,7 @@ function generateModalContent(title, projectData) {
     }
 
     //generate title section
-    modalContent.appendChild(createTitle(title));
+    //modalContent.appendChild(createTitle(title));
 
     //generate new modal content
     projectData.forEach(templateData => {
