@@ -68,7 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         .then(response => response.json())
                         .then(projectData => {
                             projectModalMap.set(project.title, projectData); //STORE the data for next time!!
-                            generateModalContent(projectData); // send project data directly to DOM construction function
+                            generateModalContent(project.title, projectData); // send project data directly to DOM construction function
                         })
                         .catch(error => console.error('Error project details:', error));
                 }else {
