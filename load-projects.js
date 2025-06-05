@@ -72,7 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         })
                         .catch(error => console.error('Error project details:', error));
                 }else {
-                    generateModalContent(cachedProjectData); //generate modal layout from stored data in project map!
+                    generateModalContent(project.title, cachedProjectData); //generate modal layout from stored data in project map!
                     console.log("project data loaded from local cache. Server not pinged")
                 }
 

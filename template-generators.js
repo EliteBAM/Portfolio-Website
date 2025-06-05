@@ -1,14 +1,8 @@
-function createTitle(data) {
+function createTitle(title) {
     const container = document.createElement('div');
-    container.className = 'modal-title'
+    container.className = 'modal-title';
 
-    //there's probably a better way to do this part, but its not performance sensitive, so
-    for (let [key, value] of projectModalMap.entries()) {
-        if (value === data)
-            return key;
-    }
-
-    container.textContent = key
+    container.textContent = title;
 
     return container;
 }
@@ -144,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 50);
 });
 
-function generateModalContent(projectData) {
+function generateModalContent(title, projectData) {
 
     //clear all previous modal content except the close button
     [...modalContent.children].forEach(child => {
@@ -162,7 +156,7 @@ function generateModalContent(projectData) {
     }
 
     //generate title section
-    modalContent.appendChild(createTitle(projectData));
+    modalContent.appendChild(createTitle(title));
 
     //generate new modal content
     projectData.forEach(templateData => {
