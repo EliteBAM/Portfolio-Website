@@ -360,6 +360,20 @@ pre {
     overflow-x: auto;
 }
 
+.modal-title {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+
+    /*font*/
+    font-weight: 600;
+    color: #5A5A5A; /* Pastel Mocha */
+    margin: 0;
+    padding-top: 5px;
+    line-height: 1.2;
+    font-size: 1.2em;
+}
+
 /* Single Media Template */
 .single-media img {
     max-width: 80%;

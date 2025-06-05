@@ -1,3 +1,16 @@
+function createTitle(data) {
+    const continer = document.createElement('div');
+    container.className = 'modal-title'
+
+    //there's probably a better way to do this part, but its not performance sensitive, so
+    for ([key, value] of map.entries()) {
+        if (value === data)
+            return key;
+    }
+
+    container.textContent = key
+}
+
 function createSingleMediaTemplate(data) {
 
     const container = document.createElement('div');
@@ -146,6 +159,9 @@ function generateModalContent(projectData) {
         return; //cut off the function
     }
 
+    //generate title section
+    createTitle(projectData);
+
     //generate new modal content
     projectData.forEach(templateData => {
 
@@ -162,6 +178,8 @@ function generateModalContent(projectData) {
             case '4':
                 modalContent.appendChild(createCodeExampleTemplate(templateData.data));
                 break;
+            case '5':
+                //create 'description template'
             default:
                 console.error('Unknown template ID:', templateData.templateID);
         }
