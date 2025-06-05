@@ -3,7 +3,7 @@ function createTitle(data) {
     container.className = 'modal-title'
 
     //there's probably a better way to do this part, but its not performance sensitive, so
-    for (let [key, value] of map.entries()) {
+    for (let [key, value] of projectModalMap.entries()) {
         if (value === data)
             return key;
     }
