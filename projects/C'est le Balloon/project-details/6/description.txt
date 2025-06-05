@@ -1,0 +1,7 @@
+Made in Unity. I made all the art, and coded the game.
+
+Our professor's favorite game was "Mountain." Yes, the game where you stare at a mountain. I found this to be funny, and decided to make him something that was right up his alley.
+
+I did not make the audio effects or shaders for this game. 
+
+Technically there was a team, but nobody actually did anything. I just did it all and assigned different aspects to different people so we would all get a good grade.
