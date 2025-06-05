@@ -125,6 +125,17 @@ function createCodeExampleTemplate(data) {
     return container;
 }
 
+function createDescriptionTemplate(data) {
+
+    const container = document.createElement('div');
+    container.className = 'template-description';
+
+    const p1 = document.createElement('p');
+    p1.textContent = data.texts[0];
+
+    return container;
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
@@ -174,6 +185,8 @@ function generateModalContent(title, projectData) {
             case '4':
                 modalContent.appendChild(createCodeExampleTemplate(templateData.data));
                 break;
+            case '5':
+                modalContent.appendChild(createDescriptionTemplate(templateData.data));
             default:
                 console.error('Unknown template ID:', templateData.templateID);
         }

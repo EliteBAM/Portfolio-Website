@@ -1,0 +1,7 @@
+I created this assset for a game called Turtle Town, and it did not get used due to team dysfunction. \n
+\n
+I sculpted and retopologized the turtle model in ZBrush, painted the textures in Substance Painter, and rigged it in Maya LT. \n
+\n
+The screenshots you see are in Unity engine with orthographic projection, as was the intended display format for the game project. \n
+\n
+The turtle is rendered using a stylized shader which gives an outline effect as well as quantized lighting bands. The shader was part of my art direction, but I did not code it.

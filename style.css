@@ -465,6 +465,11 @@ pre {
     border-radius: 8px;
 }
 
+.template-description {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 /* Code Example */
 .code-example p {
     font-size: 16px;
