@@ -84,7 +84,7 @@ window.addEventListener('DOMContentLoaded', () => {
             });
 
             //if thumnail file name starts with 0, remove smooth transition from gif for frame-perfect match
-            if(String(project.staticImage)[0] == '0') {
+            if(project.staticImage.split('/').pop()[0] == '0') {
                 console.log(project.title, "'s thumbnail is the first frame of the gif. Disabling gif fade-in");
                 gifImage.classList.add('thumb-is-frame');
             }
