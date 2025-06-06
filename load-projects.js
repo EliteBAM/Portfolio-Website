@@ -85,7 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             projectElement.addEventListener('mouseenter', function () {
                 gifImage.src = '';
-                gifImage.src = src;
+                gifImage.src = project.gifImage;
             });
 
 
