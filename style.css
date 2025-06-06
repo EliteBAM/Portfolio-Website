@@ -237,25 +237,26 @@ body {
 .project-image img.static-image {
     opacity: 1;
     z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+
 }
 
 .project-image img.gif-image {
     opacity: 0;
     z-index: 2;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.project .project-image img.gif-image.thumb-is-frame {
+    transition: opacity 0.5s ease-out;
 }
 
 .project:hover .project-image img.static-image {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
 }
 
 .project:hover .project-image img.gif-image {
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.project:hover .project-image img.gif-image.thumb-is-frame {
-    transition: opacity 0.5s ease-in;
 }
 
 .project-info {
