@@ -83,6 +83,12 @@ window.addEventListener('DOMContentLoaded', () => {
                 }, 50); // Small delay to ensure smooth transition
             });
 
+            projectElement.addEventListener('mouseenter', function () {
+                gifImage.src = '';
+                gifImage.src = src;
+            });
+
+
             // animation after delay for each element
             setTimeout(() => {
                 projectElement.classList.add('show');
