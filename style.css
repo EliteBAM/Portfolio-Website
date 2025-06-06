@@ -241,27 +241,30 @@ body {
 
 }
 
-.project-image img.gif-image {
+.project-image img.gif-image:not(.thumb-is-frame) {
     opacity: 0;
     z-index: 2;
     transition: opacity 0.5s ease-in-out;
 }
 
-.project .project-image img.gif-image.thumb-is-frame {
+.project-image img.gif-image.thumb-is-frame {
+    opacity: 0;
+    z-index: 2;
     transition: none;
 }
 
+.project:hover .project-image img.gif-image:not(.thumb-is-frame) {
+    opacity: 1;
+}
+
 .project:hover .project-image img.gif-image.thumb-is-frame {
+    opacity: 1;
     transition: opacity 0.5s ease-out;
 }
 
 /*.project:hover .project-image img.static-image {
     opacity: 0;
 }*/
-
-.project:hover .project-image img.gif-image {
-    opacity: 1;
-}
 
 .project-info {
     position: absolute;
