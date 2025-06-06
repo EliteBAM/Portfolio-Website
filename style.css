@@ -248,6 +248,10 @@ body {
 }
 
 .project .project-image img.gif-image.thumb-is-frame {
+    transition: none;
+}
+
+.project:hover .project-image img.gif-image.thumb-is-frame {
     transition: opacity 0.5s ease-out;
 }
 
