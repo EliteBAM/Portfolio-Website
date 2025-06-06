@@ -259,7 +259,6 @@ body {
 
 .project:hover .project-image img.gif-image.thumb-is-frame {
     opacity: 1;
-    transition: opacity 0.5s ease-out;
 }
 
 /*.project:hover .project-image img.static-image {
