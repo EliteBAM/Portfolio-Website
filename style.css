@@ -255,9 +255,9 @@ body {
     transition: opacity 0.5s ease-out;
 }
 
-.project:hover .project-image img.static-image {
+/*.project:hover .project-image img.static-image {
     opacity: 0;
-}
+}*/
 
 .project:hover .project-image img.gif-image {
     opacity: 1;
