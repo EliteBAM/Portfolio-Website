@@ -3,7 +3,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "prebuild": "node scripts/generate-project-manifest.js"
+        "postinstall": "node scripts/generate-project-manifest.js"
     }
 }
  
