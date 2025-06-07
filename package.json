@@ -1,0 +1,7 @@
+{
+  "name": "my-portfolio",
+  "scripts": {
+    "prebuild": "scripts/generate-project-manifest.js",
+    "build":    "echo \"No build needed\""
+  }
+}
