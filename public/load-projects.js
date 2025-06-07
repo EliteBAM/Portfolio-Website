@@ -112,7 +112,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     // Fetch all projects from the serverless function
-    fetch('/api/projects')
+    fetch('/data/projects.json')
         .then(response => response.json())
         .then(projects => {
             allProjects = projects; // Store the fetched projects
