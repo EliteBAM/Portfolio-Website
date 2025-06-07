@@ -1,0 +1,3 @@
+The game's focus was to build a base on the back of a giant, living turtle. On the back of the turtle are stylized trees and monolithic rocks that jut from its shell.
+
+The turtle is rigged to animate 3 tiers of progress for the player. Each town hall upgrade clears rocks and trees from the back of the turtle, openning up new areas for the player to expand their city:

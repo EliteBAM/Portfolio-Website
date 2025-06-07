@@ -1,1 +1,0 @@
-Offline Raytracer built in Electron / Javascript. Supports transformations, spheres, and Phong lighting material at the moment.

@@ -1,1 +1,0 @@
-Third Person Camera with smooth target follow and dynamic positioning with collision detection.

@@ -9,7 +9,7 @@ export default async function handler(req, res) {
 
     //get directory to project data (project details folder)
     const title = req.query.title;
-    const projectDetailsDir = path.join(process.cwd(), 'projects/' + title + "/project-details/");
+    const projectDetailsDir = path.join(process.cwd(), 'public/projects/' + title + "/project-details/");
 
     try {
 
