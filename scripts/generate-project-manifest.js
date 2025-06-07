@@ -4,7 +4,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 async function main() {
-  const base = path.join(process.cwd(), 'public', 'projects');
+  const base = path.join(process.cwd(), 'site', 'projects');
   const folders = await fs.readdir(base);
   const projects = await Promise.all(
     folders.map(async folder => {
@@ -22,7 +22,7 @@ async function main() {
     })
   );
 
-  const outDir = path.join(process.cwd(), 'public', 'data');
+  const outDir = path.join(process.cwd(), 'site', 'data');
   await fs.mkdir(outDir, { recursive: true });
   await fs.writeFile(
     path.join(outDir, 'projects.json'),

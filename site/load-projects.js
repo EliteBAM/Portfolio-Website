@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 const cachedProjectData = projectModalMap.get(project.title);
 
                 if(cachedProjectData === null) { //downlaod data if never before retrieved, and SAVE it
-                    fetch(`../api/project-details?title=${encodeURIComponent(project.title)}`)
+                    fetch(`/api/project-details?title=${encodeURIComponent(project.title)}`)
                         .then(response => response.json())
                         .then(projectData => {
                             projectModalMap.set(project.title, projectData); //STORE the data for next time!!
