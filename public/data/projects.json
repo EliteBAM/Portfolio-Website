@@ -1,0 +1,156 @@
+[
+  {
+    "title": "Boat Simulator",
+    "staticImage": "/projects/Boat Simulator/boat-thumb.png",
+    "gifImage": "/projects/Boat Simulator/getshroomed.gif",
+    "description": "Physically accurate simulation of a boat using airfoil in a fluid dynamics",
+    "tags": [
+      "Software"
+    ]
+  },
+  {
+    "title": "C'est le Balloon",
+    "staticImage": "/projects/C'est le Balloon/balloon_thumb.png",
+    "gifImage": "/projects/C'est le Balloon/balloon_game.gif",
+    "description": "Honestly, what is this? C'est le Balloon.",
+    "tags": [
+      "Games",
+      "Art"
+    ]
+  },
+  {
+    "title": "Collision-Aware Camera System",
+    "staticImage": "/projects/Collision-Aware Camera System/Dynamic Camera.png",
+    "gifImage": "/projects/Collision-Aware Camera System/getshroomed.gif",
+    "description": "Third Person Camera with smooth target follow and dynamic positioning with collision detection.",
+    "tags": [
+      "Software"
+    ]
+  },
+  {
+    "title": "Dark Temple",
+    "staticImage": "/projects/Dark Temple/dt2.png",
+    "gifImage": "/projects/Dark Temple/getshroomed.gif",
+    "description": "More of a prototype than a game-- a little action RPG made on a very short deadline.",
+    "tags": [
+      "Games"
+    ]
+  },
+  {
+    "title": "EMPATH",
+    "staticImage": "/projects/EMPATH/empathnew.png",
+    "gifImage": "/projects/EMPATH/empath_optimized_again.gif",
+    "description": "",
+    "tags": [
+      "Games"
+    ]
+  },
+  {
+    "title": "Fighting Game Framework",
+    "staticImage": "/projects/Fighting Game Framework/fighting_game_new.png",
+    "gifImage": "/projects/Fighting Game Framework/getshroomed.gif",
+    "description": "a framework that turns Unity into a robust engine for developing fighting games",
+    "tags": [
+      "Software"
+    ]
+  },
+  {
+    "title": "FROGGER Clone",
+    "staticImage": "/projects/FROGGER Clone/Frogger Clone new.png",
+    "gifImage": "/projects/FROGGER Clone/getshroomed.gif",
+    "description": "Clone of Frogger made in Unity. Pixel perfect snapping. First level only.",
+    "tags": [
+      "Games"
+    ]
+  },
+  {
+    "title": "Hyperspace Drifter",
+    "staticImage": "/projects/Hyperspace Drifter/hyperspace-drifter-new.png",
+    "gifImage": "/projects/Hyperspace Drifter/getshroomed.gif",
+    "description": "Hyperspace is the bridge between worlds. Unknown dangers await. Survive to escape... the Hyperspace Rift.",
+    "tags": [
+      "Games"
+    ]
+  },
+  {
+    "title": "Infinidungeon",
+    "staticImage": "/projects/Infinidungeon/0_infinidungeon_thumb_new_low.png",
+    "gifImage": "/projects/Infinidungeon/infinidungeon_gif_low.gif",
+    "description": "Simple infinite run dungeon crawler made in Unity.",
+    "tags": [
+      "Games"
+    ]
+  },
+  {
+    "title": "Infinite Procedural Terrain",
+    "staticImage": "/projects/Infinite Procedural Terrain/unity_craft_new.png",
+    "gifImage": "/projects/Infinite Procedural Terrain/getshroomed.gif",
+    "description": "voxel engine developed in Unity using procedural mesh generation and Burst jobs",
+    "tags": [
+      "Software"
+    ]
+  },
+  {
+    "title": "Javascript Raytracer",
+    "staticImage": "/projects/Javascript Raytracer/raytracer.png",
+    "gifImage": "/projects/Javascript Raytracer/getshroomed.gif",
+    "description": "Offline Raytracer built in Electron / Javascript. Supports transformations, spheres, and Phong lighting material at the moment.",
+    "tags": [
+      "Software"
+    ]
+  },
+  {
+    "title": "Land of the Occult",
+    "staticImage": "/projects/Land of the Occult/Dark-Tower-new.png",
+    "gifImage": "/projects/Land of the Occult/getshroomed.gif",
+    "description": "A wandering night is drawn to a temple of the occult.",
+    "tags": [
+      "Games"
+    ]
+  },
+  {
+    "title": "Mount System",
+    "staticImage": "/projects/Mount System/0_mount_thumb_new.png",
+    "gifImage": "/projects/Mount System/mount_gif.gif",
+    "description": "Mount system for an action RPG character controller",
+    "tags": [
+      "Software"
+    ]
+  },
+  {
+    "title": "Souls-Like Character Controller",
+    "staticImage": "/projects/Souls-Like Character Controller/darksoulscombat_new.png",
+    "gifImage": "/projects/Souls-Like Character Controller/getshroomed.gif",
+    "description": "Dark Souls-inspired third person character controller",
+    "tags": [
+      "Software"
+    ]
+  },
+  {
+    "title": "Stylized Fantasy Turtle",
+    "staticImage": "/projects/Stylized Fantasy Turtle/0_turtle_thumb_new_small.png",
+    "gifImage": "/projects/Stylized Fantasy Turtle/turtle_loop.gif",
+    "description": "Fully rigged \"World Turtle\" game asset",
+    "tags": [
+      "Art"
+    ]
+  },
+  {
+    "title": "The Witch List",
+    "staticImage": "/projects/The Witch List/witch_list_low.png",
+    "gifImage": "/projects/The Witch List/witchlist_gameplay.gif",
+    "description": "Realtime multiplayer iOS wizard combat game. Cast spells by drawing runes. Aim and dodge spells in realtime combat minigame.",
+    "tags": [
+      "Games"
+    ]
+  },
+  {
+    "title": "World Generator",
+    "staticImage": "/projects/World Generator/worldgeneratornew.png",
+    "gifImage": "/projects/World Generator/getshroomed.gif",
+    "description": "World Generator that generates continental geography for a game world as well as biome data for each cell of the world.",
+    "tags": [
+      "Software"
+    ]
+  }
+]
