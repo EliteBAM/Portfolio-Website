@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 const cachedProjectData = projectModalMap.get(project.title);
 
                 if(cachedProjectData === null) { //downlaod data if never before retrieved, and SAVE it
-                    fetch(`/api/project-details?title=${encodeURIComponent(project.title)}`)
+                    fetch(`../api/project-details?title=${encodeURIComponent(project.title)}`)
                         .then(response => response.json())
                         .then(projectData => {
                             projectModalMap.set(project.title, projectData); //STORE the data for next time!!
@@ -118,7 +118,7 @@ window.addEventListener('DOMContentLoaded', () => {
             allProjects = projects; // Store the fetched projects
             displayProjects(allProjects); // Display all projects initially
         })
-        .catch(error => console.error('Error fetching projects:', error));
+        .catch(error => console.error('Error fetching projects. No JSON directory? Accidental server call? :', error));
 
     // Event listeners for buttons
     document.getElementById('nav-games').addEventListener('click', () => filterProjects('Games'));
