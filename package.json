@@ -3,7 +3,6 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "prebuild": "node scripts/generate-project-manifest.js",
-        "build":    "echo \"No build needed\""
+        "prebuild": "node scripts/generate-project-manifest.js"
     }
 }
