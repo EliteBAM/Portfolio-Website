@@ -6,3 +6,4 @@
         "prebuild": "node scripts/generate-project-manifest.js"
     }
 }
+ 
