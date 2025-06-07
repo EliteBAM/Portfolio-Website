@@ -156,7 +156,7 @@ function generateModalContent(title, projectData) {
             modalContent.removeChild(child);
         }
     });
-
+    
     if (!Array.isArray(projectData) || projectData.length === 0) {
         const fallback = document.createElement('div');
         fallback.className = 'template fallback';
