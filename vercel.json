@@ -1,17 +1,4 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "api/**/*.js",  "use": "@vercel/node"   },
-    { "src": "index.html",   "use": "@vercel/static" },
-    { "src": "public/**/*",  "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "^/api/(.*)$",  "dest": "/api/$1"        },
-    {
-      "src": "^/(.*\\.(?:js|css|png|jpg|gif|json))$",
-      "dest": "/public/$1"
-    },
-    { "handle": "filesystem" },
-    { "src": "/.*",          "dest": "/index.html"    }
-  ]
+  "buildCommand": "npm run build",
+  "outputDirectory": "site"
 }
