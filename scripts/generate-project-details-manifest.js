@@ -2,7 +2,7 @@ import { isUtf8 } from 'buffer';
 import { promises as fs } from 'fs';
 import path from 'path';
 
-async function getProjectDetails(title) {
+async function getProjectDetails(title) { 
 
     //init empty array for response
     const projectData = [];
