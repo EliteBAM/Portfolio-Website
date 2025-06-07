@@ -3,7 +3,7 @@
   "outputDirectory": "site",
   "headers": [
     {
-      "source": "/site/.*\\.gif",
+      "source": "/site/(.*)\\.gif",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
