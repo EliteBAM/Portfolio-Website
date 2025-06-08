@@ -8,8 +8,6 @@ const modalContent = document.getElementById("modal-content");
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    createProjectMapFromJSON();
-    
     const projectGrid = document.querySelector('.project-grid');
 
     let allProjects = []; // Store all projects fetched from the server
@@ -119,6 +117,8 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('nav-games').addEventListener('click', () => filterProjects('Games'));
     document.getElementById('nav-art').addEventListener('click', () => filterProjects('Art'));
     document.getElementById('nav-software').addEventListener('click', () => filterProjects('Software'));
+
+    createProjectMapFromJSON();
 });
 
 // Close modal when the 'X' is clicked
