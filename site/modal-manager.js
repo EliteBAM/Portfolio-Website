@@ -10,6 +10,8 @@ function createProjectMapFromJSON() {
             projectMap = new Map(details.map(({ key, value }) => [key, value]));
         })
         .catch(error => console.error('Error getting project details from JSON:', error));
+
+    console.log("project Map created: ", projectMap);
 }
 
 function addProjectEntry (project) {
