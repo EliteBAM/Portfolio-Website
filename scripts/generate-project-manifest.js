@@ -122,6 +122,7 @@ async function main() {
     JSON.stringify(projectDetails, null, 2),
     'utf8'
   );
+
 }
 
 main().catch(err => {
