@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
                 console.log("does projectMap have ", project.title, "? --> ", projectMap.has(project.title));
 
-                projectMapReady.then( () => {
+                mapLoaded.then( () => {
                         generateModalContent(project.title, cachedProjectData); //generate modal layout from stored data in project map!
                         console.log("project data loaded from JSON");
                     }
