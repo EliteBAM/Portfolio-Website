@@ -5,7 +5,7 @@ import path from 'path';
 
 async function main() {
 
-  const base = path.join(process.cwd(), 'site', 'projects');
+  const base = path.join(process.cwd(), 'projects');
   const folders = await fs.readdir(base);
 
   //generate array of project thumbnail object data
