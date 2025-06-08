@@ -61,19 +61,14 @@ window.addEventListener('DOMContentLoaded', () => {
                 console.log("Loading project:", project.title);
 
                 //CHECK IF MODAL HAS ALREADY BEEN STORED FROM THE SERVER
-                const cachedProjectData = projectModalMap.get(project.title);
+                const cachedProjectData = projectMap.get(project.title);
 
-                if(cachedProjectData === null) { //downlaod data if never before retrieved, and SAVE it
-                    fetch(`/api/project-details?title=${encodeURIComponent(project.title)}`)
-                        .then(response => response.json())
-                        .then(projectData => {
-                            projectModalMap.set(project.title, projectData); //STORE the data for next time!!
-                            generateModalContent(project.title, projectData); // send project data directly to DOM construction function
-                        })
-                        .catch(error => console.error('Error project details:', error));
-                }else {
+                if (cachedProjectData != null) {
                     generateModalContent(project.title, cachedProjectData); //generate modal layout from stored data in project map!
-                    console.log("project data loaded from local cache. Server not pinged")
+                    console.log("project data loaded from JSON");
+                }
+                else {
+                    throw new Error("error getting project details from project map");
                 }
 
                 modal.style.display = "flex"; // Show the modal
@@ -111,7 +106,7 @@ window.addEventListener('DOMContentLoaded', () => {
         displayProjects(filteredProjects);
     };
 
-    // Fetch all projects from the serverless function
+    // Fetch all projects from the JSON manifest
     fetch('/data/projects.json')
         .then(response => response.json())
         .then(projects => {
