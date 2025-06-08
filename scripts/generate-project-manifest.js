@@ -97,7 +97,7 @@ async function main() {
       } catch (err) {
           console.error('Error reading project details:', err);
 
-          //projectDetailsEntry.value = null;
+          projectDetailsEntry.value = null;
       }
 
 
