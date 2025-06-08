@@ -1,0 +1,220 @@
+[
+  {
+    "key": "Boat Simulator",
+    "value": null
+  },
+  {
+    "key": "C'est le Balloon",
+    "value": [
+      {
+        "templateID": "5",
+        "data": {
+          "images": [],
+          "texts": [
+            "A balloon... and your soul. A game of balance... and reflection.\r\n\r\nSometimes? Games don’t need a beginning and an end."
+          ]
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "images": [
+            "/projects/C'est le Balloon/project-details/2/image5.gif"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "images": [],
+          "texts": [
+            "\"We created a peaceful interactive experience that offers calming visuals and minimalistic gameplay. The game emphasizes the importance of the player’s thoughts and feelings as a big part of how the game is experienced. In that regard, we succeeded in our mission with C’est la balloon\""
+          ]
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "images": [
+            "/projects/C'est le Balloon/project-details/4/balloon_game.gif"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "images": [
+            "/projects/C'est le Balloon/project-details/5/balloon_unity.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "images": [],
+          "texts": [
+            "Made in Unity. I made all the art, and coded the game.\r\n\r\nOur professor's favorite game was \"Mountain.\" Yes, the game where you stare at a mountain. I found this to be funny, and decided to make him something that was right up his alley.\r\n\r\nI did not make the audio effects or shaders for this game. \r\n\r\nTechnically there was a team, but nobody actually did anything. I just did it all and assigned different aspects to different people so we would all get a good grade."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "key": "Collision-Aware Camera System",
+    "value": null
+  },
+  {
+    "key": "Dark Temple",
+    "value": [
+      {
+        "templateID": "1",
+        "data": {
+          "images": [
+            "/projects/Dark Temple/project-details/1/dark-tower-2.png"
+          ],
+          "texts": []
+        }
+      }
+    ]
+  },
+  {
+    "key": "EMPATH",
+    "value": null
+  },
+  {
+    "key": "Fighting Game Framework",
+    "value": null
+  },
+  {
+    "key": "FROGGER Clone",
+    "value": null
+  },
+  {
+    "key": "Hyperspace Drifter",
+    "value": null
+  },
+  {
+    "key": "Infinidungeon",
+    "value": [
+      {
+        "templateID": "2",
+        "data": {
+          "images": [
+            "/projects/Infinidungeon/project-details/1/,Forest 1.png",
+            "/projects/Infinidungeon/project-details/1/,Forest 2.png",
+            "/projects/Infinidungeon/project-details/1/Dungeon 1.png",
+            "/projects/Infinidungeon/project-details/1/Dungeon 2.png",
+            "/projects/Infinidungeon/project-details/1/Dungeon 3.png",
+            "/projects/Infinidungeon/project-details/1/Dungeon 4.png",
+            "/projects/Infinidungeon/project-details/1/Dungeon 5.png",
+            "/projects/Infinidungeon/project-details/1/Dungeon 6.png",
+            "/projects/Infinidungeon/project-details/1/Dungeon 7.png",
+            "/projects/Infinidungeon/project-details/1/Infinidungeon_Death Screen.png",
+            "/projects/Infinidungeon/project-details/1/_Main Menu.png"
+          ],
+          "texts": []
+        }
+      }
+    ]
+  },
+  {
+    "key": "Infinite Procedural Terrain",
+    "value": [
+      {
+        "templateID": "1",
+        "data": {
+          "images": [
+            "/projects/Infinite Procedural Terrain/project-details/1/minotaur_png.png"
+          ],
+          "texts": []
+        }
+      }
+    ]
+  },
+  {
+    "key": "Javascript Raytracer",
+    "value": null
+  },
+  {
+    "key": "Land of the Occult",
+    "value": null
+  },
+  {
+    "key": "Mount System",
+    "value": null
+  },
+  {
+    "key": "Souls-Like Character Controller",
+    "value": null
+  },
+  {
+    "key": "Stylized Fantasy Turtle",
+    "value": [
+      {
+        "templateID": "5",
+        "data": {
+          "images": [],
+          "texts": [
+            "I created this asset for a game called Turtle Town, but it did not get used due to team dysfunction.\r\n\r\nI sculpted and retopologized the turtle model in ZBrush, painted the textures in Substance Painter, and rigged it in Maya LT.\r\n\r\nThe screenshots you see are in Unity engine with orthographic projection, as was the intended display format for the game project.\r\n\r\nThe turtle is rendered using a stylized shader which gives an outline effect as well as quantized lighting bands. The shader was part of my art direction, but I did not code it."
+          ]
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "images": [
+            "/projects/Stylized Fantasy Turtle/project-details/1/turtle-rig.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "images": [],
+          "texts": [
+            "The game's focus was to build a base on the back of a giant, living turtle. On the back of the turtle are stylized trees and monolithic rocks that jut from its shell.\r\n\r\nThe turtle is rigged to animate 3 tiers of progress for the player. Each town hall upgrade clears rocks and trees from the back of the turtle, openning up new areas for the player to expand their city:"
+          ]
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "images": [
+            "/projects/Stylized Fantasy Turtle/project-details/3/turtle_townhall_lvl1.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "images": [
+            "/projects/Stylized Fantasy Turtle/project-details/4/turtle_townhall_lvl2.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "images": [
+            "/projects/Stylized Fantasy Turtle/project-details/5/turtle_townhall_lvl3.png"
+          ],
+          "texts": []
+        }
+      }
+    ]
+  },
+  {
+    "key": "The Witch List",
+    "value": null
+  },
+  {
+    "key": "World Generator",
+    "value": null
+  }
+]
