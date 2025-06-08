@@ -54,9 +54,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
             projectGrid.appendChild(projectElement);
 
-            //LAST STEP OF CREATION -- ADD PROJECT TO MODAL MANAGER PROJECT MAP
-            addProjectEntry(project.title);
-
             projectElement.addEventListener('click', () => {    
                 // load template layout + data on-click from the serverless function OR cache
                 console.log("Loading project:", project.title);
@@ -117,8 +114,6 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('nav-games').addEventListener('click', () => filterProjects('Games'));
     document.getElementById('nav-art').addEventListener('click', () => filterProjects('Art'));
     document.getElementById('nav-software').addEventListener('click', () => filterProjects('Software'));
-
-    createProjectMapFromJSON();
 });
 
 // Close modal when the 'X' is clicked
