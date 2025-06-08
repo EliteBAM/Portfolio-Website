@@ -65,8 +65,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
                 console.log("does projectMap have ", project.title, "? --> ", projectMap.has(project.title));
 
-                generateModalContent(project.title, cachedProjectData); //generate modal layout from stored data in project map!
-                console.log("project data loaded from JSON");
+                projectMapReady.then( () => {
+                        generateModalContent(project.title, cachedProjectData); //generate modal layout from stored data in project map!
+                        console.log("project data loaded from JSON");
+                    }
+                );
 
                 modal.style.display = "flex"; // Show the modal
                 setTimeout(() => {
