@@ -63,13 +63,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 //CHECK IF MODAL HAS ALREADY BEEN STORED FROM THE SERVER
                 const cachedProjectData = projectMap.get(project.title);
 
-                if (cachedProjectData != null) {
-                    generateModalContent(project.title, cachedProjectData); //generate modal layout from stored data in project map!
-                    console.log("project data loaded from JSON");
-                }
-                else {
-                    throw new Error("error getting project details from project map");
-                }
+                generateModalContent(project.title, cachedProjectData); //generate modal layout from stored data in project map!
+                console.log("project data loaded from JSON");
 
                 modal.style.display = "flex"; // Show the modal
                 setTimeout(() => {
