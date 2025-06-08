@@ -156,8 +156,8 @@ function generateModalContent(title, projectData) {
             modalContent.removeChild(child);
         }
     });
-
-    if (!Array.isArray(projectData.data) || projectData.data.length === 0) {
+    
+    if (!Array.isArray(projectData) || projectData.length === 0) {
         const fallback = document.createElement('div');
         fallback.className = 'template fallback';
         fallback.textContent = 'No details available.';

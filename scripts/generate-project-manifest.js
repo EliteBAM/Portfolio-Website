@@ -93,6 +93,7 @@ async function main() {
               })
 
               console.log(projectDetailsEntry.key, " details found, pushed to entry");
+              console.log(projectDetailsEntry.value);
 
           }     
 
