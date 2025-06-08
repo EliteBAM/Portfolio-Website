@@ -5,7 +5,9 @@ import path from 'path';
 
 async function main() {
 
-  const base = path.join(process.cwd(), 'projects');
+  console.log("running main");
+
+  const base = path.join(process.cwd(), 'site', 'projects');
   const folders = await fs.readdir(base);
 
   //generate array of project thumbnail object data
@@ -23,7 +25,10 @@ async function main() {
                 .split(',').map(t => t.trim()),
       };
     })
+
   );
+
+  console.log("projects generated");
 
   //generate array of key value pairs of project titles and their detail contents 
   const projectDetails = await Promise.all(
