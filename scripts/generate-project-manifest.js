@@ -92,10 +92,12 @@ async function main() {
                 data
               })
 
+              console.log(folder, " details found, pushed to entry");
+
           }     
 
       } catch (err) {
-          console.error('Error reading project details:', err);
+          console.warn(folder, " details are not found, set to null");
 
           projectDetailsEntry.value = null;
       }
