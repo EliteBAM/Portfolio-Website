@@ -13,7 +13,7 @@ async function main() {
   //generate array of project thumbnail object data
   const projects = await Promise.all(
     folders.map(async folder => {
-      const dir = path.join(base, folder);
+      const dir = path.join(base, folder); 
       const files = await fs.readdir(dir);
 
       return {
