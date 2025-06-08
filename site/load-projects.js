@@ -7,6 +7,9 @@ const modalContent = document.getElementById("modal-content");
 
 
 window.addEventListener('DOMContentLoaded', () => {
+
+    createProjectMapFromJSON();
+    
     const projectGrid = document.querySelector('.project-grid');
 
     let allProjects = []; // Store all projects fetched from the server
@@ -60,16 +63,13 @@ window.addEventListener('DOMContentLoaded', () => {
                 // load template layout + data on-click from the serverless function OR cache
                 console.log("Loading project:", project.title);
 
-                mapLoaded.then( () => {
-                //get cached data only when its ready
+                //CHECK IF MODAL HAS ALREADY BEEN STORED FROM THE SERVER
                 const cachedProjectData = projectMap.get(project.title);
 
                 console.log("does projectMap have ", project.title, "? --> ", projectMap.has(project.title));
 
-                        generateModalContent(project.title, cachedProjectData); //generate modal layout from stored data in project map!
-                        console.log("project data loaded from JSON");
-                    }
-                );
+                generateModalContent(project.title, cachedProjectData); //generate modal layout from stored data in project map!
+                console.log("project data loaded from JSON");
 
                 modal.style.display = "flex"; // Show the modal
                 setTimeout(() => {
