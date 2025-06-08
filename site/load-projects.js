@@ -60,12 +60,12 @@ window.addEventListener('DOMContentLoaded', () => {
                 // load template layout + data on-click from the serverless function OR cache
                 console.log("Loading project:", project.title);
 
-                //CHECK IF MODAL HAS ALREADY BEEN STORED FROM THE SERVER
+                mapLoaded.then( () => {
+                //get cached data only when its ready
                 const cachedProjectData = projectMap.get(project.title);
 
                 console.log("does projectMap have ", project.title, "? --> ", projectMap.has(project.title));
 
-                mapLoaded.then( () => {
                         generateModalContent(project.title, cachedProjectData); //generate modal layout from stored data in project map!
                         console.log("project data loaded from JSON");
                     }
