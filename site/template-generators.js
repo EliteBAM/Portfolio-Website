@@ -114,9 +114,8 @@ function createCodeExampleTemplate(data) {
 
     const pre = document.createElement('pre');
 
-    const languageClass = data.texts[0];
     const code = document.createElement('code');
-    code.className = languageClass;
+    code.className = data.texts[0];
     code.textContent = data.texts[2];
 
     const p2 = document.createElement('p');
