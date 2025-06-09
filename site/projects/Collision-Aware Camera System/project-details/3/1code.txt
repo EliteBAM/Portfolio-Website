@@ -3,8 +3,7 @@ public class CameraFollow : MonoBehaviour
     //instance fields
     //...
 
-    void Start()
-    {
+    void Start() {
         //init values
         currentRotation = transform.eulerAngles;
         currentDst = dstFromTarget;
@@ -12,8 +11,7 @@ public class CameraFollow : MonoBehaviour
         Cursor.visible = false;
     }
 
-    void Update()
-    {
+    void Update() {
         //user input
         UpdateCameraRotation();
         //update distance based on collision before position update
