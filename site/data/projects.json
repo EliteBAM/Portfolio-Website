@@ -21,7 +21,7 @@
   {
     "title": "Collision-Aware Camera System",
     "staticImage": "/projects/Collision-Aware Camera System/Dynamic Camera.png",
-    "gifImage": "/projects/Collision-Aware Camera System/getshroomed.gif",
+    "gifImage": "/projects/Collision-Aware Camera System/dynamic-camera.gif",
     "description": "Third Person Camera with smooth target follow and dynamic positioning with collision detection.",
     "tags": [
       "Software"
@@ -102,7 +102,7 @@
   {
     "title": "Land of the Occult",
     "staticImage": "/projects/Land of the Occult/Dark-Tower-new.png",
-    "gifImage": "/projects/Land of the Occult/getshroomed.gif",
+    "gifImage": "/projects/Land of the Occult/landoftheoccult_vid.gif",
     "description": "A wandering night is drawn to a temple of the occult.",
     "tags": [
       "Games"
@@ -119,8 +119,8 @@
   },
   {
     "title": "Souls-Like Character Controller",
-    "staticImage": "/projects/Souls-Like Character Controller/darksoulscombat_new.png",
-    "gifImage": "/projects/Souls-Like Character Controller/getshroomed.gif",
+    "staticImage": "/projects/Souls-Like Character Controller/combat_controller_thumb.png",
+    "gifImage": "/projects/Souls-Like Character Controller/combatcontroller.gif",
     "description": "Dark Souls-inspired third person character controller",
     "tags": [
       "Software"

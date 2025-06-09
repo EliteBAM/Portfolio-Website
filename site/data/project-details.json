@@ -64,7 +64,50 @@
   },
   {
     "key": "Collision-Aware Camera System",
-    "value": null
+    "value": [
+      {
+        "templateID": "5",
+        "data": {
+          "images": [],
+          "texts": [
+            "Dynamic third-person camera programmed in C# with Unity.\r\n\r\nAble to perfectly stop camera clipping with only two raycasts.\r\n\r\n"
+          ]
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "images": [
+            "/projects/Collision-Aware Camera System/project-details/2/dynamic-camera.gif"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "4",
+        "data": {
+          "images": [],
+          "texts": [
+            "language-csharp",
+            "Clean and readable initialization and update loop:",
+            "public class CameraFollow : MonoBehaviour\r\n{\r\n    //instance fields\r\n    //...\r\n\r\n    void Start() {\r\n        //init values\r\n        currentRotation = transform.eulerAngles;\r\n        currentDst = dstFromTarget;\r\n        Cursor.lockState = CursorLockMode.Locked;\r\n        Cursor.visible = false;\r\n    }\r\n\r\n    void Update() {\r\n        //user input\r\n        UpdateCameraRotation();\r\n        //update distance based on collision before position update\r\n        CollisionDistanceUpdate();\r\n        UpdateCameraPosition();\r\n    }\r\n\r\n    //methods\r\n    //...\r\n}",
+            ""
+          ]
+        }
+      },
+      {
+        "templateID": "4",
+        "data": {
+          "images": [],
+          "texts": [
+            "language-csharp",
+            "Here is the collision detection method:",
+            "public class CameraFollow : MonoBehaviour\r\n{\r\n\r\n    //...\r\n\r\n    void CollisionDistanceUpdate() {\r\n\r\n        float castDistance = maxDistance + 10f;\r\n        Vector3 sideAngleVector = transform.right * sideAngleFactor;\r\n\r\n        Vector3 rayLeftDir = (-transform.forward + sideAngleVector).normalized;\r\n        Vector3 rayRightDir = (-transform.forward + -sideAngleVector).normalized;\r\n\r\n        Ray rayRight = new Ray(target.transform.position, rayRightDir);\r\n        Debug.DrawRay(rayRight.origin, rayRight.direction * castDistance);\r\n\r\n\r\n        Ray rayLeft = new Ray(target.transform.position, rayLeftDir);\r\n        Debug.DrawRay(rayLeft.origin, rayLeft.direction * castDistance);\r\n\r\n        RaycastHit hit;\r\n\r\n\r\n        if ((nextCheck == 0 || nextCheck == 1) && Physics.Raycast(rayRight, out hit, castDistance, cameraObstacles)) {\r\n            float adjustedDst =  hit.distance - collisionCameraPadding;\r\n            currentDst = adjustedDst;\r\n            nextCheck = 1;\r\n        }\r\n        else if ((nextCheck == 0 || nextCheck == 2) && Physics.Raycast(rayLeft, out hit, castDistance, cameraObstacles)) {\r\n            float adjustedDst = hit.distance - collisionCameraPadding;\r\n            currentDst = adjustedDst;\r\n            nextCheck = 2;\r\n        }\r\n        else if(nextCheck == 1) {\r\n            if (!Physics.Raycast(rayLeft, out hit, castDistance, cameraObstacles)) {\r\n                currentDst = maxDistance;\r\n                nextCheck = 0;\r\n            }\r\n        }\r\n        else if(nextCheck == 2) {\r\n            if (!Physics.Raycast(rayRight, out hit, castDistance, cameraObstacles)) {\r\n                currentDst = maxDistance;\r\n                nextCheck = 0;\r\n            }\r\n        }\r\n\r\n        currentDst = Mathf.Clamp(currentDst, 1, maxDistance);\r\n        Debug.Log(\"Camera collision current check: \" + nextCheck);\r\n    }\r\n}",
+            "The implementation uses layer masking to allow the designer to choose which objects the camera can or cannot collide with, so that detail elements of the scene do not cause poor camera behaviour.\r\n\r\nThe implementation uses a \"nextCheck\" value which allows the camera to reference from a single ray per-collision-- this both avoids stutter and allows for the system to function casting only one ray per frame under many conditions!"
+          ]
+        }
+      }
+    ]
   },
   {
     "key": "Dark Temple",
