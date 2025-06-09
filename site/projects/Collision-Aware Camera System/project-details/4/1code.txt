@@ -21,16 +21,12 @@ public class CameraFollow : MonoBehaviour
         RaycastHit hit;
 
 
-        if ((nextCheck == 0 || nextCheck == 1) 
-            && Physics.Raycast(rayRight, out hit, castDistance, cameraObstacles)) {    
-        
+        if ((nextCheck == 0 || nextCheck == 1) && Physics.Raycast(rayRight, out hit, castDistance, cameraObstacles)) {
             float adjustedDst =  hit.distance - collisionCameraPadding;
             currentDst = adjustedDst;
             nextCheck = 1;
         }
-        else if ((nextCheck == 0 || nextCheck == 2) 
-                 && Physics.Raycast(rayLeft, out hit, castDistance, cameraObstacles)) {
-
+        else if ((nextCheck == 0 || nextCheck == 2) && Physics.Raycast(rayLeft, out hit, castDistance, cameraObstacles)) {
             float adjustedDst = hit.distance - collisionCameraPadding;
             currentDst = adjustedDst;
             nextCheck = 2;

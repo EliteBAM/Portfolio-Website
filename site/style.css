@@ -496,7 +496,7 @@ pre {
     border-radius: 5px;
     overflow-x: auto;
     font-family: monospace;
-    white-space: pre-wrap;
+    white-space: pre;
 }
 
 /* Footer styling */
