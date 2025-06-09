@@ -1,3 +1,3 @@
-The implementation uses layer masking to allow the designer to choosse which objects the camera can or cannot collide with, so that detail elements of the scene do not cause poor camera behaviour.
+The implementation uses layer masking to allow the designer to choose which objects the camera can or cannot collide with, so that detail elements of the scene do not cause poor camera behaviour.
 
 The implementation uses a "nextCheck" value which allows the camera to reference from a single ray per-collision-- this both avoids stutter and allows for the system to function casting only one ray per frame under many conditions!
