@@ -110,17 +110,23 @@ function createCodeExampleTemplate(data) {
     container.className = 'template code-example';
 
     const p1 = document.createElement('p');
-    p1.textContent = data.texts[0];
+    p1.textContent = data.texts[1];
 
     const pre = document.createElement('pre');
-    pre.textContent = data.texts[1];
+
+    const languageClass = data.texts[0];
+    const code = document.createElement('code');
+    code.className = languageClass;
+    code.textContent = data.texts[2];
 
     const p2 = document.createElement('p');
-    p2.textContent = data.texts[2];
+    p2.textContent = data.texts[3];
 
     container.appendChild(p1);
     container.appendChild(pre);
     container.appendChild(p2);
+
+    pre.appendChild(code);
 
     return container;
 }
