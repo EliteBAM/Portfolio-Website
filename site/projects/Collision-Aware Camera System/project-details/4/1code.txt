@@ -34,22 +34,16 @@ public class CameraFollow : MonoBehaviour
         {
             if (!Physics.Raycast(rayLeft, out hit, dstFromTarget + 10f, cameraObstacles))
             {
-                if (hit.collider == null)
-                {
-                    currentDst = dstFromTarget;
-                    nextCheck = 0;
-                }
+                currentDst = dstFromTarget;
+                nextCheck = 0;
             }
         }
         else if(nextCheck == 2)
         {
             if (!Physics.Raycast(rayRight, out hit, dstFromTarget + 10f, cameraObstacles))
             {
-                if (hit.collider == null)
-                {
-                    currentDst = dstFromTarget;
-                    nextCheck = 0;
-                }
+                currentDst = dstFromTarget;
+                nextCheck = 0;
             }
         }
 
