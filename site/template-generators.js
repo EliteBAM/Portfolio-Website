@@ -127,6 +127,8 @@ function createCodeExampleTemplate(data) {
 
     pre.appendChild(code);
 
+    Prism.highlightElement(code);
+
     return container;
 }
 
