@@ -1,0 +1,59 @@
+public class CameraFollow : MonoBehaviour
+{
+
+    //...
+
+    void CollisionDistanceUpdate()
+    {
+
+        Ray rayRight = new Ray(target.transform.position, -transform.forward + (-transform.right * 0.042f));
+        Debug.DrawRay(target.transform.position, ((-transform.forward + (-transform.right * 0.042f)) * (dstFromTarget + 10f)));
+
+
+        Ray rayLeft = new Ray(target.transform.position, -transform.forward + (transform.right * 0.042f));
+        Debug.DrawRay(target.transform.position, (-transform.forward + (transform.right * 0.042f)) * (dstFromTarget + 10f));
+
+        RaycastHit hit;
+
+
+        if ((nextCheck == 0 || nextCheck == 1) && Physics.Raycast(rayRight, out hit, dstFromTarget + 10f, cameraObstacles))
+        {            
+            adjustedDst =  hit.distance - 2f;
+            currentDst = adjustedDst;
+            nextCheck = 1;
+
+        }
+        else if ((nextCheck == 0 || nextCheck == 2) && Physics.Raycast(rayLeft, out hit, dstFromTarget + 10f, cameraObstacles))
+        {
+            adjustedDst = hit.distance - 2f;
+            currentDst = adjustedDst;
+            nextCheck = 2;
+
+        }
+        else if(nextCheck == 1)
+        {
+            if (!Physics.Raycast(rayLeft, out hit, dstFromTarget + 10f, cameraObstacles))
+            {
+                if (hit.collider == null)
+                {
+                    currentDst = dstFromTarget;
+                    nextCheck = 0;
+                }
+            }
+        }
+        else if(nextCheck == 2)
+        {
+            if (!Physics.Raycast(rayRight, out hit, dstFromTarget + 10f, cameraObstacles))
+            {
+                if (hit.collider == null)
+                {
+                    currentDst = dstFromTarget;
+                    nextCheck = 0;
+                }
+            }
+        }
+
+        currentDst = Mathf.Clamp(currentDst, 1, 13.75f); //hard-coded max distance :D
+        Debug.Log("Camera collision current checK: " + nextCheck);
+    }
+}

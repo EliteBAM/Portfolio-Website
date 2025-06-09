@@ -1,0 +1,1 @@
+Clean and readable initialization and update loop:

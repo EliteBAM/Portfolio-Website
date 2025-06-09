@@ -1,0 +1,26 @@
+public class CameraFollow : MonoBehaviour
+{
+    //instance fields
+    //...
+
+    void Start()
+    {
+        //init values
+        currentRotation = transform.eulerAngles;
+        currentDst = dstFromTarget;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    void Update()
+    {
+        //user input
+        UpdateCameraRotation();
+        //update distance based on collision before position update
+        CollisionDistanceUpdate();
+        UpdateCameraPosition();
+    }
+
+    //methods
+    //...
+}

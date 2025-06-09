@@ -1,0 +1,4 @@
+Dynamic third-person camera programmed in C# with Unity.
+
+Able to perfectly stop camera clipping with only two raycasts.
+
