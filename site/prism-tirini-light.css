@@ -2,7 +2,7 @@
 code[class*="language-"],
 pre[class*="language-"] {
   color: #8e8e8e;
-  background: #fdfcfc;
+  background: #f7f7f7;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1em;
   line-height: 1.5;
@@ -20,7 +20,6 @@ pre[class*="language-"] {
   padding: 1em;
   margin: .5em 0;
   overflow: auto;
-  border-radius: 0.3em;
 }
 
 .token.comment { color: #7fa777; }
