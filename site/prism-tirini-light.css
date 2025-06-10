@@ -16,12 +16,6 @@ pre[class*="language-"] {
   hyphens: none;
 }
 
-pre[class*="language-"] {
-  padding: 1em;
-  margin: .5em 0;
-  overflow: auto;
-}
-
 .token.comment { color: #7fa777; }
 .token.constant { color: #656361; }
 .token.char-escape { color: #80797488; }
