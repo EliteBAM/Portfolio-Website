@@ -1,8 +1,8 @@
 /* Tiniri Light for Prism.js */
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #333231;
-  background: #FDFCFC;
+  color: #8e8e8e;
+  background: #faf8f2;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1em;
   line-height: 1.5;
@@ -23,26 +23,24 @@ pre[class*="language-"] {
   border-radius: 0.3em;
 }
 
-.token.comment { color: #80797499; font-style: italic; }
-.token.constant { color: #333231; }
+.token.comment { color: #7fa777; }
+.token.constant { color: #656361; }
 .token.char-escape { color: #80797488; }
-.token.function { color: #356B94; }
+.token.function { color: #AD514C; }
 .token.tag { color: #807974; }
 .token.attr-name { color: #356B94; }
 .token.deleted { color: #E59793; }
-.token.keyword { color: #807974; font-weight: bold; }
+.token.keyword { color: #807974; }
 .token.raw { color: #807974; }
 .token.punctuation { color: #807974; }
-.token.string { color: #333231; }
-.token.variable { color: #356B94; }
+.token.string { color: #9f8bc5; }
+.token.variable { color: #AD514C; }
 .token.parameter { color: #356B94; }
-
-/* Additional Tokens */
 .token.number { color: #AD514C; }
 .token.boolean { color: #AD514C; }
 .token.selector { color: #356B94; }
 .token.property { color: #807974; }
-.token.class-name { color: #AD514C; }
+.token.class-name { color: #f2c394; }
 .token.builtin { color: #AD514C; }
 .token.operator { color: #807974; }
 .token.namespace { color: #AD514C; }
@@ -50,3 +48,15 @@ pre[class*="language-"] {
 .token.symbol { color: #AD514C; }
 .token.entity { color: #AD514C; }
 .token.url { color: #538A8A; }
+
+/*.atrule
+.attr-value
+.cdata
+.doctype
+.important
+.inserted
+.prolog
+.pseudo-class
+.pseudo-element
+.template-string*/
+
