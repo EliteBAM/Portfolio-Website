@@ -1,0 +1,3 @@
+This is a prototype for a procedural world generator that generates discrete sized worlds.
+
+The intended use was for generating a tile-based world for a 2D top-down survival game.
