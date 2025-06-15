@@ -3,6 +3,12 @@
   "outputDirectory": "site",
   "headers": [
     {
+      "source": "/site/(.*)\\.png",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
       "source": "/site/(.*)\\.gif",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
