@@ -258,6 +258,97 @@
   },
   {
     "key": "World Generator",
-    "value": null
+    "value": [
+      {
+        "templateID": "1",
+        "data": {
+          "images": [
+            "/projects/World Generator/project-details/agif/worldgen_image.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "images": [],
+          "texts": [
+            "This is a prototype for a procedural world generator that generates discrete sized worlds.\r\n\r\nThe intended use was for generating a tile-based world for a 2D top-down survival game."
+          ]
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "images": [
+            "/projects/World Generator/project-details/cperlingif/perlin noise demo.gif"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "images": [],
+          "texts": [
+            "Refine world resolution, size, and \"feel\" with auto-updating perlin noise settings."
+          ]
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "images": [
+            "/projects/World Generator/project-details/elevelsgif/perlin_levels_demo.gif"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "images": [],
+          "texts": [
+            "Perlin clamping levels can be adjusted to modify the water level, beach size, and overall landmass size."
+          ]
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "images": [
+            "/projects/World Generator/project-details/gvoronoigif/voronoi_demo.gif"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "images": [],
+          "texts": [
+            "Voronoi noise is used to generate a biome map. Biomes can be added on the fly. Voronoi settings can be modified to change the number / size of biome groups, as well as the distance function used to classify a cell's biome. Traditional distance gives straight, harsh cutoffs, while Minkowski's distance formula yields cool twisty borders between biomes."
+          ]
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "images": [
+            "/projects/World Generator/project-details/igenprofiles/generator_profiles_demo.gif"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "images": [],
+          "texts": [
+            "Biomes can also be created in a serialized generation profile. Profiles can be swapped on the fly to generate worlds or levels of different varieties."
+          ]
+        }
+      }
+    ]
   }
 ]

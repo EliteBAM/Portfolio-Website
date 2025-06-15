@@ -147,7 +147,7 @@
   {
     "title": "World Generator",
     "staticImage": "/projects/World Generator/worldgeneratornew.png",
-    "gifImage": "/projects/World Generator/getshroomed.gif",
+    "gifImage": "/projects/World Generator/world_gen_demo_short.gif",
     "description": "World Generator that generates continental geography for a game world as well as biome data for each cell of the world.",
     "tags": [
       "Software"
