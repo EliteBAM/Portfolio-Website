@@ -1,0 +1,1 @@
+Refine world resolution, size, and "feel" with auto-updating perlin noise settings.

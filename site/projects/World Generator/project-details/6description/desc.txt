@@ -1,0 +1,1 @@
+Perlin clamping levels can be adjusted to modify the water level, beach size, and overall landmass size.
