@@ -1,0 +1,1 @@
+Biomes can also be created in a serialized generation profile. Profiles can be swapped on the fly to generate worlds or levels of different varieties.
