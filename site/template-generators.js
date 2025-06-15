@@ -22,6 +22,21 @@ function createSingleMediaTemplate(data) {
     return container;
 }
 
+function createVideoTemplate(data) {
+
+    const container = document.createElement('div');
+    container.className = 'single-media';
+
+    const img = document.createElement('img');
+    img.src = data.images?.[0] || ''; //take first image if there are more than 1
+    img.alt = 'Single Image';
+    img.style.maxWidth = '100%';
+    img.style.height = 'auto';
+
+    container.appendChild(img);
+    return container;
+}
+
 function createHorizontalGalleryTemplate(data) {
 
     const galleryImages = data.images;
