@@ -1,0 +1,3 @@
+This is a prototype boat simulator made in unity.
+
+The boat is driven by physically accurate force calculations for airfoils moving through fluids like air or water. This is achieved by calculating the lift and drag forces for each airfoil on the boat: the sail, centerboard, and rudder.

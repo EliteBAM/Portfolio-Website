@@ -1,7 +1,68 @@
 [
   {
     "key": "Boat Simulator",
-    "value": null
+    "value": [
+      {
+        "templateID": "1",
+        "data": {
+          "videos": [],
+          "images": [
+            "/projects/Boat Simulator/project-details/a_gif/boatdemo-low.gif"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "This is a prototype boat simulator made in unity.\r\n\r\nThe boat is driven by physically accurate force calculations for airfoils moving through fluids like air or water. This is achieved by calculating the lift and drag forces for each airfoil on the boat: the sail, centerboard, and rudder."
+          ]
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "videos": [],
+          "images": [
+            "/projects/Boat Simulator/project-details/c_freebody_image/freebody.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "The magnitudes of these forces is calculated using the lift or drag formula, and the direction of the force is either parallel to the fluid velocity (drag) or perpendicular to it (lift).\r\n\r\nThe magnitudes vary directly by the area of the airfoil and the coefficient of lift or drag, which is a function of angle of attack.\r\n\r\nThe magnitudes also vary directly by the properties of the fluid they travel in. The sail varies by the density and velocity of the apparent wind, while the centerboard forces are affected by different values set for the ocean's density and realtime apparent velocity."
+          ]
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "videos": [],
+          "images": [
+            "/projects/Boat Simulator/project-details/e_coefficientcharts/drag_lift_coefficients.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "The functions for the lift and drag coefficients of the airfoils are taken from empirical data, and approximated using piecewise functions to return an accurate coefficient for the state of the boat's airfoils at any direction relative to the fluid direction."
+          ]
+        }
+      }
+    ]
   },
   {
     "key": "C'est le Balloon",
@@ -219,7 +280,7 @@
           "videos": [],
           "images": [],
           "texts": [
-            "Original art, animations, and code. Developed in Unity. Horse modeled in Maya. Synchronous animations made using Maya's reference system.\r\n\r\nThe system allows the player to mounr a horse, toggling a new control scheme using the same inputs."
+            "Original art, animations, and code. Developed in Unity. Horse modeled in Maya. Synchronous animations made using Maya's reference system.\r\n\r\nThe mount system allows the player to mount a horse, toggling a new control scheme using the original user inputs.\r\n\r\nHorse controls include trotting and galloping."
           ]
         }
       }
@@ -246,7 +307,7 @@
           "videos": [],
           "images": [],
           "texts": [
-            "temp"
+            "Original art, animations, and code. Developed in Unity.\r\n\r\nInspired by the third person combat of Dark Souls.\r\n\r\nIntegrates third-person camera with a third-person melee conbat system. The system gives the player a light attack and a heavy attack mode. There are two animations for each mode that seamlessly blend with each other. Heavy and light attacks and also blend together in a combo. \r\n\r\nEach attack has an \"active frame\" attack window using unity Animation Event toggles. This gives each attack the structure of \"wind-up,\" \"attack,\" and \"recovery.\" During \"wind-up,\" the player's direction is controllable with both keyboard and mouse, creating a responsive and natural game feel.\r\n\r\nThe player is also equipped with a sprint and dodge roll.\r\n\r\nSee video for a full demo."
           ]
         }
       }

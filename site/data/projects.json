@@ -2,7 +2,7 @@
   {
     "title": "Boat Simulator",
     "staticImage": "/projects/Boat Simulator/boat-thumb.png",
-    "gifImage": "/projects/Boat Simulator/getshroomed.gif",
+    "gifImage": "/projects/Boat Simulator/boatdemo-low.gif",
     "description": "Physically accurate simulation of a boat using airfoil in a fluid dynamics",
     "tags": [
       "Software"
