@@ -30,8 +30,6 @@ function createVideoTemplate(data) {
     const img = document.createElement('img');
     img.src = data.images?.[0] || ''; //take first image if there are more than 1
     img.alt = 'Single Image';
-    img.style.maxWidth = '100%';
-    img.style.height = 'auto';
 
     container.appendChild(img);
     return container;
