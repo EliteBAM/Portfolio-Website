@@ -9,6 +9,7 @@
       {
         "templateID": "5",
         "data": {
+          "videos": [],
           "images": [],
           "texts": [
             "A balloon... and your soul. A game of balance... and reflection.\r\n\r\nSometimes? Games don’t need a beginning and an end."
@@ -18,6 +19,7 @@
       {
         "templateID": "1",
         "data": {
+          "videos": [],
           "images": [
             "/projects/C'est le Balloon/project-details/2/image5.gif"
           ],
@@ -27,6 +29,7 @@
       {
         "templateID": "5",
         "data": {
+          "videos": [],
           "images": [],
           "texts": [
             "\"We created a peaceful interactive experience that offers calming visuals and minimalistic gameplay. The game emphasizes the importance of the player’s thoughts and feelings as a big part of how the game is experienced. In that regard, we succeeded in our mission with C’est la balloon\""
@@ -36,6 +39,7 @@
       {
         "templateID": "1",
         "data": {
+          "videos": [],
           "images": [
             "/projects/C'est le Balloon/project-details/4/balloon_game.gif"
           ],
@@ -45,6 +49,7 @@
       {
         "templateID": "1",
         "data": {
+          "videos": [],
           "images": [
             "/projects/C'est le Balloon/project-details/5/balloon_unity.png"
           ],
@@ -54,6 +59,7 @@
       {
         "templateID": "5",
         "data": {
+          "videos": [],
           "images": [],
           "texts": [
             "Made in Unity. I made all the art, and coded the game.\r\n\r\nOur professor's favorite game was \"Mountain.\" Yes, the game where you stare at a mountain. I found this to be funny, and decided to make him something that was right up his alley.\r\n\r\nI did not make the audio effects or shaders for this game. \r\n\r\nTechnically there was a team, but nobody actually did anything. I just did it all and assigned different aspects to different people so we would all get a good grade."
@@ -68,6 +74,7 @@
       {
         "templateID": "5",
         "data": {
+          "videos": [],
           "images": [],
           "texts": [
             "Dynamic third-person camera programmed in C# with Unity.\r\n\r\nAble to perfectly stop camera clipping with only two raycasts.\r\n\r\n"
@@ -77,6 +84,7 @@
       {
         "templateID": "1",
         "data": {
+          "videos": [],
           "images": [
             "/projects/Collision-Aware Camera System/project-details/2/dynamic-camera.gif"
           ],
@@ -86,6 +94,7 @@
       {
         "templateID": "4",
         "data": {
+          "videos": [],
           "images": [],
           "texts": [
             "language-csharp",
@@ -98,6 +107,7 @@
       {
         "templateID": "4",
         "data": {
+          "videos": [],
           "images": [],
           "texts": [
             "language-csharp",
@@ -115,6 +125,7 @@
       {
         "templateID": "1",
         "data": {
+          "videos": [],
           "images": [
             "/projects/Dark Temple/project-details/1/dark-tower-2.png"
           ],
@@ -145,6 +156,7 @@
       {
         "templateID": "2",
         "data": {
+          "videos": [],
           "images": [
             "/projects/Infinidungeon/project-details/1/,Forest 1.png",
             "/projects/Infinidungeon/project-details/1/,Forest 2.png",
@@ -169,6 +181,7 @@
       {
         "templateID": "1",
         "data": {
+          "videos": [],
           "images": [
             "/projects/Infinite Procedural Terrain/project-details/1/minotaur_png.png"
           ],
@@ -187,11 +200,57 @@
   },
   {
     "key": "Mount System",
-    "value": null
+    "value": [
+      {
+        "templateID": "6",
+        "data": {
+          "videos": [
+            "/projects/Mount System/project-details/a_video/mount_video.mp4"
+          ],
+          "images": [
+            "/projects/Mount System/project-details/a_video/0_mount_thumb_new.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "Original art, animations, and code. Developed in Unity. Horse modeled in Maya. Synchronous animations made using Maya's reference system.\r\n\r\nThe system allows the player to mounr a horse, toggling a new control scheme using the same inputs."
+          ]
+        }
+      }
+    ]
   },
   {
     "key": "Souls-Like Character Controller",
-    "value": null
+    "value": [
+      {
+        "templateID": "6",
+        "data": {
+          "videos": [
+            "/projects/Souls-Like Character Controller/project-details/a_video/I Made DARK SOULS COMBAT in Unity! - Unity Melee Combat System - Robert (1080p, h264) (1).mp4"
+          ],
+          "images": [
+            "/projects/Souls-Like Character Controller/project-details/a_video/combat_controller_thumb.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "temp"
+          ]
+        }
+      }
+    ]
   },
   {
     "key": "Stylized Fantasy Turtle",
@@ -199,6 +258,7 @@
       {
         "templateID": "5",
         "data": {
+          "videos": [],
           "images": [],
           "texts": [
             "I created this asset for a game called Turtle Town, but it did not get used due to team dysfunction.\r\n\r\nI sculpted and retopologized the turtle model in ZBrush, painted the textures in Substance Painter, and rigged it in Maya LT.\r\n\r\nThe screenshots you see are in Unity engine with orthographic projection, as was the intended display format for the game project.\r\n\r\nThe turtle is rendered using a stylized shader which gives an outline effect as well as quantized lighting bands. The shader was part of my art direction, but I did not code it."
@@ -208,6 +268,7 @@
       {
         "templateID": "1",
         "data": {
+          "videos": [],
           "images": [
             "/projects/Stylized Fantasy Turtle/project-details/1/turtle-rig.png"
           ],
@@ -217,6 +278,7 @@
       {
         "templateID": "5",
         "data": {
+          "videos": [],
           "images": [],
           "texts": [
             "The game's focus was to build a base on the back of a giant, living turtle. On the back of the turtle are stylized trees and monolithic rocks that jut from its shell.\r\n\r\nThe turtle is rigged to animate 3 tiers of progress for the player. Each town hall upgrade clears rocks and trees from the back of the turtle, openning up new areas for the player to expand their city:"
@@ -226,6 +288,7 @@
       {
         "templateID": "1",
         "data": {
+          "videos": [],
           "images": [
             "/projects/Stylized Fantasy Turtle/project-details/3/turtle_townhall_lvl1.png"
           ],
@@ -235,6 +298,7 @@
       {
         "templateID": "1",
         "data": {
+          "videos": [],
           "images": [
             "/projects/Stylized Fantasy Turtle/project-details/4/turtle_townhall_lvl2.png"
           ],
@@ -244,6 +308,7 @@
       {
         "templateID": "1",
         "data": {
+          "videos": [],
           "images": [
             "/projects/Stylized Fantasy Turtle/project-details/5/turtle_townhall_lvl3.png"
           ],
@@ -262,6 +327,7 @@
       {
         "templateID": "1",
         "data": {
+          "videos": [],
           "images": [
             "/projects/World Generator/project-details/agif/worldgen_image.png"
           ],
@@ -271,6 +337,7 @@
       {
         "templateID": "5",
         "data": {
+          "videos": [],
           "images": [],
           "texts": [
             "This is a prototype for a procedural world generator that generates discrete sized worlds.\r\n\r\nThe intended use was for generating a tile-based world for a 2D top-down survival game."
@@ -280,6 +347,7 @@
       {
         "templateID": "1",
         "data": {
+          "videos": [],
           "images": [
             "/projects/World Generator/project-details/cperlingif/perlin noise demo.gif"
           ],
@@ -289,6 +357,7 @@
       {
         "templateID": "5",
         "data": {
+          "videos": [],
           "images": [],
           "texts": [
             "Refine world resolution, size, and \"feel\" with auto-updating perlin noise settings."
@@ -298,6 +367,7 @@
       {
         "templateID": "1",
         "data": {
+          "videos": [],
           "images": [
             "/projects/World Generator/project-details/elevelsgif/perlin_levels_demo.gif"
           ],
@@ -307,6 +377,7 @@
       {
         "templateID": "5",
         "data": {
+          "videos": [],
           "images": [],
           "texts": [
             "Perlin clamping levels can be adjusted to modify the water level, beach size, and overall landmass size."
@@ -316,6 +387,7 @@
       {
         "templateID": "1",
         "data": {
+          "videos": [],
           "images": [
             "/projects/World Generator/project-details/gvoronoigif/voronoi_demo.gif"
           ],
@@ -325,6 +397,7 @@
       {
         "templateID": "5",
         "data": {
+          "videos": [],
           "images": [],
           "texts": [
             "Voronoi noise is used to generate a biome map. Biomes can be added on the fly. Voronoi settings can be modified to change the number / size of biome groups, as well as the distance function used to classify a cell's biome. Traditional distance gives straight, harsh cutoffs, while Minkowski's distance formula yields cool twisty borders between biomes."
@@ -334,6 +407,7 @@
       {
         "templateID": "1",
         "data": {
+          "videos": [],
           "images": [
             "/projects/World Generator/project-details/igenprofiles/generator_profiles_demo.gif"
           ],
@@ -343,6 +417,7 @@
       {
         "templateID": "5",
         "data": {
+          "videos": [],
           "images": [],
           "texts": [
             "Biomes can also be created in a serialized generation profile. Profiles can be swapped on the fly to generate worlds or levels of different varieties."

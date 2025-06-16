@@ -1,1 +1,11 @@
-temp
+Original art, animations, and code. Developed in Unity.
+
+Inspired by the third person combat of Dark Souls.
+
+Integrates third-person camera with a third-person melee conbat system. The system gives the player a light attack and a heavy attack mode. There are two animations for each mode that seamlessly blend with each other. Heavy and light attacks and also blend together in a combo. 
+
+Each attack has an "active frame" attack window using unity Animation Event toggles. This gives each attack the structure of "wind-up," "attack," and "recovery." During "wind-up," the player's direction is controllable with both keyboard and mouse, creating a responsive and natural game feel.
+
+The player is also equipped with a sprint and dodge roll.
+
+See video for a full demo.

@@ -10,13 +10,11 @@ function createTitle(title) {
 function createSingleMediaTemplate(data) {
 
     const container = document.createElement('div');
-    container.className = 'template single-media';
+    container.className = 'single-media';
 
     const img = document.createElement('img');
     img.src = data.images?.[0] || ''; //take first image if there are more than 1
     img.alt = 'Single Image';
-    img.style.maxWidth = '100%';
-    img.style.height = 'auto';
 
     container.appendChild(img);
     return container;
@@ -27,11 +25,18 @@ function createVideoTemplate(data) {
     const container = document.createElement('div');
     container.className = 'single-media';
 
-    const img = document.createElement('img');
-    img.src = data.images?.[0] || ''; //take first image if there are more than 1
-    img.alt = 'Single Image';
+    const video = document.createElement('video');
+    video.controls = true;
+    video.poster = data.images?.[0] || undefined;
+    const source = document.createElement('source');
+    source.src = data.videos?.[0] || ''; //take first image if there are more than 1
+    source.type = source.src ? "video/mp4" : undefined; //if there is a video source, set the source type.
+    video.alt = 'mp4 media';
 
-    container.appendChild(img);
+
+    video.appendChild(source);
+    container.appendChild(video);
+
     return container;
 }
 
@@ -206,6 +211,9 @@ function generateModalContent(title, projectData) {
                 break;
             case '5':
                 modalContent.appendChild(createDescriptionTemplate(templateData.data));
+                break;
+            case '6':
+                modalContent.appendChild(createVideoTemplate(templateData.data));
                 break;
             default:
                 console.error('Unknown template ID:', templateData.templateID);

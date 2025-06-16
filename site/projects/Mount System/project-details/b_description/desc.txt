@@ -1,0 +1,5 @@
+Original art, animations, and code. Developed in Unity. Horse modeled in Maya. Synchronous animations made using Maya's reference system.
+
+The mount system allows the player to mount a horse, toggling a new control scheme using the original user inputs.
+
+Horse controls include trotting and galloping.

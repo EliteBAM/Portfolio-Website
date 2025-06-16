@@ -65,6 +65,11 @@ async function main() {
               const files = await fs.readdir(folderPath);
       
               //get content out of folder
+
+                    //find all videos to add to data (mp4 only guys im serious)
+              const videos = files
+                  .filter(file => file.endsWith('.mp4'))
+                  .map(file => `/projects/${projectDetailsEntry.key}/project-details/${folder}/${file}`);
   
                   //find all images and gifs to add to data
               const images = files
@@ -83,8 +88,9 @@ async function main() {
               //add all to data
               // Add all data under a named object
               const data = {
-                  images,
-                  texts
+                  "videos" : videos,
+                  "images" : images,
+                  "texts" : texts
               };
 
               sections.push({
