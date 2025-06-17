@@ -1,0 +1,9 @@
+This project represents a completed baseball batting training program built in Unity.
+
+The main structure of the program can be described as four systems running in parallel: 
+- the player input system
+- the pitch generation system
+- the baseball force simulation system
+- the bat collision detection system. 
+
+These four systems run continuously throughout the program’s operation and continuously pass relevant output data to each other that is then interpreted uniquely by each system in order for them to successfully fulfill their purposes. The player input system continually gathers sensory input data from the virtual reality apparatus, which is used to update the position and rotation of the player camera and the virtual baseball bat. The player input system also continually outputs relevant position data to be continuously interpreted by the bat collision system. In parallel, the pitch generation system manages a timer and generates a new baseball pitch with unique parameters once that timer reaches zero. The pitch generation system repeats this process continuously and passes on the pitch parameter data to the baseball force simulation system with each pitch generation. Once a pitch has been generated, the baseball force simulation system uses those pitch parameters to continuously simulate the magnus effect and other relevant forces throughout the lifetime of the ball’s trajectory until it collides with an object. It is this relationship between inputs and outputs of these continuous systems that define the general process of this program. 

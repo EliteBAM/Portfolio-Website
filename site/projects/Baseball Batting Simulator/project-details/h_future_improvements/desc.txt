@@ -1,0 +1,5 @@
+Though out of the scope for this project, future developments of this training program could include the following enhancements:
+
+1. Implementing motion capture data for the pitcher for more accurate pitch telegraphing.
+2. Implementing a PBR rendering workflow, using realistic custom Unity materials to give depth to the scene.
+3. Implementing a custom shader for realistic field grass, made in either Unity HLSL or Unity's Shader Graph.

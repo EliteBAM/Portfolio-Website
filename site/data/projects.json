@@ -1,5 +1,15 @@
 [
   {
+    "title": "Baseball Batting Simulator",
+    "staticImage": "/projects/Baseball Batting Simulator/0_project_gif_thumb.png",
+    "gifImage": "/projects/Baseball Batting Simulator/project_gif.gif",
+    "description": "Physics-simulated baseball batting and pitching simulator",
+    "tags": [
+      "Software",
+      "Art"
+    ]
+  },
+  {
     "title": "Boat Simulator",
     "staticImage": "/projects/Boat Simulator/boat-thumb.png",
     "gifImage": "/projects/Boat Simulator/boatdemo-low.gif",
@@ -57,7 +67,7 @@
   },
   {
     "title": "Frogger Clone",
-    "staticImage": "/projects/Frogger Clone/Frogger Clone new.png",
+    "staticImage": "/projects/Frogger Clone/Frogger Clone.png",
     "gifImage": "/projects/Frogger Clone/frogger.gif",
     "description": "Clone of Frogger made in Unity. Pixel perfect snapping. First level only.",
     "tags": [

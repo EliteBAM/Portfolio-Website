@@ -1,9 +1,8 @@
-Infinite Procedural Terrain.
+Infinite Procedural Voxel Terrain.
 
+(Bitshift, I probably don’t have to explain this one to you guys.)
 
-Bitshift, I probably don’t have to explain this one to you guys!
-
-I only 2D perlin noise and 2D chunking for this system.
+I used 2D perlin noise and 2D chunking for this system.
 
 I implemented chunking, mesh face optimization, and chunk streaming with Unity jobs system.
 

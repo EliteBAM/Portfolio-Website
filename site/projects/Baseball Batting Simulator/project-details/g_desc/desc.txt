@@ -1,0 +1,5 @@
+Above is a demo of the custom controller designed to be used with the Virtual Reality headset.
+
+The controller sends sensory data from a 9 degree of freedom sensor back to the simulation, where it is then processed to articulate the virtual baseball bat in the simulation.
+
+Using this controller, the player gets the realistic feel of holding a baseball bat, further enhancing the accuracy of the training simulation.
