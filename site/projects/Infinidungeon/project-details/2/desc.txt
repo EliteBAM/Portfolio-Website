@@ -1,0 +1,11 @@
+Infinidungeon is an early project I made in 8 days to challenge myself.
+
+I made all the textures, models, code... everything except the background music. Admittedly, the audio is the most lacking part.
+
+The player spawns on the outskirts of an ominous dungeon. When they enter, there is no turning back.
+
+The player must kill all the enemies in the current room to move on to the next one. The rooms go on forever as enemies get harder and more in number. The idea is to get the highest score you can before dying!
+
+The name Infinidungeon was inspired by the name of Infiniminer. The idea was to create infinite adventure rather than infinite survival!
+
+The full vision includes expanding rooms and hallways, loot, enemy variety, and... multiplayer?

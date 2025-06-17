@@ -429,8 +429,8 @@ pre {
 }
 
 .main-image {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 450px;
     object-fit: cover; /* Ensure the main image maintains its aspect ratio */
     margin-bottom: 10px;
 }

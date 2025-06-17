@@ -1,0 +1,4 @@
+I recreated the classic Frogger game in Unity. I set the game to display at a wonderfully low resolution, and recreated the effect of “pixel-perfect” snapping when sprites move in the scene.
+
+I downloaded and used all the original sprites and audio for the game, and mimicked the functionality of the first level: 3 lives, and 5 goals at the other side of the obstacles.
+

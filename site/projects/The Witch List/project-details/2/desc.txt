@@ -1,0 +1,3 @@
+The Witch List is a real-time multiplayer PvP spell casting mobile game! Players engage in exciting 1v1 online combat, casting spells with touch gestures and drawing of rune symbols. This project was made as a vertical slice demo at USC Games, and was published on the App Store (no longer available).
+
+I was responsible for designing and creating the characters and the primary combat arena featured in the game.

@@ -1,0 +1,6 @@
+EMPATH is a narrative-based VR action game. The player uses gesture controls to conjure spells from arcane gauntlets which they wield on both arms.
+
+The game was developed as a vertical slice at USC Games.
+
+I was responsible for designing the main character’s assets (first person arms and gauntlets) and the model for the final boss of the game. I also did animation integration in Unreal Engine and made some additional prop art, though the environments were mostly acquired assets due to a lack of 3D artists on the team (I was the only one).
+

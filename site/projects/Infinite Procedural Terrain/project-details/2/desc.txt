@@ -1,0 +1,16 @@
+Infinite Procedural Terrain.
+
+
+Bitshift, I probably don’t have to explain this one to you guys!
+
+I only 2D perlin noise and 2D chunking for this system.
+
+I implemented chunking, mesh face optimization, and chunk streaming with Unity jobs system.
+
+I wrote the code using C++ native data structures in C# wrappers. This allowed me to invoke the burst compiler, which heavily optimizes the machine code output.
+
+Between the burst compiler and the Jobs system, the chunks load extremely fast!
+
+I got enough satisfaction from this project by getting it to the state you currently see it. My goal was not to recreate Minecraft or make a voxel game— I just wanted to implement an infinite voxel world in my own way.
+
+Next steps would be adding trees by streaming neighboring chunk data to fix chunk seam issues and setting a water height level. That would add some nice features to the landscape!

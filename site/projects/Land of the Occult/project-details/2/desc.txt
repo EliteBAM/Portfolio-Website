@@ -1,0 +1,9 @@
+Land of the Occult is a little dungeon crawler roguelike I built in Unity. It has great vibes and I find it very fun and challenging, even though the code is a bit wonky! I'm adding this to my portfolio for the design and atmosphere check, as well as some pixel art.
+
+I designed the game and was the only one working in-engine.
+
+I made all the pixel art and animations for the main character and coded the game.
+
+I had some team members make the art for the environment and the art for the cult enemies.
+
+The end credits list way more people than who actually worked on it, as it was a school project with many "non-contributors." It was just me and two other artists as mentioned above.

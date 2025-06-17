@@ -42,7 +42,8 @@
     "gifImage": "/projects/EMPATH/empath_optimized_again.gif",
     "description": "",
     "tags": [
-      "Games"
+      "Games",
+      "Art"
     ]
   },
   {
@@ -55,9 +56,9 @@
     ]
   },
   {
-    "title": "FROGGER Clone",
-    "staticImage": "/projects/FROGGER Clone/Frogger Clone new.png",
-    "gifImage": "/projects/FROGGER Clone/getshroomed.gif",
+    "title": "Frogger Clone",
+    "staticImage": "/projects/Frogger Clone/Frogger Clone new.png",
+    "gifImage": "/projects/Frogger Clone/frogger.gif",
     "description": "Clone of Frogger made in Unity. Pixel perfect snapping. First level only.",
     "tags": [
       "Games"
@@ -65,8 +66,8 @@
   },
   {
     "title": "Hyperspace Drifter",
-    "staticImage": "/projects/Hyperspace Drifter/hyperspace-drifter-new.png",
-    "gifImage": "/projects/Hyperspace Drifter/getshroomed.gif",
+    "staticImage": "/projects/Hyperspace Drifter/0_drift_thumb.png",
+    "gifImage": "/projects/Hyperspace Drifter/hyperspace_drifter.gif",
     "description": "Hyperspace is the bridge between worlds. Unknown dangers await. Survive to escape... the Hyperspace Rift.",
     "tags": [
       "Games"

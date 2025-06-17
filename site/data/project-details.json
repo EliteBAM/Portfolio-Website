@@ -58,7 +58,7 @@
           "videos": [],
           "images": [],
           "texts": [
-            "The magnitudes of these forces is calculated using the lift or drag formula. The magnitudes vary directly by the area of the airfoil and the coefficient of lift or drag, which is a function of angle of attack.\r\n\r\nThe magnitudes also vary directly by the properties of the fluid they travel in. The sail varies by the density and velocity of the apparent wind, while the centerboard forces are affected by different values set for the ocean's density and realtime apparent velocity."
+            "The magnitudes of these forces are calculated using the lift or drag formula. The magnitudes vary directly by the area of the airfoil and the coefficient of lift or drag, which is a function of angle of attack.\r\n\r\nThe magnitudes also vary directly by the properties of the fluid they travel in. The sail varies by the density and velocity of the apparent wind, while the centerboard forces are affected by different values set for the ocean's density and realtime apparent velocity."
           ]
         }
       },
@@ -217,39 +217,157 @@
   },
   {
     "key": "EMPATH",
-    "value": null
+    "value": [
+      {
+        "templateID": "6",
+        "data": {
+          "videos": [
+            "/projects/EMPATH/project-details/1/empath_trailer.mp4"
+          ],
+          "images": [
+            "/projects/EMPATH/project-details/1/empath_thumb_trailer.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "EMPATH is a narrative-based VR action game. The player uses gesture controls to conjure spells from arcane gauntlets which they wield on both arms.\r\n\r\nThe game was developed as a vertical slice at USC Games.\r\n\r\nI was responsible for designing the main character’s assets (first person arms and gauntlets) and the model for the final boss of the game. I also did animation integration in Unreal Engine and made some additional prop art, though the environments were mostly acquired assets due to a lack of 3D artists on the team (I was the only one).\r\n\r\n"
+          ]
+        }
+      },
+      {
+        "templateID": "3",
+        "data": {
+          "videos": [],
+          "images": [
+            "/projects/EMPATH/project-details/3/a.png",
+            "/projects/EMPATH/project-details/3/b.png",
+            "/projects/EMPATH/project-details/3/c.png",
+            "/projects/EMPATH/project-details/3/d.png",
+            "/projects/EMPATH/project-details/3/e.png",
+            "/projects/EMPATH/project-details/3/f.png",
+            "/projects/EMPATH/project-details/3/g.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "2",
+        "data": {
+          "videos": [],
+          "images": [
+            "/projects/EMPATH/project-details/4/forearm_sweater.png",
+            "/projects/EMPATH/project-details/4/glove.png"
+          ],
+          "texts": []
+        }
+      }
+    ]
   },
   {
     "key": "Fighting Game Framework",
     "value": null
   },
   {
-    "key": "FROGGER Clone",
-    "value": null
+    "key": "Frogger Clone",
+    "value": [
+      {
+        "templateID": "6",
+        "data": {
+          "videos": [
+            "/projects/Frogger Clone/project-details/1/frogger_gameplay_video.mp4"
+          ],
+          "images": [
+            "/projects/Frogger Clone/project-details/1/frogger_video_thumb.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "I recreated the classic Frogger game in Unity. I set the game to display at a wonderfully low resolution, and recreated the effect of “pixel-perfect” snapping when sprites move in the scene.\r\n\r\nI downloaded and used all the original sprites and audio for the game, and mimicked the functionality of the first level: 3 lives, and 5 goals at the other side of the obstacles.\r\n\r\n"
+          ]
+        }
+      }
+    ]
   },
   {
     "key": "Hyperspace Drifter",
-    "value": null
+    "value": [
+      {
+        "templateID": "6",
+        "data": {
+          "videos": [
+            "/projects/Hyperspace Drifter/project-details/1/hyperspace_gameplay.mp4"
+          ],
+          "images": [
+            "/projects/Hyperspace Drifter/project-details/1/drift_thumb.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "Hyperspace drifter is an original game made in Unity 1 night.\r\n\r\n\"Hyperspace is the bridge between worlds. Unknown dangers await. Survive to escape... the Hyperspace Rift!\""
+          ]
+        }
+      }
+    ]
   },
   {
     "key": "Infinidungeon",
     "value": [
       {
-        "templateID": "2",
+        "templateID": "6",
+        "data": {
+          "videos": [
+            "/projects/Infinidungeon/project-details/1/infinidungeon_gameplay_small.mp4"
+          ],
+          "images": [
+            "/projects/Infinidungeon/project-details/1/infinidungeon_video_thumb.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "Infinidungeon is an early project I made in 8 days to challenge myself.\r\n\r\nI made all the textures, models, code... everything except the background music. Admittedly, the audio is the most lacking part.\r\n\r\nThe player spawns on the outskirts of an ominous dungeon. When they enter, there is no turning back.\r\n\r\nThe player must kill all the enemies in the current room to move on to the next one. The rooms go on forever as enemies get harder and more in number. The idea is to get the highest score you can before dying!\r\n\r\nThe name Infinidungeon was inspired by the name of Infiniminer. The idea was to create infinite adventure rather than infinite survival!\r\n\r\nThe full vision includes expanding rooms and hallways, loot, enemy variety, and... multiplayer?"
+          ]
+        }
+      },
+      {
+        "templateID": "3",
         "data": {
           "videos": [],
           "images": [
-            "/projects/Infinidungeon/project-details/1/,Forest 1.png",
-            "/projects/Infinidungeon/project-details/1/,Forest 2.png",
-            "/projects/Infinidungeon/project-details/1/Dungeon 1.png",
-            "/projects/Infinidungeon/project-details/1/Dungeon 2.png",
-            "/projects/Infinidungeon/project-details/1/Dungeon 3.png",
-            "/projects/Infinidungeon/project-details/1/Dungeon 4.png",
-            "/projects/Infinidungeon/project-details/1/Dungeon 5.png",
-            "/projects/Infinidungeon/project-details/1/Dungeon 6.png",
-            "/projects/Infinidungeon/project-details/1/Dungeon 7.png",
-            "/projects/Infinidungeon/project-details/1/Infinidungeon_Death Screen.png",
-            "/projects/Infinidungeon/project-details/1/_Main Menu.png"
+            "/projects/Infinidungeon/project-details/3/,Forest 1.png",
+            "/projects/Infinidungeon/project-details/3/,Forest 2.png",
+            "/projects/Infinidungeon/project-details/3/Dungeon 1.png",
+            "/projects/Infinidungeon/project-details/3/Dungeon 2.png",
+            "/projects/Infinidungeon/project-details/3/Dungeon 3.png",
+            "/projects/Infinidungeon/project-details/3/Dungeon 4.png",
+            "/projects/Infinidungeon/project-details/3/Dungeon 5.png",
+            "/projects/Infinidungeon/project-details/3/Dungeon 6.png",
+            "/projects/Infinidungeon/project-details/3/Dungeon 7.png",
+            "/projects/Infinidungeon/project-details/3/Infinidungeon_Death Screen.png",
+            "/projects/Infinidungeon/project-details/3/_Main Menu.png"
           ],
           "texts": []
         }
@@ -264,20 +382,113 @@
         "data": {
           "videos": [],
           "images": [
-            "/projects/Infinite Procedural Terrain/project-details/1/minotaur_png.png"
+            "/projects/Infinite Procedural Terrain/project-details/1/unity_craft_new.png"
           ],
           "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "Infinite Procedural Terrain.\r\n\r\n\r\nBitshift, I probably don’t have to explain this one to you guys!\r\n\r\nI only 2D perlin noise and 2D chunking for this system.\r\n\r\nI implemented chunking, mesh face optimization, and chunk streaming with Unity jobs system.\r\n\r\nI wrote the code using C++ native data structures in C# wrappers. This allowed me to invoke the burst compiler, which heavily optimizes the machine code output.\r\n\r\nBetween the burst compiler and the Jobs system, the chunks load extremely fast!\r\n\r\nI got enough satisfaction from this project by getting it to the state you currently see it. My goal was not to recreate Minecraft or make a voxel game— I just wanted to implement an infinite voxel world in my own way.\r\n\r\nNext steps would be adding trees by streaming neighboring chunk data to fix chunk seam issues and setting a water height level. That would add some nice features to the landscape!"
+          ]
         }
       }
     ]
   },
   {
     "key": "Javascript Raytracer",
-    "value": null
+    "value": [
+      {
+        "templateID": "1",
+        "data": {
+          "videos": [],
+          "images": [
+            "/projects/Javascript Raytracer/project-details/1/raytracer.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "I built a raytracer in JavaScript, integrated in an Electron environment with Vite (hi Bitshift!). I made this project to gain implementation experience with raytracers from the ground up while also priming my JavaScript skills.\r\n\r\nI implemented matrices, vectors, points, rays, and all the associated math functions between them from scratch.\r\n\r\nI implemented sphere rendering for now using sphere intersection calculations.\r\n\r\nI then implemented the main render function, which follows a phong lighting model.\r\n\r\nThe renderer is currently offline, but I’m excited at the idea of GPU accelerating it with WebGPU just for fun! I already wrote all the data structures to use performant data types, and it’s quite fun having a JS renderer running as its own Electron app!\r\n\r\nDear Bitshift and Notch— I hope you like it, even though I know it’s still simple. I built it in a week in order to add to my portfolio for you. It was really fun and I can build anything!"
+          ]
+        }
+      },
+      {
+        "templateID": "4",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "language-javascript",
+            "The Tuple prototype is the base for Point, Vector, and Color:",
+            "const tuple = {\r\n\r\n    add(other) {\r\n        const thisdat = this.data;\r\n        const otherdat = other.data;\r\n\r\n        return new this.constructor(\r\n            thisdat[0] + otherdat[0],\r\n            thisdat[1] + otherdat[1],\r\n            thisdat[2] + otherdat[2]\r\n        );\r\n    },\r\n\r\n    subtract(other) {\r\n        const thisdat = this.data;\r\n        const otherdat = other.data;\r\n\r\n        console.log(\"this object's data: \", thisdat[0], \", \", thisdat[1], \", \", thisdat[2]);\r\n        console.log(\"other object's data: \", otherdat[0], \", \", otherdat[1], \", \", otherdat[2]);\r\n\r\n        return new this.constructor(\r\n            thisdat[0] - otherdat[0],\r\n            thisdat[1] - otherdat[1],\r\n            thisdat[2] - otherdat[2]\r\n        );\r\n    },\r\n\r\n    negate() { //operates on the Float32Array of calling object\r\n        const data = this.data;\r\n\r\n        return new this.constructor(\r\n            -data[0],\r\n            -data[1],\r\n            -data[2]\r\n        );\r\n    },\r\n\r\n    scalarMult(scalar) { //operates on the Float32Array of calling object\r\n        const data = this.data;\r\n\r\n        return new this.constructor(\r\n            data[0] * scalar,\r\n            data[1] * scalar,\r\n            data[2] * scalar\r\n        );\r\n    },\r\n\r\n    scalarDiv(scalar) { //operates on the Float32Array of calling object\r\n        const data = this.data;\r\n\r\n        return new this.constructor(\r\n            data[0] / scalar,\r\n            data[1] / scalar,\r\n            data[2] / scalar\r\n        );\r\n    },\r\n\r\n    magnitude() {\r\n        return Math.sqrt(this.data[0]**2 + this.data[1]**2 + this.data[2]**2 + this.data[3]**2)\r\n    },\r\n\r\n    normalize() {\r\n        const magnitude = this.magnitude();\r\n        if (magnitude === 0) return this;\r\n        return this.scalarDiv(magnitude);\r\n    }\r\n\r\n};\r\n\r\nexport default tuple;",
+            ""
+          ]
+        }
+      },
+      {
+        "templateID": "4",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "language-javascript",
+            "Below is the Matrix4x4 object. All math operations are hard-coded and avoid looping and branching for maximum performance. Entries are stored in a one-dimensional Float32Array with smart indexing, also to maximize performance:",
+            "import matrix from './matrix';\r\nimport Matrix3x3 from './matrix3x3';\r\nimport Vector from './vector';\r\nimport Point from './point';\r\n\r\nfunction Matrix4x4(elements) {\r\n    this.size = 4;\r\n    this.elements = elements || new Float32Array(16).fill(0);\r\n}\r\n\r\nMatrix4x4.prototype = Object.create(matrix);\r\nMatrix4x4.prototype.constructor = Matrix4x4;\r\n\r\n//this is not part of the matrix prototype because only 4x4s are multiplied in this renderer\r\nMatrix4x4.prototype.matrixMultiply = function (other) {\r\n    return new Matrix4x4([\r\n        //row 1\r\n        this.getElement(0, 0) * other.getElement(0, 0) + this.getElement(0, 1) * other.getElement(1, 0) + this.getElement(0, 2) * other.getElement(2, 0) + this.getElement(0, 3) * other.getElement(3, 0),\r\n        this.getElement(0, 0) * other.getElement(0, 1) + this.getElement(0, 1) * other.getElement(1, 1) + this.getElement(0, 2) * other.getElement(2, 1) + this.getElement(0, 3) * other.getElement(3, 1),\r\n        this.getElement(0, 0) * other.getElement(0, 2) + this.getElement(0, 1) * other.getElement(1, 2) + this.getElement(0, 2) * other.getElement(2, 2) + this.getElement(0, 3) * other.getElement(3, 2),\r\n        this.getElement(0, 0) * other.getElement(0, 3) + this.getElement(0, 1) * other.getElement(1, 3) + this.getElement(0, 2) * other.getElement(2, 3) + this.getElement(0, 3) * other.getElement(3, 3),\r\n        //row 2\r\n        this.getElement(1, 0) * other.getElement(0, 0) + this.getElement(1, 1) * other.getElement(1, 0) + this.getElement(1, 2) * other.getElement(2, 0) + this.getElement(1, 3) * other.getElement(3, 0),\r\n        this.getElement(1, 0) * other.getElement(0, 1) + this.getElement(1, 1) * other.getElement(1, 1) + this.getElement(1, 2) * other.getElement(2, 1) + this.getElement(1, 3) * other.getElement(3, 1),\r\n        this.getElement(1, 0) * other.getElement(0, 2) + this.getElement(1, 1) * other.getElement(1, 2) + this.getElement(1, 2) * other.getElement(2, 2) + this.getElement(1, 3) * other.getElement(3, 2),\r\n        this.getElement(1, 0) * other.getElement(0, 3) + this.getElement(1, 1) * other.getElement(1, 3) + this.getElement(1, 2) * other.getElement(2, 3) + this.getElement(1, 3) * other.getElement(3, 3),\r\n        //row 3\r\n        this.getElement(2, 0) * other.getElement(0, 0) + this.getElement(2, 1) * other.getElement(1, 0) + this.getElement(2, 2) * other.getElement(2, 0) + this.getElement(2, 3) * other.getElement(3, 0),\r\n        this.getElement(2, 0) * other.getElement(0, 1) + this.getElement(2, 1) * other.getElement(1, 1) + this.getElement(2, 2) * other.getElement(2, 1) + this.getElement(2, 3) * other.getElement(3, 1),\r\n        this.getElement(2, 0) * other.getElement(0, 2) + this.getElement(2, 1) * other.getElement(1, 2) + this.getElement(2, 2) * other.getElement(2, 2) + this.getElement(2, 3) * other.getElement(3, 2),\r\n        this.getElement(2, 0) * other.getElement(0, 3) + this.getElement(2, 1) * other.getElement(1, 3) + this.getElement(2, 2) * other.getElement(2, 3) + this.getElement(2, 3) * other.getElement(3, 3),\r\n        //row 4\r\n        this.getElement(3, 0) * other.getElement(0, 0) + this.getElement(3, 1) * other.getElement(1, 0) + this.getElement(3, 2) * other.getElement(2, 0) + this.getElement(3, 3) * other.getElement(3, 0),\r\n        this.getElement(3, 0) * other.getElement(0, 1) + this.getElement(3, 1) * other.getElement(1, 1) + this.getElement(3, 2) * other.getElement(2, 1) + this.getElement(3, 3) * other.getElement(3, 1),\r\n        this.getElement(3, 0) * other.getElement(0, 2) + this.getElement(3, 1) * other.getElement(1, 2) + this.getElement(3, 2) * other.getElement(2, 2) + this.getElement(3, 3) * other.getElement(3, 2),\r\n        this.getElement(3, 0) * other.getElement(0, 3) + this.getElement(3, 1) * other.getElement(1, 3) + this.getElement(3, 2) * other.getElement(2, 3) + this.getElement(3, 3) * other.getElement(3, 3),\r\n    ]);\r\n}\r\n\r\nMatrix4x4.prototype.vectorMultiply = function (vector) {\r\n    return new Vector(\r\n        //w would be 0 in all cases\r\n        this.getElement(0, 0) * vector.x + this.getElement(0, 1) * vector.y + this.getElement(0, 2) * vector.z + this.getElement(0, 3) * vector.w,\r\n        this.getElement(1, 0) * vector.x + this.getElement(1, 1) * vector.y + this.getElement(1, 2) * vector.z + this.getElement(1, 3) * vector.w,\r\n        this.getElement(2, 0) * vector.x + this.getElement(2, 1) * vector.y + this.getElement(2, 2) * vector.z + this.getElement(2, 3) * vector.w\r\n    );\r\n}\r\n\r\nMatrix4x4.prototype.pointMultiply = function (point) {\r\n    console.log(\"multiplying point by matrix\");\r\n    return new Point(\r\n        //w would be 1 in all cases\r\n        this.getElement(0, 0) * point.x + this.getElement(0, 1) * point.y + this.getElement(0, 2) * point.z + this.getElement(0, 3) * point.w,\r\n        this.getElement(1, 0) * point.x + this.getElement(1, 1) * point.y + this.getElement(1, 2) * point.z + this.getElement(1, 3) * point.w,\r\n        this.getElement(2, 0) * point.x + this.getElement(2, 1) * point.y + this.getElement(2, 2) * point.z + this.getElement(2, 3) * point.w\r\n    );\r\n}\r\n\r\nMatrix4x4.prototype.transpose = function () {\r\n    return new Matrix4x4([\r\n        this.getElement(0, 0), this.getElement(1, 0), this.getElement(2, 0), this.getElement(3, 0),\r\n        this.getElement(0, 1), this.getElement(1, 1), this.getElement(2, 1), this.getElement(3, 1),\r\n        this.getElement(0, 2), this.getElement(1, 2), this.getElement(2, 2), this.getElement(3, 2),\r\n        this.getElement(0, 3), this.getElement(1, 3), this.getElement(2, 3), this.getElement(3, 3),\r\n    ]);\r\n}\r\n\r\nMatrix4x4.prototype.subMatrix = function(removeRowIndex, removeColIndex) {\r\n    // hardcoded to avoid branching for performance\r\n    switch (`${removeRowIndex}${removeColIndex}`) {\r\n        case '00': return new Matrix3x3([this.getElement(1, 1), this.getElement(1, 2), this.getElement(1, 3), \r\n                                         this.getElement(2, 1), this.getElement(2, 2), this.getElement(2, 3),\r\n                                         this.getElement(3, 1), this.getElement(3, 2), this.getElement(3, 3)\r\n                                        ]);\r\n        case '01': return new Matrix3x3([this.getElement(1, 0), this.getElement(1, 2), this.getElement(1, 3), \r\n                                         this.getElement(2, 0), this.getElement(2, 2), this.getElement(2, 3),\r\n                                         this.getElement(3, 0), this.getElement(3, 2), this.getElement(3, 3)\r\n                                        ]);\r\n        case '02': return new Matrix3x3([this.getElement(1, 0), this.getElement(1, 1), this.getElement(1, 3), \r\n                                         this.getElement(2, 0), this.getElement(2, 1), this.getElement(2, 3),\r\n                                         this.getElement(3, 0), this.getElement(3, 1), this.getElement(3, 3)\r\n                                        ]);\r\n        case '03': return new Matrix3x3([this.getElement(1, 0), this.getElement(1, 1), this.getElement(1, 2), \r\n                                         this.getElement(2, 0), this.getElement(2, 1), this.getElement(2, 2),\r\n                                         this.getElement(3, 0), this.getElement(3, 1), this.getElement(3, 2)\r\n                                        ]);\r\n\r\n        case '10': return new Matrix3x3([this.getElement(0, 1), this.getElement(0, 2), this.getElement(0, 3), \r\n                                         this.getElement(2, 1), this.getElement(2, 2), this.getElement(2, 3),\r\n                                         this.getElement(3, 1), this.getElement(3, 2), this.getElement(3, 3)\r\n                                        ]);\r\n        case '11': return new Matrix3x3([this.getElement(0, 0), this.getElement(0, 2), this.getElement(0, 3), \r\n                                         this.getElement(2, 0), this.getElement(2, 2), this.getElement(2, 3),\r\n                                         this.getElement(3, 0), this.getElement(3, 2), this.getElement(3, 3)\r\n                                        ]);\r\n        case '12': return new Matrix3x3([this.getElement(0, 0), this.getElement(0, 1), this.getElement(0, 3), \r\n                                         this.getElement(2, 0), this.getElement(2, 1), this.getElement(2, 3),\r\n                                         this.getElement(3, 0), this.getElement(3, 1), this.getElement(3, 3)\r\n                                        ]);\r\n        case '13': return new Matrix3x3([this.getElement(0, 0), this.getElement(0, 1), this.getElement(0, 2), \r\n                                         this.getElement(2, 0), this.getElement(2, 1), this.getElement(2, 2),\r\n                                         this.getElement(3, 0), this.getElement(3, 1), this.getElement(3, 2)\r\n                                        ]);\r\n\r\n        case '20': return new Matrix3x3([this.getElement(0, 1), this.getElement(0, 2), this.getElement(0, 3), \r\n                                         this.getElement(1, 1), this.getElement(1, 2), this.getElement(1, 3),\r\n                                         this.getElement(3, 1), this.getElement(3, 2), this.getElement(3, 3)\r\n                                        ]);\r\n        case '21': return new Matrix3x3([this.getElement(0, 0), this.getElement(0, 2), this.getElement(0, 3), \r\n                                         this.getElement(1, 0), this.getElement(1, 2), this.getElement(1, 3),\r\n                                         this.getElement(3, 0), this.getElement(3, 2), this.getElement(3, 3)\r\n                                        ]);\r\n        case '22': return new Matrix3x3([this.getElement(0, 0), this.getElement(0, 1), this.getElement(0, 3), \r\n                                         this.getElement(1, 0), this.getElement(1, 1), this.getElement(1, 3),\r\n                                         this.getElement(3, 0), this.getElement(3, 1), this.getElement(3, 3)\r\n                                        ]);\r\n        case '23': return new Matrix3x3([this.getElement(0, 0), this.getElement(0, 1), this.getElement(0, 2), \r\n                                         this.getElement(1, 0), this.getElement(1, 1), this.getElement(1, 2),\r\n                                         this.getElement(3, 0), this.getElement(3, 1), this.getElement(3, 2)\r\n                                        ]);\r\n    \r\n        case '30': return new Matrix3x3([this.getElement(0, 1), this.getElement(0, 2), this.getElement(0, 3), \r\n                                         this.getElement(1, 1), this.getElement(1, 2), this.getElement(1, 3),\r\n                                         this.getElement(2, 1), this.getElement(2, 2), this.getElement(2, 3)\r\n                                        ]);\r\n        case '31': return new Matrix3x3([this.getElement(0, 0), this.getElement(0, 2), this.getElement(0, 3), \r\n                                         this.getElement(1, 0), this.getElement(1, 2), this.getElement(1, 3),\r\n                                         this.getElement(2, 0), this.getElement(2, 2), this.getElement(2, 3)\r\n                                        ]);\r\n        case '32': return new Matrix3x3([this.getElement(0, 0), this.getElement(0, 1), this.getElement(0, 3), \r\n                                         this.getElement(1, 0), this.getElement(1, 1), this.getElement(1, 3),\r\n                                         this.getElement(2, 0), this.getElement(2, 1), this.getElement(2, 3)\r\n                                        ]);\r\n        case '33': return new Matrix3x3([this.getElement(0, 0), this.getElement(0, 1), this.getElement(0, 2), \r\n                                         this.getElement(1, 0), this.getElement(1, 1), this.getElement(1, 2),\r\n                                         this.getElement(2, 0), this.getElement(2, 1), this.getElement(2, 2)\r\n                                        ]);\r\n    }\r\n    \r\n    throw new Error('Invalid row/col');\r\n}\r\n\r\nMatrix4x4.prototype.minor = function (row, col) {\r\n    return this.subMatrix(row, col).determinant();\r\n}\r\n\r\nMatrix4x4.prototype.cofactor = function (row, col) {\r\n    return (row + col) % 2 == 0 ? this.minor(row, col) : -this.minor(row, col);\r\n}\r\n\r\nMatrix4x4.prototype.determinant = function () {\r\n    return this.getElement(0, 0) * this.cofactor(0, 0) + this.getElement(0, 1) * this.cofactor(0, 1) + this.getElement(0, 2) * this.cofactor(0, 2) + this.getElement(0, 3) * this.cofactor(0, 3);\r\n}\r\n\r\nMatrix4x4.prototype.inverse = function () {\r\n\r\n    const det = this.determinant();\r\n\r\n    let cofactorMatrix = new Matrix4x4([\r\n        this.cofactor(0, 0), this.cofactor(0, 1), this.cofactor(0, 2), this.cofactor(0, 3),\r\n        this.cofactor(1, 0), this.cofactor(1, 1), this.cofactor(1, 2), this.cofactor(1, 3),\r\n        this.cofactor(2, 0), this.cofactor(2, 1), this.cofactor(2, 2), this.cofactor(2, 3),\r\n        this.cofactor(3, 0), this.cofactor(3, 1), this.cofactor(3, 2), this.cofactor(3, 3)\r\n    ]);\r\n\r\n    cofactorMatrix = cofactorMatrix.transpose();\r\n    \r\n    cofactorMatrix.elementwiseDiv(det);\r\n\r\n    return cofactorMatrix;\r\n}\r\n\r\nMatrix4x4.getIdentity = function() {\r\n    return new Matrix4x4([\r\n        1, 0, 0, 0,\r\n        0, 1, 0, 0,\r\n        0, 0, 1, 0,\r\n        0, 0, 0, 1\r\n    ]);\r\n}\r\n\r\n//Transformation functions:\r\n\r\n\r\nMatrix4x4.prototype.toString = function() {\r\n    return `\\n\r\n            [${this.getElement(0, 0)}, ${this.getElement(0, 1)}, ${this.getElement(0, 2)}, ${this.getElement(0, 3)}]\\n\r\n            [${this.getElement(1, 0)}, ${this.getElement(1, 1)}, ${this.getElement(1, 2)}, ${this.getElement(1, 3)}]\\n\r\n            [${this.getElement(2, 0)}, ${this.getElement(2, 1)}, ${this.getElement(2, 2)}, ${this.getElement(2, 3)}]\\n\r\n            [${this.getElement(3, 0)}, ${this.getElement(3, 1)}, ${this.getElement(3, 2)}, ${this.getElement(3, 3)}]`;\r\n}\r\n\r\n\r\nexport default Matrix4x4;",
+            ""
+          ]
+        }
+      },
+      {
+        "templateID": "4",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "language-javascript",
+            "Here is the main render loop from \"renderer-entry.js\":",
+            "function rayTraceSphere() {\r\n    ctx.clearRect(0, 0, canvas.width, canvas.height);\r\n\r\n\r\n    //Set Up Scene\r\n    let rayOrigin = new Point(0, 0, -5);\r\n    let wall_z = 10;\r\n    let wall_size = 7;\r\n    let canvas_pixels = canvas.width;\r\n    let pixel_size = wall_size / canvas_pixels;\r\n    let half = wall_size / 2;\r\n\r\n    let raytracerCanvas = new Canvas(canvas_pixels, canvas_pixels);\r\n    const red = new Color(0, 0.6, 1);\r\n\r\n    //CREATE SPHERE\r\n    let sphere = new Sphere(1); //unit sphere at origin with ID: 1\r\n\r\n    //Set Sphere Transform\r\n    let scaleMat = scalingMatrix(1, 0.7, 1.35);\r\n    let rotY = rotationMatrix_Y(.2);\r\n    let rotZ = rotationMatrix_Z(Math.PI/2 * 1.5);\r\n    sphere.transform = rotY.matrixMultiply(rotZ).matrixMultiply(scaleMat);\r\n\r\n    //Set Sphere Material\r\n    sphere.material = new PhongMaterial();\r\n    sphere.material.color = red;//new Color(1, 0.2, 1);\r\n\r\n    //CREATE LIGHT\r\n    let light = new PointLight(new Point(-10, 10, -10), new Color(1, 1, 1));\r\n\r\n\r\n    //Shoot Rays from origin to virtual pixel wall\r\n    for (let y = 0; y < raytracerCanvas.height; y++) {\r\n        let world_y = half - pixel_size * y;\r\n        for (let x = 0; x < raytracerCanvas.width; x++) {\r\n\r\n            let world_x = -half + pixel_size * x;\r\n\r\n            let position = new Point(world_x, world_y, wall_z);\r\n\r\n            let ray = new Ray(rayOrigin, position.subtract(rayOrigin).normalize());\r\n\r\n            let hit = sphere.intersect(ray).getHit();\r\n\r\n            if(hit != null) {\r\n                //get hit point\r\n                let worldPoint = ray.position(hit.t);\r\n\r\n                //get normal at point on the hit object\r\n                let normal = hit.object.normalAt(worldPoint);\r\n\r\n                //get eye vector\r\n                let eye = ray.direction.negate();\r\n\r\n                //calculate the final color of the pixel using phong lighting model\r\n                let pixelColor = hit.object.material.lightPixel(light, worldPoint, eye, normal);\r\n                \r\n                //write position to pixel on buffer\r\n                raytracerCanvas.writePixel(x, y, pixelColor);\r\n            }\r\n\r\n\r\n        }\r\n    }\r\n\r\n    let imageData = new ImageData(raytracerCanvas.toPixelBuffer(), raytracerCanvas.width, raytracerCanvas.height);\r\n\r\n    ctx.putImageData(imageData, 0, 0);\r\n}",
+            "Please see the full source code on GitHub for more details, linked at the top of this page."
+          ]
+        }
+      }
+    ]
   },
   {
     "key": "Land of the Occult",
-    "value": null
+    "value": [
+      {
+        "templateID": "6",
+        "data": {
+          "videos": [
+            "/projects/Land of the Occult/project-details/1/land_of_the_occult_gameplay_small.mp4"
+          ],
+          "images": [
+            "/projects/Land of the Occult/project-details/1/land_of_the_occult_video_thumb.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "Land of the Occult is a little dungeon crawler roguelike I built in Unity. It has great vibes and I find it very fun and challenging, even though the code is a bit wonky! I'm adding this to my portfolio for the design and atmosphere check, as well as some pixel art.\r\n\r\nI designed the game and was the only one working in-engine.\r\n\r\nI made all the pixel art and animations for the main character and coded the game.\r\n\r\nI had some team members make the art for the environment and the art for the cult enemies.\r\n\r\nThe end credits list way more people than who actually worked on it, as it was a school project with many \"non-contributors.\" It was just me and two other artists as mentioned above.\r\n"
+          ]
+        }
+      }
+    ]
   },
   {
     "key": "Mount System",
@@ -400,7 +611,87 @@
   },
   {
     "key": "The Witch List",
-    "value": null
+    "value": [
+      {
+        "templateID": "6",
+        "data": {
+          "videos": [
+            "/projects/The Witch List/project-details/1/witch_list_trailer.mp4"
+          ],
+          "images": [
+            "/projects/The Witch List/project-details/1/witch_list_trailer_thumn.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "The Witch List is a real-time multiplayer PvP spell casting mobile game! Players engage in exciting 1v1 online combat, casting spells with touch gestures and drawing of rune symbols. This project was made as a vertical slice demo at USC Games, and was published on the App Store (no longer available).\r\n\r\nI was responsible for designing and creating the characters and the primary combat arena featured in the game."
+          ]
+        }
+      },
+      {
+        "templateID": "2",
+        "data": {
+          "videos": [],
+          "images": [
+            "/projects/The Witch List/project-details/3/scene_1.png",
+            "/projects/The Witch List/project-details/3/scene_2.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "I used Zbrush and Maya to 3D model the trees, runic arcane bench, bushes and shrubbery. I used ZBrush and Maya to sculpt and topologize the main character’s faces, eyes, and male character body.\r\n\r\nFor texturing, I used Substance Painter and Maya."
+          ]
+        }
+      },
+      {
+        "templateID": "3",
+        "data": {
+          "videos": [],
+          "images": [
+            "/projects/The Witch List/project-details/5/a_female_head.png",
+            "/projects/The Witch List/project-details/5/b_male_head_tex.png",
+            "/projects/The Witch List/project-details/5/eye_orange.png",
+            "/projects/The Witch List/project-details/5/eye_purple.png",
+            "/projects/The Witch List/project-details/5/male_body.png",
+            "/projects/The Witch List/project-details/5/male_head.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "2",
+        "data": {
+          "videos": [],
+          "images": [
+            "/projects/The Witch List/project-details/6/bench_final.png",
+            "/projects/The Witch List/project-details/6/tree_final.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "I fully integrated all the assets into Unity, and designed the final game map in-engine.\r\n\r\nThe shipped game featured some graphical downgrades in order to be compatible with weaker android phones."
+          ]
+        }
+      }
+    ]
   },
   {
     "key": "World Generator",

@@ -1,0 +1,3 @@
+I fully integrated all the assets into Unity, and designed the final game map in-engine.
+
+The shipped game featured some graphical downgrades in order to be compatible with weaker android phones.
