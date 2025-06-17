@@ -1,1 +1,3 @@
-The functions for the lift and drag coefficients of the airfoils are taken from empirical data, and approximated using piecewise functions to return an accurate coefficient for the state of the boat's airfoils at any direction relative to the fluid direction.
+The magnitudes of these forces are calculated using the lift or drag formula. The magnitudes vary directly by the area of the airfoil and the coefficient of lift or drag, which is a function of angle of attack.
+
+The magnitudes also vary directly by the properties of the fluid they travel in. The sail varies by the density and velocity of the apparent wind, while the centerboard forces are affected by different values set for the ocean's density and realtime apparent velocity.
