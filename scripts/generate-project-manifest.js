@@ -1,4 +1,4 @@
-//run as prebuild so that api function only includes manifest that directs to CDN cache, instead of bundling all static data
+//run as build script so that static function only includes manifest that directs to CDN cache, instead of bundling all static data
 
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -8,25 +8,38 @@ async function main() {
   console.log("running main");
 
   const base = path.join(process.cwd(), 'site', 'projects');
-  const folders = await fs.readdir(base);
+  const baseContents = await fs.readdir(base, { withFileTypes: true });
+  const folders = baseContents.filter(entry => entry.isDirectory()).map(entry => entry.name);
+
+  const indices = (await fs.readFile(path.join(base, 'indices.txt'), "utf-8")).split(',').map(index => index.trim());      
+  let indicesCount = 0;
 
   //generate array of project thumbnail object data
-  const projects = await Promise.all(
+  let projects = await Promise.all(
     folders.map(async folder => {
-      const dir = path.join(base, folder); 
+      const dir = path.join(base, folder);
       const files = await fs.readdir(dir);
 
       return {
-        title: folder,
-        staticImage: `/projects/${folder}/${files.find(f => f.endsWith('.png'))}`,
-        gifImage:    `/projects/${folder}/${files.find(f => f.endsWith('.gif'))}`,
-        description: await fs.readFile(path.join(dir, 'description.txt'), 'utf8'),
-        tags: (await fs.readFile(path.join(dir, 'tags.txt'), 'utf8'))
-                .split(',').map(t => t.trim()),
+        [indices[indicesCount++]]: {
+                                    title: folder,
+                                    staticImage: `/projects/${folder}/${files.find(f => f.endsWith('.png'))}`,
+                                    gifImage:    `/projects/${folder}/${files.find(f => f.endsWith('.gif'))}`,
+                                    description: await fs.readFile(path.join(dir, 'description.txt'), 'utf8'),
+                                    tags: (await fs.readFile(path.join(dir, 'tags.txt'), 'utf8'))
+                                            .split(',').map(t => t.trim()),
+                                  }
       };
     })
 
   );
+  
+  projects = projects.sort((obj1, obj2) => {
+      const key1 = Object.keys(obj1)[0];
+      const key2 = Object.keys(obj2)[0];
+
+      return parseInt(key1) - parseInt(key2);
+  }).map(obj => Object.values(obj)[0]);
 
   console.log("projects generated");
 
