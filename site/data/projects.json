@@ -1,8 +1,8 @@
 [
   {
     "title": "Fighting Game Framework",
-    "staticImage": "/projects/Fighting Game Framework/fighting_game_new.png",
-    "gifImage": "/projects/Fighting Game Framework/getshroomed.gif",
+    "staticImage": "/projects/Fighting Game Framework/0_fightinggame_thumb.png",
+    "gifImage": "/projects/Fighting Game Framework/fightinggame_gif_small.gif",
     "description": "a framework that turns Unity into a robust engine for developing fighting games",
     "tags": [
       "Software"
