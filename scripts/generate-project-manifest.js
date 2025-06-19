@@ -12,16 +12,15 @@ async function main() {
   const folders = baseContents.filter(entry => entry.isDirectory()).map(entry => entry.name);
 
   const indices = (await fs.readFile(path.join(base, 'indices.txt'), "utf-8")).split(',').map(index => index.trim());      
-  let indicesCount = 0;
 
   //generate array of project thumbnail object data
   let projects = await Promise.all(
-    folders.map(async folder => {
+    folders.map(async (folder, i) => {
       const dir = path.join(base, folder);
       const files = await fs.readdir(dir);
 
       return {
-        [indices[indicesCount++]]: {
+        [indices[i]]: {
                                     title: folder,
                                     staticImage: `/projects/${folder}/${files.find(f => f.endsWith('.png'))}`,
                                     gifImage:    `/projects/${folder}/${files.find(f => f.endsWith('.gif'))}`,
