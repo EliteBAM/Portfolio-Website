@@ -1,0 +1,1 @@
+The Framework replicates the traditional fighting game systems found in games like Mortal Kombat and Guilty Gear, such as old fashioned hitbox data with frame-perfect animation alignment and raw animation execution without frame blending.

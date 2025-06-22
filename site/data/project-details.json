@@ -271,7 +271,109 @@
   },
   {
     "key": "Fighting Game Framework",
-    "value": null
+    "value": [
+      {
+        "templateID": "1",
+        "data": {
+          "videos": [],
+          "images": [
+            "/projects/Fighting Game Framework/project-details/1/FG_Details_Media_1.gif"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "Dynamic framework for Unity designed to make the creation of fighting games as easy as possible for pros and non-coders alike.\r\n\r\n"
+          ]
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "videos": [],
+          "images": [
+            "/projects/Fighting Game Framework/project-details/3/HitBoxDebug.gif"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "The Framework replicates the traditional fighting game systems found in games like Mortal Kombat and Guilty Gear, such as old fashioned hitbox data with frame-perfect animation alignment and raw animation execution without frame blending."
+          ]
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "videos": [],
+          "images": [
+            "/projects/Fighting Game Framework/project-details/5/Openning_HB_Editor.gif"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "My framework takes care of the boiler-plate systems necessary for creating such a fighting game, and abstracts the complexities of those systems away from the developer with a suite of custom visual tools built into Unity. The HitBox Editor, for example, is an Editor Extension that can be opened through the window tab."
+          ]
+        }
+      },
+      {
+        "templateID": "1",
+        "data": {
+          "videos": [],
+          "images": [
+            "/projects/Fighting Game Framework/project-details/7/HitboxEditorDemo.gif"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "The visual HitBox Editor allows the developer to scrub through animations using Unity's director timeline GUI, and add, remove, and key frame new HitBox data using my custom made HitBox Editor GUI.\r\n\r\nThis system allows the developer to visually create the data structures that store custom hitbox animation data into a custom seriablizable \"FightAnimation\" file, which my custom animation system built on the Unity Playables API will use to ensure frame-perfect synchronization of skeletal mesh animations and hitbox frame data. All this complexity is removed from the developer's concern."
+          ]
+        }
+      },
+      {
+        "templateID": "2",
+        "data": {
+          "videos": [],
+          "images": [
+            "/projects/Fighting Game Framework/project-details/9/character data sheet1.png",
+            "/projects/Fighting Game Framework/project-details/9/data sheet movelist.png"
+          ],
+          "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "Lastly, the developer is able to create all the characters for their fighting game roster entirely \"code-free.\"\r\n\r\nCharacter data serializable files can be created through Unity's contex menu under \"Create -> Create New Character.\" From here, the developer is able to choose a character model, name, and define a moveset of combos tied to FightAnimations.\r\n\r\nBy dropping this data file into the base character controller, the new character will be set up with no code needed.\r\n\r\nThe Movelist defined in the datasheet is parsed by the framework's combat system, which parses it out into a \"combo tree,\" where combo strings are translated into nodes of a tree where the root is \"idle\" input. Duplicate tree nodes are ignored, and the final tree contains a path from idle to each attack, where the traversal node is set to idle if commands aren't executed within the specified frame window."
+          ]
+        }
+      }
+    ]
   },
   {
     "key": "Frogger Clone",

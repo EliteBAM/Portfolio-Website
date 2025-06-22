@@ -1,0 +1,1 @@
+My framework takes care of the boiler-plate systems necessary for creating such a fighting game, and abstracts the complexities of those systems away from the developer with a suite of custom visual tools built into Unity. The HitBox Editor, for example, is an Editor Extension that can be opened through the window tab.

@@ -1,0 +1,7 @@
+Lastly, the developer is able to create all the characters for their fighting game roster entirely "code-free."
+
+Character data serializable files can be created through Unity's contex menu under "Create -> Create New Character." From here, the developer is able to choose a character model, name, and define a moveset of combos tied to FightAnimations.
+
+By dropping this data file into the base character controller, the new character will be set up with no code needed.
+
+The Movelist defined in the datasheet is parsed by the framework's combat system, which parses it out into a "combo tree," where combo strings are translated into nodes of a tree where the root is "idle" input. Duplicate tree nodes are ignored, and the final tree contains a path from idle to each attack, where the traversal node is set to idle if commands aren't executed within the specified frame window.

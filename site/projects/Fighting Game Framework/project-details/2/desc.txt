@@ -1,0 +1,2 @@
+Dynamic framework for Unity designed to make the creation of fighting games as easy as possible for pros and non-coders alike.
+

@@ -1,0 +1,3 @@
+The visual HitBox Editor allows the developer to scrub through animations using Unity's director timeline GUI, and add, remove, and key frame new HitBox data using my custom made HitBox Editor GUI.
+
+This system allows the developer to visually create the data structures that store custom hitbox animation data into a custom seriablizable "FightAnimation" file, which my custom animation system built on the Unity Playables API will use to ensure frame-perfect synchronization of skeletal mesh animations and hitbox frame data. All this complexity is removed from the developer's concern.
