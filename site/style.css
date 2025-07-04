@@ -187,6 +187,8 @@ body {
     row-gap: 10px;
     justify-content: center;
     width: 100%;
+
+    overflow-y: hidden;
 }
 
 .project {
@@ -220,12 +222,11 @@ body {
     .project:hover {
         transform: scale(1);
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-        opacity: 0;
     }
 }
 
 .project.active {
-    transform: scale(1.2);
+    transform: scale(1.1);
     box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
     z-index: 10; /* Ensures the hovered element is on top */
     background-color: #fffdf7; /* Pastel Light Beige */
@@ -281,6 +282,16 @@ body {
     transition: none;
 }
 
+/*mobile*/
+.project.active .project-image img.gif-image:not(.thumb-is-frame) {
+    opacity: 1;
+}
+
+.project.active .project-image img.gif-image.thumb-is-frame {
+    opacity: 1;
+    transition: none;
+}
+
 /*.project:hover .project-image img.static-image {
     opacity: 0;
 }*/
@@ -316,6 +327,11 @@ body {
 }
 
 .project:hover .project-info p {
+    opacity: 1;
+}
+
+/*mobile*/
+.project.active .project-info p {
     opacity: 1;
 }
 
