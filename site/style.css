@@ -4,6 +4,8 @@ body {
     padding: 0;
     background-color: #fffdf7; /* Pastel Light Beige */
     color: #333; /* Darker Text Color */
+
+    overflow-x: hidden;
 }
 
 .container {

@@ -1,5 +1,5 @@
 //mobile only
-const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches && window.innerWidth <= 1440;
 
 
 if(isTouchDevice) {
