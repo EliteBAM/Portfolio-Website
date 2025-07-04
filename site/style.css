@@ -189,6 +189,8 @@ body {
     row-gap: 10px;
     justify-content: center;
     width: 100%;
+
+    overflow-x: hidden;
 }
 
 .project {
