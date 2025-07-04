@@ -38,9 +38,9 @@
   },
   {
     "title": "Infinite Procedural Terrain",
-    "staticImage": "/projects/Infinite Procedural Terrain/unity_craft_new.png",
-    "gifImage": "/projects/Infinite Procedural Terrain/getshroomed.gif",
-    "description": "voxel engine developed in Unity using procedural mesh generation and Burst jobs",
+    "staticImage": "/projects/Infinite Procedural Terrain/craftminethumb.png",
+    "gifImage": "/projects/Infinite Procedural Terrain/craftmine_vid.gif",
+    "description": "voxel engine developed in Unity using procedural mesh generation and Burst-compiled jobs",
     "tags": [
       "Software"
     ]

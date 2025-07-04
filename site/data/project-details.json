@@ -484,7 +484,7 @@
         "data": {
           "videos": [],
           "images": [
-            "/projects/Infinite Procedural Terrain/project-details/1/unity_craft_new.png"
+            "/projects/Infinite Procedural Terrain/project-details/1/render_dist.gif"
           ],
           "texts": []
         }
@@ -495,7 +495,7 @@
           "videos": [],
           "images": [],
           "texts": [
-            "Infinite Procedural Voxel Terrain.\r\n\r\n(Bitshift, I probably don’t have to explain this one to you guys.)\r\n\r\nI used 2D perlin noise and 2D chunking for this system.\r\n\r\nI implemented chunking, mesh face optimization, and chunk streaming with Unity jobs system.\r\n\r\nI wrote the code using C++ native data structures in C# wrappers. This allowed me to invoke the burst compiler, which heavily optimizes the machine code output.\r\n\r\nBetween the burst compiler and the Jobs system, the chunks load extremely fast!\r\n\r\nI got enough satisfaction from this project by getting it to the state you currently see it. My goal was not to recreate Minecraft or make a voxel game— I just wanted to implement an infinite voxel world in my own way.\r\n\r\nNext steps would be adding trees by streaming neighboring chunk data to fix chunk seam issues and setting a water height level. That would add some nice features to the landscape!"
+            "Infinite Procedural Voxel Terrain.\r\n\r\nI used 2D perlin noise and 2D chunking for this system.\r\n\r\nThe system uses a world manager to handle the processing of loaded chunks and the scheduling of their mesh generation into off-main-thread jobs using Unity's Job system.\r\n\r\nMesh data generation is handled on cpu threads using the Burst Compiler to create orders of magnitude faster mesh-gen machine code, and Unity's low-level mesh API to optimize mesh stream data handling and data-per vertex.\r\n\r\nMesh data is then sent to the GPU to be drawn to the screen using Unity Mesh  API calls.\r\n\r\nI refactored the whole thing to add it to my portfolio, adding the concept of neighbor tracking and \"edgeMaps\" to efficiently and accurately generate mesh faces between chunk borders.\r\n\r\nBetween the burst compiler and the Jobs system, the chunks load extremely fast, about 0.3ms per chunk, allowing for up to a 4096-chunk render area, with 64 chunk updates per world render update before any stutter is noticed on my mobile 10980HK.\r\n\r\nNext steps would be to add trees, which would be easy due to the neighbor system, and to parallelize the off-main-thread jobs for even more performance and simultaneous chunk loading.\r\n\r\nOf note: The Unity Mesh.ApplyAndDisposeWritableMeshData() call is a current \"bottleneck,\" as it is the only way to apply the mesh data generated in the jobs, and it is impossible to call without locking the main thread. This inevitably causes a hitch when loading copious data. In the future I'd like to refactor the world manager to support staggering this call over multiple frames, giving a huge smoothness on world updates, allowing for even immensely greater render distances and more complex chunks."
           ]
         }
       }
