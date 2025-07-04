@@ -215,6 +215,23 @@ body {
     cursor: pointer;
 }
 
+/* for mobile -- hover replacement */
+@media (hover: none) and (pointer: coarse) {
+    .project:hover {
+        transform: scale(1);
+    }
+}
+
+.project.active {
+    transform: scale(1.2);
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Ensures the hovered element is on top */
+    background-color: #fffdf7; /* Pastel Light Beige */
+
+    cursor: pointer;
+}
+/*--------------------------------*/
+
 .project-image {
     position: absolute;
     top: 0;

@@ -87,7 +87,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 gifImage.src = project.gifImage;
             });
 
-
             // animation after delay for each element
             setTimeout(() => {
                 projectElement.classList.add('show');

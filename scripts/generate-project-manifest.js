@@ -21,13 +21,13 @@ async function main() {
 
       return {
         [indices[i]]: {
-                                    title: folder,
-                                    staticImage: `/projects/${folder}/${files.find(f => f.endsWith('.png'))}`,
-                                    gifImage:    `/projects/${folder}/${files.find(f => f.endsWith('.gif'))}`,
-                                    description: await fs.readFile(path.join(dir, 'description.txt'), 'utf8'),
-                                    tags: (await fs.readFile(path.join(dir, 'tags.txt'), 'utf8'))
-                                            .split(',').map(t => t.trim()),
-                                  }
+                        title: folder,
+                        staticImage: `/projects/${folder}/${files.find(f => f.endsWith('.png'))}`,
+                        gifImage:    `/projects/${folder}/${files.find(f => f.endsWith('.gif'))}`,
+                        description: await fs.readFile(path.join(dir, 'description.txt'), 'utf8'),
+                        tags: (await fs.readFile(path.join(dir, 'tags.txt'), 'utf8'))
+                                .split(',').map(t => t.trim()),
+                      }
       };
     })
 
