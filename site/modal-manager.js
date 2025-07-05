@@ -19,14 +19,11 @@ function createProjectMapFromJSON() {
 function AssignMediaSrc(element, url) {
     if(cacheMap.has(url) && cacheMap.get(url) != null) {
         element.onerror = () => {
-            console.warn(`Blob failed for ${url}, reverting to original.`);
-            element.onerror = null;
             element.src = url;
         };
         element.src = "";
         element.src = cacheMap.get(url);
     } else {
-        element.onerror = null; // clear error handler
         element.src = url;
         CacheMedia(url);
     }
