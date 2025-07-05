@@ -4,14 +4,14 @@ body {
     padding: 0;
     background-color: #fffdf7; /* Pastel Light Beige */
     color: #333; /* Darker Text Color */
-
-    overflow-x: hidden;
 }
 
 .container {
     width: 63%; /* Reduced to 2/3 of the original spacing */
     max-width: 1200px;
     margin: 0 auto;
+
+    overflow-x: hidden;
 }
 
 @media (min-width: 1440px) {
