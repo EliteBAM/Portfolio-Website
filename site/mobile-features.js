@@ -16,8 +16,10 @@ if(isTouchDevice) {
             projectElement.classList.toggle('active', isActive);
 
             if(isActive) {
-                projectElement.gifImage.src = '';
-                projectElement.gifImage.src = project.gifImage;
+                const gifImage = projectElement.querySelector('.gif-image');
+                const gif = gifImage.src;
+                gifImage.src = '';
+                gifImage.src = gif;
             }
         });
     });
