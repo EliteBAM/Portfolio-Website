@@ -8,6 +8,8 @@ body {
 
 .container {
     width: 100%; /* Reduced to 2/3 of the original spacing */
+    padding: 0 1rem;
+
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -15,7 +17,7 @@ body {
 @media (min-width: 1440px) {
   .container {
     width: 63%;
-    padding: 0 1rem;
+    padding: 0;
   }
 }
 
