@@ -13,7 +13,9 @@ function createSingleMediaTemplate(data) {
     container.className = 'single-media';
 
     const img = document.createElement('img');
-    img.src = data.images?.[0] || ''; //take first image if there are more than 1
+    const src = data.images?.[0] || '';
+    AssignMediaSrc(img, src)
+    //img.src = data.images?.[0] || ''; //take first image if there are more than 1
     img.alt = 'Single Image';
 
     container.appendChild(img);
@@ -29,6 +31,8 @@ function createVideoTemplate(data) {
     video.controls = true;
     video.poster = data.images?.[0] || undefined;
     const source = document.createElement('source');
+    //const sourcesrc = data.videos?.[0] || '';
+    //AssignMediaSrc(source, sourcesrc);
     source.src = data.videos?.[0] || ''; //take first image if there are more than 1
     source.type = source.src ? "video/mp4" : undefined; //if there is a video source, set the source type.
     video.alt = 'mp4 media';
@@ -64,7 +68,9 @@ function createHorizontalGalleryTemplate(data) {
 
     const mainImage = document.createElement('img');
     mainImage.className = 'main-image';
-    mainImage.src = galleryImages?.[0] || '';
+    const mainImageSrc = galleryImages?.[0] || '';
+    AssignMediaSrc(mainImage, mainImageSrc)
+    //mainImage.src = galleryImages?.[0] || '';
     galleryItems.appendChild(mainImage);
 
     const thumbnails = document.createElement('div');
@@ -73,12 +79,15 @@ function createHorizontalGalleryTemplate(data) {
 
     galleryImages.forEach((src, index) => {
         const thumb = document.createElement('img');
-        thumb.src = src;
+        AssignMediaSrc(thumb, src);
+        //thumb.src = src;
         thumb.alt = `Thumbnail ${index + 1}`;
         thumb.className = 'thumbnail';
         thumb.index = index;
         thumb.addEventListener('click', () => {
-            mainImage.src = galleryImages[thumb.index];
+            const mainImageSrc = galleryImages[thumb.index];
+            AssignMediaSrc(mainImage, mainImageSrc);
+            //mainImage.src = galleryImages[thumb.index];
             imageIndex = thumb.index;
         });
         thumbnails.appendChild(thumb);
@@ -87,11 +96,15 @@ function createHorizontalGalleryTemplate(data) {
     //add event listeners to buttons
     rightBtn.addEventListener('click', () => {
         imageIndex = imageIndex + 1 > galleryImages.length - 1 ? 0 : imageIndex + 1; //cycle if out of bounds
-        mainImage.src = galleryImages[imageIndex];
+        const mainImageSrc = galleryImages[imageIndex];
+        AssignMediaSrc(mainImage, mainImageSrc)
+        //mainImage.src = galleryImages[imageIndex];
     });
     leftBtn.addEventListener('click', () => {
         imageIndex = imageIndex - 1 < 0 ? galleryImages.length - 1 : imageIndex - 1; //cycle if out of bounds
-        mainImage.src = galleryImages[imageIndex];
+        const mainImageSrc = galleryImages[imageIndex];
+        AssignMediaSrc(mainImage, mainImageSrc);
+        //mainImage.src = galleryImages[imageIndex];
     });
 
     galleryItems.appendChild(thumbnails);
@@ -113,7 +126,8 @@ function createDynamicGalleryTemplate(data) {
 
     data.images.forEach((src, index) => {
         const img = document.createElement('img');
-        img.src = src;
+        AssignMediaSrc(img, src);
+        //img.src = src;
         img.alt = `Dynamic Image ${index + 1}`;
         grid.appendChild(img);
     });

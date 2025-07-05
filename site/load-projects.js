@@ -25,12 +25,12 @@ window.addEventListener('DOMContentLoaded', () => {
             projectImageDiv.classList.add('project-image');
 
             const staticImage = document.createElement('img');
-            staticImage.src = project.staticImage;
+            AssignMediaSrc(staticImage, project.staticImage);
             staticImage.alt = project.title;
             staticImage.classList.add('static-image');
 
             const gifImage = document.createElement('img');
-            gifImage.src = project.gifImage;
+            AssignMediaSrc(gifImage, project.gifImage);
             gifImage.alt = project.title + " GIF";
             gifImage.classList.add('gif-image');
 
