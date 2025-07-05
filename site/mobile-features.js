@@ -15,13 +15,14 @@ if(isTouchDevice) {
 
             if(isActive && !projectElement.classList.contains('active')) {
                 const gifImage = projectElement.querySelector('.gif-image');
-                const gif = gifImage.src;
+                const baseSrc = gifImage.dataset.src || gifImage.src.split('?')[0];
+                const cacheBuster = `?t=${Date.now()}`;
                 gifImage.src = '';
-                gifImage.src = gif;
+                gifImage.src = baseSrc + cacheBuster;
             }
 
             projectElement.classList.toggle('active', isActive);
-            
+
         });
     });
 }
