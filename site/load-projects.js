@@ -5,12 +5,12 @@ const modal = document.getElementById("project-modal");
 const closeModal = document.querySelector(".close");
 const modalContent = document.getElementById("modal-content");
 
+let allProjects = []; // Store all projects fetched from the server
 
 window.addEventListener('DOMContentLoaded', () => {
 
     const projectGrid = document.querySelector('.project-grid');
 
-    let allProjects = []; // Store all projects fetched from the server
 
     // Function to create and display projects
     const displayProjects = (filteredProjects) => {
