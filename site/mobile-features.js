@@ -15,8 +15,9 @@ if(isTouchDevice) {
 
             if(isActive && !projectElement.classList.contains('active')) {
                 const gifImage = projectElement.querySelector('.gif-image');
+                const src = gifImage.src;
                 gifImage.src = '';
-                gifImage.src = cacheMap.get(src);
+                AssignMediaSrc(gifImage, src);
             }
 
             projectElement.classList.toggle('active', isActive);
