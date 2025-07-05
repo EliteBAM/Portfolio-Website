@@ -15,7 +15,7 @@ if(isTouchDevice) {
 
             if(isActive && !projectElement.classList.contains('active')) {
                 const gifImage = projectElement.querySelector('.gif-image');
-                const baseSrc = gifImage.dataset.src || gifImage.src.split('?')[0];
+                const baseSrc = gifImage.src.split('?')[0];
                 gifImage.src = '';
                 gifImage.src = baseSrc;
             }
