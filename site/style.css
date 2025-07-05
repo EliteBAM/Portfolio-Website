@@ -6,9 +6,9 @@ body {
     color: #333; /* Darker Text Color */
 }
 
+/*mobile vs desktop support*/
 .container {
     width: 100%; /* Reduced to 2/3 of the original spacing */
-    padding: 0 1rem;
 
     max-width: 1200px;
     margin: 0 auto;
@@ -17,7 +17,6 @@ body {
 @media (min-width: 1440px) {
   .container {
     width: 63%;
-    padding: 0;
   }
 }
 
@@ -190,13 +189,20 @@ body {
     margin-bottom: 60px;
 }
 
+/*mobile vs desktop support*/
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px; 
     row-gap: 10px;
     justify-content: center;
+    width: 90%;
+}
+
+@media (min-width: 1440px) {
+  .project-grid {
     width: 100%;
+  }
 }
 
 .project {
