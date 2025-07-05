@@ -13,14 +13,15 @@ if(isTouchDevice) {
             const centerY = (window.innerHeight / 3) * 2;
             const isActive = activeWindow.top < centerY && activeWindow.bottom > centerY;
 
-            projectElement.classList.toggle('active', isActive);
-
-            if(isActive) {
+            if(isActive && !projectElement.classList.contains('active')) {
                 const gifImage = projectElement.querySelector('.gif-image');
                 const gif = gifImage.src;
                 gifImage.src = '';
                 gifImage.src = gif;
             }
+
+            projectElement.classList.toggle('active', isActive);
+            
         });
     });
 }
