@@ -15,9 +15,8 @@ if(isTouchDevice) {
 
             if(isActive && !projectElement.classList.contains('active')) {
                 const gifImage = projectElement.querySelector('.gif-image');
-                const newGif = gifImage.cloneNode(true);
-                newGif.src = gifImage.src.split('?')[0];
-                gifImage.replaceWith(newGif);
+                gifImage.src = '';
+                gifImage.src = cacheMap.get(src);
             }
 
             projectElement.classList.toggle('active', isActive);
