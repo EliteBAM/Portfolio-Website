@@ -47,6 +47,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
             projectInfoDiv.appendChild(title);
             projectInfoDiv.appendChild(description);
+            
+            requestAnimationFrame(() => {
+                autoFitText(description, '1rem', '0.3rem');
+            });
 
             projectElement.appendChild(projectImageDiv);
             projectElement.appendChild(projectInfoDiv);
