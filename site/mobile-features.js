@@ -14,6 +14,11 @@ if(isTouchDevice) {
             const isActive = activeWindow.top < centerY && activeWindow.bottom > centerY;
 
             projectElement.classList.toggle('active', isActive);
+
+            if(isActive) {
+                projectElement.gifImage.src = '';
+                projectElement.gifImage.src = project.gifImage;
+            }
         });
     });
 }
