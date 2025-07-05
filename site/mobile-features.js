@@ -8,9 +8,7 @@ if(isTouchDevice) {
             const rect = projectElement.getBoundingClientRect();
             const activeWindow = {
                 top: rect.top + rect.height / 4,
-                left: rect.left + rect.width / 4,
-                width: rect.width / 2,
-                height: rect.height / 2
+                bottom: rect.bottom - rect.height / 4,
             };
             const centerY = (window.innerHeight / 3) * 2;
             const isActive = activeWindow.top < centerY && activeWindow.bottom > centerY;
