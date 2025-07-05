@@ -18,6 +18,10 @@ function createProjectMapFromJSON() {
 
 function AssignMediaSrc(element, url) {
     if(cacheMap.has(url) && cacheMap.get(url) != null) {
+        element.onerror = () => {
+            element.src = url;
+        };
+        element.src = "";
         element.src = cacheMap.get(url);
     } else {
         element.src = url;

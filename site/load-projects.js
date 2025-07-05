@@ -11,7 +11,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const projectGrid = document.querySelector('.project-grid');
 
-
     // Function to create and display projects
     const displayProjects = (filteredProjects) => {
 
