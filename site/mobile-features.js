@@ -6,8 +6,14 @@ if(isTouchDevice) {
     window.addEventListener('scroll', () => {
         document.querySelectorAll('.project').forEach(projectElement => {
             const rect = projectElement.getBoundingClientRect();
+            const activeWindow = {
+                top: rect.top + rect.height / 4,
+                left: rect.left + rect.width / 4,
+                width: rect.width / 2,
+                height: rect.height / 2
+            };
             const centerY = (window.innerHeight / 3) * 2;
-            const isActive = rect.top < centerY && rect.bottom > centerY;
+            const isActive = activeWindow.top < centerY && activeWindow.bottom > centerY;
 
             projectElement.classList.toggle('active', isActive);
         });
