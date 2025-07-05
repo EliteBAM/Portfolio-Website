@@ -7,6 +7,30 @@ function createTitle(title) {
     return container;
 }
 
+function createLinksTemplate(data) {
+    const container = document.createElement('div');
+    container.className = 'template-links';
+
+    const links = data.texts[0]
+    .split(',')
+    .map(s => s.trim())
+    .reduce((acc, val, i, arr) => {
+        if (i % 2 === 0 && arr[i + 1]) acc.push({ text: val, href: arr[i + 1].trim() });
+        return acc;
+    }, []);
+
+    links.forEach(link => {
+        const linkElement = document.createElement('a');
+        linkElement.href = link.href;         
+        linkElement.textContent = link.text;
+        linkElement.target = '_blank';
+        linkElement.rel = 'noopener noreferrer'; // security best practice
+        container.appendChild(linkElement);
+    });
+
+    return container;
+}
+
 function createSingleMediaTemplate(data) {
 
     const container = document.createElement('div');
@@ -228,6 +252,9 @@ function generateModalContent(title, projectData) {
                 break;
             case '6':
                 modalContent.appendChild(createVideoTemplate(templateData.data));
+                break;
+            case '7':
+                modalContent.appendChild(createLinksTemplate(templateData.data));
                 break;
             default:
                 console.error('Unknown template ID:', templateData.templateID);

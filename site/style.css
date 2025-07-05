@@ -2,13 +2,38 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fffdf7; /* Pastel Light Beige */
-    color: #333; /* Darker Text Color */
+    background-color: #fffdf7;
+    color: #333;
+}
+
+a {
+    color: rgb(192 97 92);
+    font-style: italic;
+    text-shadow:
+        0 0 0 rgb(192 97 92),
+        0.1px 0 rgb(192 97 92),
+        -0.1px 0 rgb(192 97 92),
+        0 0.1px rgb(192 97 92),
+        0 -0.1px rgb(192 97 92);
+    text-decoration: none;  /* Remove underline */
+    transition: transform 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+}
+
+a:hover {
+    
+    color: rgb(207, 92, 86);
+    text-shadow:
+        0 0 0 rgb(207, 92, 86),      /* center */
+        0.2px 0 rgb(207, 92, 86),    /* right */
+        -0.2px 0 rgb(207, 92, 86),   /* left */
+        0 0.2px rgb(207, 92, 86),    /* down */
+        0 -0.2px rgb(207, 92, 86);   /* up */
+    transform: scale(1.1);
 }
 
 /*mobile vs desktop support*/
 .container {
-    width: 100%; /* Reduced to 2/3 of the original spacing */
+    width: 100%;
 
     max-width: 1200px;
     margin: 0 auto;
@@ -37,7 +62,7 @@ body {
     position: sticky;
     padding-top: 8%;
     top: 0px;
-    background-color: #fffdf7; /* Pastel Light Beige */
+    background-color: #fffdf7;
     z-index: 2000;
     padding-bottom: 20px;
     margin-bottom: 20px;
@@ -49,7 +74,7 @@ body {
 .header-left h1 {
     font-weight: 500;
     font-size: 30px;
-    color: #5A5A5A; /* Pastel Mocha */
+    color: #5A5A5A; 
     margin: 0;
 }
 
@@ -538,10 +563,26 @@ pre {
     border-radius: 8px;
 }
 
+/* Description Template */
+
 .template-description {
     white-space: pre-wrap;
     font-size: 16px;
     line-height: 1.5;
+}
+
+/* Links Template */
+.template-links {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+  justify-content: center;
+  column-gap: 12px;
+  row-gap: 15px;
+  padding: 0;
+  margin-top: -20px;
+  margin-bottom: -10px;
+  text-align: center;
 }
 
 /* Code Example */
