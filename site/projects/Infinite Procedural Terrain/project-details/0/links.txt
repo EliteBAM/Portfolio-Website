@@ -1,1 +1,1 @@
-GitHub, https://github.com/EliteBAM/Infinite-Procedural-Terrain-Generation, Demo, /downloads/craftmine.zip
+GitHub, https://github.com/EliteBAM/Infinite-Procedural-Terrain-Generation/tree/main/Assets/Code, Demo, /downloads/craftmine.zip
