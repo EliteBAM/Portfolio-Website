@@ -88,6 +88,16 @@
     "key": "C'est le Balloon",
     "value": [
       {
+        "templateID": "7",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "Demo, /downloads/Cest Le Balloon.zip"
+          ]
+        }
+      },
+      {
         "templateID": "5",
         "data": {
           "videos": [],
@@ -495,7 +505,7 @@
           "videos": [],
           "images": [],
           "texts": [
-            "GitHub, https://github.com/EliteBAM/Infinite-Procedural-Terrain-Generation, Demo, /downloads/craftmine.zip"
+            "GitHub, https://github.com/EliteBAM/Infinite-Procedural-Terrain-Generation/tree/main/Assets/Code, Demo, /downloads/craftmine.zip"
           ]
         }
       },
@@ -828,6 +838,16 @@
   {
     "key": "VR Baseball Simulator",
     "value": [
+      {
+        "templateID": "7",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "GitHub, https://github.com/EliteBAM/Virtual-Reality-Baseball-Hitting-Simulator/tree/main/Assets/Code, Demo, /downloads/vr-baseball-batting-simulator.zip"
+          ]
+        }
+      },
       {
         "templateID": "1",
         "data": {

@@ -20,9 +20,11 @@ function AssignMediaSrc(element, url) {
     if(cacheMap.has(url) && cacheMap.get(url) != null && cacheMap.get(url) != undefined) {
         element.src = "";
         element.onerror = () => {
+            console.warn(url + ": error loading from cache. Using " + url + " instead.");
             element.src = url;
         };
         element.src = cacheMap.get(url);
+        console.log(url + " loaded from cache!");
     } else {
         element.src = url;
         CacheMedia(url);
@@ -38,6 +40,7 @@ async function CacheMedia(url) {
         const blob = await fetch(url).then(r => r.blob());
         const blobUrl = URL.createObjectURL(blob);
         cacheMap.set(url, blobUrl);
+        console.log(url + " successfully cached!");
     } catch (err) {
         console.warn(`Failed to cache media for ${url}`, err);
         cacheMap.delete(url); // clean up failed entry
