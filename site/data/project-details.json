@@ -525,6 +525,16 @@
     "key": "Javascript Raytracer",
     "value": [
       {
+        "templateID": "7",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "GitHub, https://github.com/EliteBAM/Javascript-Raytracer/tree/main/src/renderer/raytracer"
+          ]
+        }
+      },
+      {
         "templateID": "1",
         "data": {
           "videos": [],
