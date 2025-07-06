@@ -17,11 +17,11 @@ function createProjectMapFromJSON() {
 }
 
 function AssignMediaSrc(element, url) {
-    if(cacheMap.has(url) && cacheMap.get(url) != null) {
+    if(cacheMap.has(url) && cacheMap.get(url) != null && cacheMap.get(url) != undefined) {
+        element.src = "";
         element.onerror = () => {
             element.src = url;
         };
-        element.src = "";
         element.src = cacheMap.get(url);
     } else {
         element.src = url;
