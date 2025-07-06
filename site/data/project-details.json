@@ -273,6 +273,16 @@
     "key": "Fighting Game Framework",
     "value": [
       {
+        "templateID": "7",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "GitHub, https://github.com/EliteBAM/Unity-Fighting-Game-Framework"
+          ]
+        }
+      },
+      {
         "templateID": "1",
         "data": {
           "videos": [],
@@ -485,7 +495,7 @@
           "videos": [],
           "images": [],
           "texts": [
-            "GitHub, https://github.com/EliteBAM/Infinite-Procedural-Terrain-Generation, download, https://github.com/EliteBAM/Infinite-Procedural-Terrain-Generation"
+            "GitHub, https://github.com/EliteBAM/Infinite-Procedural-Terrain-Generation, Demo, /downloads/craftmine.zip"
           ]
         }
       },

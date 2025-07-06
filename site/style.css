@@ -6,31 +6,6 @@ body {
     color: #333;
 }
 
-a {
-    color: rgb(192 97 92);
-    font-style: italic;
-    text-shadow:
-        0 0 0 rgb(192 97 92),
-        0.1px 0 rgb(192 97 92),
-        -0.1px 0 rgb(192 97 92),
-        0 0.1px rgb(192 97 92),
-        0 -0.1px rgb(192 97 92);
-    text-decoration: none;  /* Remove underline */
-    transition: transform 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
-}
-
-a:hover {
-    
-    color: rgb(207, 92, 86);
-    text-shadow:
-        0 0 0 rgb(207, 92, 86),      /* center */
-        0.2px 0 rgb(207, 92, 86),    /* right */
-        -0.2px 0 rgb(207, 92, 86),   /* left */
-        0 0.2px rgb(207, 92, 86),    /* down */
-        0 -0.2px rgb(207, 92, 86);   /* up */
-    transform: scale(1.1);
-}
-
 /*mobile vs desktop support*/
 .container {
     width: 100%;
@@ -583,6 +558,31 @@ pre {
   margin-top: -20px;
   margin-bottom: -10px;
   text-align: center;
+}
+
+.template-links a {
+    color: rgb(192 97 92);
+    font-style: italic;
+    text-shadow:
+        0 0 0 rgb(192 97 92),
+        0.1px 0 rgb(192 97 92),
+        -0.1px 0 rgb(192 97 92),
+        0 0.1px rgb(192 97 92),
+        0 -0.1px rgb(192 97 92);
+    text-decoration: none;  /* Remove underline */
+    transition: transform 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+}
+
+.template-links a:hover {
+    
+    color: rgb(207, 92, 86);
+    text-shadow:
+        0 0 0 rgb(207, 92, 86),      /* center */
+        0.2px 0 rgb(207, 92, 86),    /* right */
+        -0.2px 0 rgb(207, 92, 86),   /* left */
+        0 0.2px rgb(207, 92, 86),    /* down */
+        0 -0.2px rgb(207, 92, 86);   /* up */
+    transform: scale(1.1);
 }
 
 /* Code Example */
