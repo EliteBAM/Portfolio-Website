@@ -1,4 +1,6 @@
-I built a raytracer in JavaScript, integrated in an Electron environment with Vite (hi Bitshift!). I made this project to gain implementation experience with raytracers from the ground up while also priming my JavaScript skills.
+I built a raytracer in JavaScript, integrated in an Electron environment with Vite (hi Bitshift! I made this one for you guys). I made this project to gain implementation experience with raytracers from the ground up while also priming my JavaScript skills.
+
+I decided to code the project in "prototypes-with-constructor-functions" syntax because I found it interesting and different from my usual Java / C# background.
 
 I implemented matrices, vectors, points, rays, and all the associated math functions between them from scratch.
 
@@ -7,5 +9,3 @@ I implemented sphere rendering for now using sphere intersection calculations.
 I then implemented the main render function, which follows a phong lighting model.
 
 The renderer is currently offline, but I’m excited at the idea of GPU accelerating it with WebGPU just for fun! I already wrote all the data structures to use performant data types, and it’s quite fun having a JS renderer running as its own Electron app!
-
-Dear Bitshift and Notch— I hope you like it, even though I know it’s still simple. I built it in a week in order to add to my portfolio for you. It was really fun and I can build anything!

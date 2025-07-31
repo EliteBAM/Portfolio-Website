@@ -1,1 +1,1 @@
-The Tuple prototype is the base for Point, Vector, and Color:
+Here is the main render loop from "renderer-entry.js":

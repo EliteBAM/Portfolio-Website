@@ -1,9 +1,7 @@
 const modal = document.getElementById("project-modal");
-//const modalTitle = document.getElementById("project-title");
-//const modalSummary = document.getElementById("project-summary");
-//const modalCode = document.getElementById("project-code");
 const closeModal = document.querySelector(".close");
 const modalContent = document.getElementById("modal-content");
+const body = document.getElementsByClassName("body");
 
 let allProjects = []; // Store all projects fetched from the server
 
@@ -70,6 +68,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 console.log("project data loaded from JSON");
 
                 modal.style.display = "flex"; // Show the modal
+                modalContent.scrollTo(0, 0);
+                document.body.style.overflowY = "hidden";
                 setTimeout(() => {
                     modal.style.opacity = 1;
                     modalContent.style.transform = "scale(1)";
@@ -121,6 +121,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // Close modal when the 'X' is clicked
 closeModal.addEventListener('click', () => {
     modal.style.opacity = 0;
+    document.body.style.overflowY = "auto";
     setTimeout(() => {
         modal.style.display = "none"; // Hide the modal after animation completes
         modalContent.style.transform = "scale(0.8)";
@@ -131,6 +132,7 @@ closeModal.addEventListener('click', () => {
 window.addEventListener('click', (e) => {
     if (e.target == modal) {
         modal.style.opacity = 0;
+        document.body.style.overflowY = "auto";
         setTimeout(() => {
             modal.style.display = "none";
             modalContent.style.transform = "scale(0.8)";

@@ -3,6 +3,16 @@
     "key": "Boat Simulator",
     "value": [
       {
+        "templateID": "7",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "GitHub, https://github.com/EliteBAM/Physics-Boat-Simulator/tree/main/Assets/Code"
+          ]
+        }
+      },
+      {
         "templateID": "1",
         "data": {
           "videos": [],
@@ -163,6 +173,16 @@
     "key": "Collision-Aware Camera System",
     "value": [
       {
+        "templateID": "7",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "Demo, /downloads/collision-aware-camera.zip"
+          ]
+        }
+      },
+      {
         "templateID": "5",
         "data": {
           "videos": [],
@@ -214,13 +234,35 @@
     "key": "Dark Temple",
     "value": [
       {
-        "templateID": "1",
+        "templateID": "7",
         "data": {
           "videos": [],
+          "images": [],
+          "texts": [
+            "Play!, /downloads/Dark_Temple_Build_07.zip"
+          ]
+        }
+      },
+      {
+        "templateID": "6",
+        "data": {
+          "videos": [
+            "/projects/Dark Temple/project-details/1/DarkTemple_Full_Playthrough.mp4"
+          ],
           "images": [
-            "/projects/Dark Temple/project-details/1/dark-tower-2.png"
+            "/projects/Dark Temple/project-details/1/dt_video_thumb.png"
           ],
           "texts": []
+        }
+      },
+      {
+        "templateID": "5",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "Dark Temple was prototype project developed while at the USC Games program."
+          ]
         }
       }
     ]
@@ -399,6 +441,16 @@
     "key": "Frogger Clone",
     "value": [
       {
+        "templateID": "7",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "Play!, /downloads/frogger.zip"
+          ]
+        }
+      },
+      {
         "templateID": "6",
         "data": {
           "videos": [
@@ -426,6 +478,16 @@
     "key": "Hyperspace Drifter",
     "value": [
       {
+        "templateID": "7",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "Play!, /downloads/Hyperspace Drifter.zip"
+          ]
+        }
+      },
+      {
         "templateID": "6",
         "data": {
           "videos": [
@@ -452,6 +514,16 @@
   {
     "key": "Infinidungeon",
     "value": [
+      {
+        "templateID": "7",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "Play!, /downloads/Infinidungeon.zip"
+          ]
+        }
+      },
       {
         "templateID": "6",
         "data": {
@@ -560,7 +632,20 @@
           "videos": [],
           "images": [],
           "texts": [
-            "I built a raytracer in JavaScript, integrated in an Electron environment with Vite (hi Bitshift!). I made this project to gain implementation experience with raytracers from the ground up while also priming my JavaScript skills.\r\n\r\nI implemented matrices, vectors, points, rays, and all the associated math functions between them from scratch.\r\n\r\nI implemented sphere rendering for now using sphere intersection calculations.\r\n\r\nI then implemented the main render function, which follows a phong lighting model.\r\n\r\nThe renderer is currently offline, but I’m excited at the idea of GPU accelerating it with WebGPU just for fun! I already wrote all the data structures to use performant data types, and it’s quite fun having a JS renderer running as its own Electron app!\r\n\r\nDear Bitshift and Notch— I hope you like it, even though I know it’s still simple. I built it in a week in order to add to my portfolio for you. It was really fun and I can build anything!"
+            "I built a raytracer in JavaScript, integrated in an Electron environment with Vite (hi Bitshift! I made this one for you guys). I made this project to gain implementation experience with raytracers from the ground up while also priming my JavaScript skills.\r\n\r\nI decided to code the project in \"prototypes-with-constructor-functions\" syntax because I found it interesting and different from my usual Java / C# background.\r\n\r\nI implemented matrices, vectors, points, rays, and all the associated math functions between them from scratch.\r\n\r\nI implemented sphere rendering for now using sphere intersection calculations.\r\n\r\nI then implemented the main render function, which follows a phong lighting model.\r\n\r\nThe renderer is currently offline, but I’m excited at the idea of GPU accelerating it with WebGPU just for fun! I already wrote all the data structures to use performant data types, and it’s quite fun having a JS renderer running as its own Electron app!\r\n"
+          ]
+        }
+      },
+      {
+        "templateID": "4",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "language-javascript",
+            "Here is the main render loop from \"renderer-entry.js\":",
+            "function rayTraceSphere() {\r\n    ctx.clearRect(0, 0, canvas.width, canvas.height);\r\n\r\n\r\n    //Set Up Scene\r\n    let rayOrigin = new Point(0, 0, -5);\r\n    let wall_z = 10;\r\n    let wall_size = 7;\r\n    let canvas_pixels = canvas.width;\r\n    let pixel_size = wall_size / canvas_pixels;\r\n    let half = wall_size / 2;\r\n\r\n    let raytracerCanvas = new Canvas(canvas_pixels, canvas_pixels);\r\n    const red = new Color(0, 0.6, 1);\r\n\r\n    //CREATE SPHERE\r\n    let sphere = new Sphere(1); //unit sphere at origin with ID: 1\r\n\r\n    //Set Sphere Transform\r\n    let scaleMat = scalingMatrix(1, 0.7, 1.35);\r\n    let rotY = rotationMatrix_Y(.2);\r\n    let rotZ = rotationMatrix_Z(Math.PI/2 * 1.5);\r\n    sphere.transform = rotY.matrixMultiply(rotZ).matrixMultiply(scaleMat);\r\n\r\n    //Set Sphere Material\r\n    sphere.material = new PhongMaterial();\r\n    sphere.material.color = red;//new Color(1, 0.2, 1);\r\n\r\n    //CREATE LIGHT\r\n    let light = new PointLight(new Point(-10, 10, -10), new Color(1, 1, 1));\r\n\r\n\r\n    //Shoot Rays from origin to virtual pixel wall\r\n    for (let y = 0; y < raytracerCanvas.height; y++) {\r\n        let world_y = half - pixel_size * y;\r\n        for (let x = 0; x < raytracerCanvas.width; x++) {\r\n\r\n            let world_x = -half + pixel_size * x;\r\n\r\n            let position = new Point(world_x, world_y, wall_z);\r\n\r\n            let ray = new Ray(rayOrigin, position.subtract(rayOrigin).normalize());\r\n\r\n            let hit = sphere.intersect(ray).getHit();\r\n\r\n            if(hit != null) {\r\n                //get hit point\r\n                let worldPoint = ray.position(hit.t);\r\n\r\n                //get normal at point on the hit object\r\n                let normal = hit.object.normalAt(worldPoint);\r\n\r\n                //get eye vector\r\n                let eye = ray.direction.negate();\r\n\r\n                //calculate the final color of the pixel using phong lighting model\r\n                let pixelColor = hit.object.material.lightPixel(light, worldPoint, eye, normal);\r\n                \r\n                //write position to pixel on buffer\r\n                raytracerCanvas.writePixel(x, y, pixelColor);\r\n            }\r\n\r\n\r\n        }\r\n    }\r\n\r\n    let imageData = new ImageData(raytracerCanvas.toPixelBuffer(), raytracerCanvas.width, raytracerCanvas.height);\r\n\r\n    ctx.putImageData(imageData, 0, 0);\r\n}",
+            "Please see the full source code on GitHub for more details, linked at the top of this page."
           ]
         }
       },
@@ -589,25 +674,22 @@
             ""
           ]
         }
-      },
-      {
-        "templateID": "4",
-        "data": {
-          "videos": [],
-          "images": [],
-          "texts": [
-            "language-javascript",
-            "Here is the main render loop from \"renderer-entry.js\":",
-            "function rayTraceSphere() {\r\n    ctx.clearRect(0, 0, canvas.width, canvas.height);\r\n\r\n\r\n    //Set Up Scene\r\n    let rayOrigin = new Point(0, 0, -5);\r\n    let wall_z = 10;\r\n    let wall_size = 7;\r\n    let canvas_pixels = canvas.width;\r\n    let pixel_size = wall_size / canvas_pixels;\r\n    let half = wall_size / 2;\r\n\r\n    let raytracerCanvas = new Canvas(canvas_pixels, canvas_pixels);\r\n    const red = new Color(0, 0.6, 1);\r\n\r\n    //CREATE SPHERE\r\n    let sphere = new Sphere(1); //unit sphere at origin with ID: 1\r\n\r\n    //Set Sphere Transform\r\n    let scaleMat = scalingMatrix(1, 0.7, 1.35);\r\n    let rotY = rotationMatrix_Y(.2);\r\n    let rotZ = rotationMatrix_Z(Math.PI/2 * 1.5);\r\n    sphere.transform = rotY.matrixMultiply(rotZ).matrixMultiply(scaleMat);\r\n\r\n    //Set Sphere Material\r\n    sphere.material = new PhongMaterial();\r\n    sphere.material.color = red;//new Color(1, 0.2, 1);\r\n\r\n    //CREATE LIGHT\r\n    let light = new PointLight(new Point(-10, 10, -10), new Color(1, 1, 1));\r\n\r\n\r\n    //Shoot Rays from origin to virtual pixel wall\r\n    for (let y = 0; y < raytracerCanvas.height; y++) {\r\n        let world_y = half - pixel_size * y;\r\n        for (let x = 0; x < raytracerCanvas.width; x++) {\r\n\r\n            let world_x = -half + pixel_size * x;\r\n\r\n            let position = new Point(world_x, world_y, wall_z);\r\n\r\n            let ray = new Ray(rayOrigin, position.subtract(rayOrigin).normalize());\r\n\r\n            let hit = sphere.intersect(ray).getHit();\r\n\r\n            if(hit != null) {\r\n                //get hit point\r\n                let worldPoint = ray.position(hit.t);\r\n\r\n                //get normal at point on the hit object\r\n                let normal = hit.object.normalAt(worldPoint);\r\n\r\n                //get eye vector\r\n                let eye = ray.direction.negate();\r\n\r\n                //calculate the final color of the pixel using phong lighting model\r\n                let pixelColor = hit.object.material.lightPixel(light, worldPoint, eye, normal);\r\n                \r\n                //write position to pixel on buffer\r\n                raytracerCanvas.writePixel(x, y, pixelColor);\r\n            }\r\n\r\n\r\n        }\r\n    }\r\n\r\n    let imageData = new ImageData(raytracerCanvas.toPixelBuffer(), raytracerCanvas.width, raytracerCanvas.height);\r\n\r\n    ctx.putImageData(imageData, 0, 0);\r\n}",
-            "Please see the full source code on GitHub for more details, linked at the top of this page."
-          ]
-        }
       }
     ]
   },
   {
     "key": "Land of the Occult",
     "value": [
+      {
+        "templateID": "7",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "Play!, /downloads/Land of the Occult.zip"
+          ]
+        }
+      },
       {
         "templateID": "6",
         "data": {
@@ -933,6 +1015,16 @@
   {
     "key": "World Generator",
     "value": [
+      {
+        "templateID": "7",
+        "data": {
+          "videos": [],
+          "images": [],
+          "texts": [
+            "GitHub, https://github.com/EliteBAM/Procedural-World-Data-Generator/tree/main/Assets/Code/World%20Generation, Demo, /downloads/Procedural-World-Data-Generator.zip"
+          ]
+        }
+      },
       {
         "templateID": "1",
         "data": {

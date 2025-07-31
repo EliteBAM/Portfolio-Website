@@ -1,3 +1,8 @@
+html {
+    scrollbar-gutter: stable;
+    scrollbar-color: red;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;

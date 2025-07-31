@@ -1,1 +1,1 @@
-Below is the Matrix4x4 object. All math operations are hard-coded and avoid looping and branching for maximum performance. Entries are stored in a one-dimensional Float32Array with smart indexing, also to maximize performance:
+The Tuple prototype is the base for Point, Vector, and Color:

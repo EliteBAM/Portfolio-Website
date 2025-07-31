@@ -131,8 +131,8 @@
   },
   {
     "title": "Dark Temple",
-    "staticImage": "/projects/Dark Temple/dt2.png",
-    "gifImage": "/projects/Dark Temple/getshroomed.gif",
+    "staticImage": "/projects/Dark Temple/dark_temple_thumb.png",
+    "gifImage": "/projects/Dark Temple/dt_thumb_gif.gif",
     "description": "More of a prototype than a game-- a little action RPG made on a very short deadline.",
     "tags": [
       "Games"
