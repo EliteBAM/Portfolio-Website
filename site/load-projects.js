@@ -118,24 +118,24 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('nav-software').addEventListener('click', () => filterProjects('Software'));
 });
 
-// Close modal when the 'X' is clicked
-closeModal.addEventListener('click', () => {
+
+//Close the modal page functionality
+
+function CloseModal() {
     modal.style.opacity = 0;
     document.body.style.overflowY = "auto";
     setTimeout(() => {
         modal.style.display = "none"; // Hide the modal after animation completes
         modalContent.style.transform = "scale(0.8)";
     }, 200); // Match this with the transition duration
-});
+}
+
+// Close modal when the 'X' is clicked
+closeModal.addEventListener('click', CloseModal);
 
 // Close modal when clicking outside of the modal content
 window.addEventListener('click', (e) => {
     if (e.target == modal) {
-        modal.style.opacity = 0;
-        document.body.style.overflowY = "auto";
-        setTimeout(() => {
-            modal.style.display = "none";
-            modalContent.style.transform = "scale(0.8)";
-        }, 200);
+        CloseModal();
     }
 });
