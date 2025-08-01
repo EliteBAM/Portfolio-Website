@@ -112,12 +112,12 @@
     ]
   },
   {
-    "title": "Stylized Fantasy Turtle",
-    "staticImage": "/projects/Stylized Fantasy Turtle/0_turtle_thumb_new_small.png",
-    "gifImage": "/projects/Stylized Fantasy Turtle/turtle_loop.gif",
-    "description": "Fully rigged \"World Turtle\" game asset",
+    "title": "Collision-Aware Camera System",
+    "staticImage": "/projects/Collision-Aware Camera System/Dynamic Camera.png",
+    "gifImage": "/projects/Collision-Aware Camera System/dynamic-camera.gif",
+    "description": "Third Person Camera with smooth target follow and dynamic positioning with collision detection.",
     "tags": [
-      "Art"
+      "Software"
     ]
   },
   {
@@ -133,7 +133,7 @@
     "title": "Dark Temple",
     "staticImage": "/projects/Dark Temple/dark_temple_thumb.png",
     "gifImage": "/projects/Dark Temple/dt_thumb_gif.gif",
-    "description": "More of a prototype than a game-- a little action RPG made on a very short deadline.",
+    "description": "A VERY small vertical slice of a Dark Souls inspired action RPG.",
     "tags": [
       "Games"
     ]
@@ -157,12 +157,12 @@
     ]
   },
   {
-    "title": "Collision-Aware Camera System",
-    "staticImage": "/projects/Collision-Aware Camera System/Dynamic Camera.png",
-    "gifImage": "/projects/Collision-Aware Camera System/dynamic-camera.gif",
-    "description": "Third Person Camera with smooth target follow and dynamic positioning with collision detection.",
+    "title": "Stylized Fantasy Turtle",
+    "staticImage": "/projects/Stylized Fantasy Turtle/0_turtle_thumb_new_small.png",
+    "gifImage": "/projects/Stylized Fantasy Turtle/turtle_loop.gif",
+    "description": "Fully rigged \"World Turtle\" game asset",
     "tags": [
-      "Software"
+      "Art"
     ]
   }
 ]

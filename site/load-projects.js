@@ -1,7 +1,6 @@
 const modal = document.getElementById("project-modal");
 const closeModal = document.querySelector(".close");
 const modalContent = document.getElementById("modal-content");
-const body = document.getElementsByClassName("body");
 
 let allProjects = []; // Store all projects fetched from the server
 

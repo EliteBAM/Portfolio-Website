@@ -25,15 +25,15 @@ const showIntroSection = () => {
     setTimeout(() => {
         introSection.style.opacity = '1'; // Fade in
         introSection.style.paddingBottom = '15px';
-        introSection.style.maxHeight = getIntroSectionHeight(); // Expand the height (set a reasonable max height)
+        introSection.style.maxHeight = getIntroSectionHeight(); // Expand the height
     }, 10);
 };
 
 const hideIntroSection = () => {
     setTimeout(() => {
-        introSection.style.maxHeight = '0px'; // Expand the height (set a reasonable max height)
+        introSection.style.maxHeight = '0px';
         introSection.style.paddingBottom = '0px';
-        introSection.style.opacity = '0'; // Fade out
+        introSection.style.opacity = '0';
     }, 20);
 };
 
