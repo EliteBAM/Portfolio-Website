@@ -1,1 +1,13 @@
-Dark Temple was prototype project developed while at the USC Games program.
+Dark Temple is an action RPG prototype project developed while at the USC Games program.
+
+I was the primary designer and programmer.
+
+I created every 3D model, animation, texture, UI, environment, and coded every system-- except for the final boss.
+
+The boss was procured and coded by my two teammates. Credits are at the end of the game.
+
+I feel that this project represents my artistic design capabilities, and my ability to refine, create, and understand the "vibe" and "atmosphere" of a genere I love.
+
+While the combat could be further improved by adding directional rolling and enemy lock-on, I think it is clear that I understood the "game feel" I was trying to emulate, with regard to timing, weighty-ness, responsiveness, identifying the underlying features of the Dark Souls combat scheme, etc.
+
+I believe this project represents my ability to rapidly prototype numerous interworking features (UI, mount, combat, camera, fog, puzzle, etc) as well.
