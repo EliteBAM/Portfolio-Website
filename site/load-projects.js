@@ -70,7 +70,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 modal.style.display = "flex"; // Show the modal
                 modalContent.scrollTo(0, 0);
                 document.body.style.overflowY = "hidden";
-                document.style.overflowY = "hidden";
                 setTimeout(() => {
                     modal.style.opacity = 1;
                     modalContent.style.transform = "scale(1)";
