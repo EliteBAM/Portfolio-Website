@@ -1,12 +1,12 @@
 1) fighting game framework
 2) Raytracer
 3) Dark Temple
-4) Boat Simulator
-5) Infinite Terrain
+4) Infinite Terrain
+5) Boat Simulator
 6) World Generator
-7) Balloon
-8) Witch List
-9) Empath
+7) Witch List
+8) Empath
+9) Balloon
 10) Drifter
 11) Land of the Occult
 12) Infinidungeon

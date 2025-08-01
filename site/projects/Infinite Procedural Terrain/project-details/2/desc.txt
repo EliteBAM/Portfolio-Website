@@ -1,17 +1,19 @@
-Infinite Procedural Voxel Terrain.
+Infinite Procedural Voxel Terrain. It's a very original concept, I'm calling it CraftMine.
+
+Really though, I thought this was a great exercise and found it very enjoyable to work on.
 
 I used 2D perlin noise and 2D chunking for this system.
 
 The system uses a world manager to handle the processing of loaded chunks and the scheduling of their mesh generation into off-main-thread jobs using Unity's Job system.
 
-Mesh data generation is handled on cpu threads using the Burst Compiler to create orders of magnitude faster mesh-gen machine code, and Unity's low-level mesh API to optimize mesh stream data handling and data-per vertex.
+Mesh data generation is handled on CPU threads using the Burst Compiler to create orders of magnitude faster mesh-gen machine code, and Unity's low-level mesh API to optimize mesh stream data handling and data-per vertex.
 
 Mesh data is then sent to the GPU to be drawn to the screen using Unity Mesh  API calls.
 
 I refactored the whole thing to add it to my portfolio, adding the concept of neighbor tracking and "edgeMaps" to efficiently and accurately generate mesh faces between chunk borders.
 
-Between the burst compiler and the Jobs system, the chunks load extremely fast, about 0.3ms per chunk, allowing for up to a 4096-chunk render area, with 64 chunk updates per world render update before any stutter is noticed on my mobile 10980HK.
+Between the Burst Compiler and the Jobs system, the chunks load extremely fast, about 0.3ms per chunk, allowing for up to a 4096-chunk render area, with 64 chunk updates per world render update before any stutter is noticed on my mobile 10980HK.
 
 Next steps would be to add trees, which would be easy due to the neighbor system, and to parallelize the off-main-thread jobs for even more performance and simultaneous chunk loading.
 
-Of note: The Unity Mesh.ApplyAndDisposeWritableMeshData() call is a current "bottleneck," as it is the only way to apply the mesh data generated in the jobs, and it is impossible to call without locking the main thread. This inevitably causes a hitch when loading copious data. In the future I'd like to refactor the world manager to support staggering this call over multiple frames, giving a huge smoothness on world updates, allowing for even immensely greater render distances and more complex chunks.
+Future optimizations: The Unity Mesh.ApplyAndDisposeWritableMeshData() call is a current "bottleneck," as it is the only way to apply the mesh data generated in the jobs, and it is impossible to call without locking the main thread. This inevitably causes a hitch when loading copious data. In the future I'd like to refactor the world manager to support staggering this call over multiple frames, giving a huge smoothness on world updates, allowing for even immensely greater render distances and more complex chunks.

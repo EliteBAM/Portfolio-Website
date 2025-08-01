@@ -18,22 +18,12 @@
     ]
   },
   {
-    "title": "VR Baseball Simulator",
-    "staticImage": "/projects/VR Baseball Simulator/0_project_gif_thumb.png",
-    "gifImage": "/projects/VR Baseball Simulator/project_gif.gif",
-    "description": "Physics-simulated baseball batting and pitching simulator",
+    "title": "Dark Temple",
+    "staticImage": "/projects/Dark Temple/dark_temple_thumb.png",
+    "gifImage": "/projects/Dark Temple/dt_thumb_gif.gif",
+    "description": "A VERY small vertical slice of a Dark Souls inspired action RPG.",
     "tags": [
-      "Software",
-      "Art"
-    ]
-  },
-  {
-    "title": "Boat Simulator",
-    "staticImage": "/projects/Boat Simulator/boat-thumb.png",
-    "gifImage": "/projects/Boat Simulator/boatdemo-low.gif",
-    "description": "Physically accurate simulation of a boat using airfoil in a fluid dynamics",
-    "tags": [
-      "Software"
+      "Games"
     ]
   },
   {
@@ -46,22 +36,21 @@
     ]
   },
   {
+    "title": "Boat Simulator",
+    "staticImage": "/projects/Boat Simulator/boat-thumb.png",
+    "gifImage": "/projects/Boat Simulator/boatdemo-low.gif",
+    "description": "Physically accurate simulation of a boat using airfoil in a fluid dynamics",
+    "tags": [
+      "Software"
+    ]
+  },
+  {
     "title": "World Generator",
     "staticImage": "/projects/World Generator/worldgeneratornew.png",
     "gifImage": "/projects/World Generator/world_gen_demo_short.gif",
     "description": "World Generator that generates continental geography for a game world as well as biome data for each cell of the world.",
     "tags": [
       "Software"
-    ]
-  },
-  {
-    "title": "C'est le Balloon",
-    "staticImage": "/projects/C'est le Balloon/balloon_thumb.png",
-    "gifImage": "/projects/C'est le Balloon/balloon_game.gif",
-    "description": "Honestly, what is this? C'est le Balloon.",
-    "tags": [
-      "Games",
-      "Art"
     ]
   },
   {
@@ -79,6 +68,16 @@
     "staticImage": "/projects/EMPATH/empathnew.png",
     "gifImage": "/projects/EMPATH/empath_optimized_again.gif",
     "description": "",
+    "tags": [
+      "Games",
+      "Art"
+    ]
+  },
+  {
+    "title": "C'est le Balloon",
+    "staticImage": "/projects/C'est le Balloon/balloon_thumb.png",
+    "gifImage": "/projects/C'est le Balloon/balloon_game.gif",
+    "description": "Honestly, what is this? C'est le Balloon.",
     "tags": [
       "Games",
       "Art"
@@ -112,12 +111,12 @@
     ]
   },
   {
-    "title": "Collision-Aware Camera System",
-    "staticImage": "/projects/Collision-Aware Camera System/Dynamic Camera.png",
-    "gifImage": "/projects/Collision-Aware Camera System/dynamic-camera.gif",
-    "description": "Third Person Camera with smooth target follow and dynamic positioning with collision detection.",
+    "title": "Stylized Fantasy Turtle",
+    "staticImage": "/projects/Stylized Fantasy Turtle/0_turtle_thumb_new_small.png",
+    "gifImage": "/projects/Stylized Fantasy Turtle/turtle_loop.gif",
+    "description": "Fully rigged \"World Turtle\" game asset",
     "tags": [
-      "Software"
+      "Art"
     ]
   },
   {
@@ -130,12 +129,13 @@
     ]
   },
   {
-    "title": "Dark Temple",
-    "staticImage": "/projects/Dark Temple/dark_temple_thumb.png",
-    "gifImage": "/projects/Dark Temple/dt_thumb_gif.gif",
-    "description": "A VERY small vertical slice of a Dark Souls inspired action RPG.",
+    "title": "VR Baseball Simulator",
+    "staticImage": "/projects/VR Baseball Simulator/0_project_gif_thumb.png",
+    "gifImage": "/projects/VR Baseball Simulator/project_gif.gif",
+    "description": "Physics-simulated baseball batting and pitching simulator",
     "tags": [
-      "Games"
+      "Software",
+      "Art"
     ]
   },
   {
@@ -157,12 +157,12 @@
     ]
   },
   {
-    "title": "Stylized Fantasy Turtle",
-    "staticImage": "/projects/Stylized Fantasy Turtle/0_turtle_thumb_new_small.png",
-    "gifImage": "/projects/Stylized Fantasy Turtle/turtle_loop.gif",
-    "description": "Fully rigged \"World Turtle\" game asset",
+    "title": "Collision-Aware Camera System",
+    "staticImage": "/projects/Collision-Aware Camera System/Dynamic Camera.png",
+    "gifImage": "/projects/Collision-Aware Camera System/dynamic-camera.gif",
+    "description": "Third Person Camera with smooth target follow and dynamic positioning with collision detection.",
     "tags": [
-      "Art"
+      "Software"
     ]
   }
 ]
