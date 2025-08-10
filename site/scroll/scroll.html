@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Scroll </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    
+        <!-- Preload "sprites" -->
+        <link rel="preload" as="image" href="https://robertgehr.com/scroll/scroll_closed_new_2_1.png" fetchpriority="high">
+        <link rel="preload" as="image" href="https://robertgehr.com/scroll/scroll_top_1_wax_seal_f1.png">
+        <link rel="preload" as="image" href="https://robertgehr.com/scroll/scroll_bottom_1_f1.png">
+        <link rel="preload" as="image" href="https://robertgehr.com/scroll/scroll_body_repeating.png">
+        <link rel="preload" as="image" href="https://robertgehr.com/scroll/scroll_body.png">
+
+        <link rel="preload" as="image" href="https://robertgehr.com/scroll/scroll_top_1_wax_seal_f2.png">
+        <link rel="preload" as="image" href="https://robertgehr.com/scroll/scroll_top_1_wax_seal_f3.png">
+        <link rel="preload" as="image" href="https://robertgehr.com/scroll/scroll_top_1_wax_seal_f4.png">
+
+        <link rel="preload" as="image" href="https://robertgehr.com/scroll/scroll_bottom_1_f2.png">
+        <link rel="preload" as="image" href="https://robertgehr.com/scroll/scroll_bottom_1_f3.png">
+        <link rel="preload" as="image" href="https://robertgehr.com/scroll/scroll_bottom_1_f4.png">
+
+        <link rel="preload" as="image" href="https://robertgehr.com/scroll/scroll_top_1_repeating_f1.png">
+        <link rel="preload" as="image" href="https://robertgehr.com/scroll/scroll_top_1_repeating_f2.png">
+        <link rel="preload" as="image" href="https://robertgehr.com/scroll/scroll_top_1_repeating_f3.png">
+        <link rel="preload" as="image" href="https://robertgehr.com/scroll/scroll_top_1_repeating_f4.png">
+
+        <style>
+          body {
+              font-size: clamp(12px, 1.5vw, 18px);
+              margin: 0;
+              height: 100vh;
+              overflow: hidden;
+          }
+
+          .fade {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 1);
+            z-index: 100;
+          }
+
+          .background {
+              height:100%;
+              width: 100%;
+              transform: scale(1);
+              transition: transform 0.8s ease-in-out;
+          }
+
+          .background.zoomIn {
+            transform: scale(1.2);
+          }
+
+          .bobble {
+            /* background-color: aqua; */
+
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 35vw;
+            height: 35vh;
+
+            display: flex;
+            justify-content: center;  /* horizontal centering */
+            align-items: center;      /* vertical centering */
+          }
+
+          .scroll {    
+            /* background-color: red; */
+
+            position: relative;
+
+            width: 50%;
+
+            transform: scale(0.8);
+            transition: transform 0.8s ease-in-out;
+
+            overflow: hidden;
+          }
+
+          .scroll.no-transition {
+              transition: none !important;
+          }
+
+          .scroll.zoomIn {
+            --zoomed-scale: 2.3;
+            transform: scale(var(--zoomed-scale));
+          }
+
+          .scroll.zoomIn.opened {
+            --default-opened-scale: 2.7;
+            transform: scale(var(--opened-scale, 2.7));
+          }
+
+          .scrollimage {
+            /* background-color: blue; */
+
+            position: relative;
+            display: block;
+            width: 100%;
+            height: auto;
+
+            width: 100%;
+            height: auto;
+            image-rendering: pixelated;
+
+            z-index: 90;
+          }
+
+          .scrollbodyvisibilitywrapper {
+            position: absolute;
+
+            width: 100%;
+            height: 80%;
+
+            top: 8.571428571428571%;
+            left: 0%;
+
+            overflow: hidden;
+
+            z-index: 0;
+
+            /* background-color: yellow; */
+          }
+
+          .scrollbody {
+            position: absolute;
+            top: 0%;
+
+            width: 100%;
+            height: 193%;
+            pointer-events: none;
+
+            background-image: url("https://robertgehr.com/scroll/scroll_body_repeating.png");
+            background-repeat: repeat-y;
+            background-size: 100% auto;
+
+            image-rendering: pixelated;
+
+            will-change: background-position;
+
+            z-index: 50;
+
+          }
+
+          .scrolltopimage {
+            position: absolute;
+            top: 0%;
+
+            width: 100%;
+            height: auto;
+            image-rendering: pixelated;
+            pointer-events: none;
+
+            display: none;
+
+            /* visibility: hidden; */
+
+            z-index:70;
+          }
+
+          .scrollbottomimage {
+            position: absolute;
+            top: 0%;
+
+            width: 100%;
+            height: auto;
+            image-rendering: pixelated;
+            pointer-events: none;
+
+            display: none;
+
+            /* visibility: hidden; */
+
+            z-index: 80;
+          }
+
+          .scrolltext {
+            /* background-color:yellowgreen; */
+
+            position: absolute;
+            top: 0px;
+            left: 0px;
+
+            margin-left: 13%;
+            margin-right: 13%;
+            padding-bottom: 5%;
+
+            width: 74%;
+
+            font-family: "Pixelify Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: normal;
+
+            font-size: 0.5em;
+
+            color: rgba(0, 0, 0, 0);
+
+            pointer-events: none;
+
+            z-index: 75;
+
+          }
+      </style>
+    </head>
+    <body>
+
+      <div class = "fade" id = "fade"></div>
+
+      <div class = "background" id = "background"></div>
+
+      <div class = "bobble" id = "bobble">
+        <div class = "scroll" id = "scroll">
+          <img src = "https://robertgehr.com/scroll/scroll_closed_new_2_1.png" class = 'scrollimage' id = "scrollclosed">
+          <div class = "scrollbodyvisibilitywrapper" id = "scrollbodyvisibilitywrapper">
+            <div class = "scrollbody" id = "scrollbody">
+              <div class = "scrolltext" id = "scrolltext">
+                <p>Test Test,</p>
+
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+
+                <p>.</p>
+                <p>.</p>
+                <p>.</p>
+                <p>.</p>
+                <p>.</p>
+
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+                <p>This is a test message</p>
+
+                <p>Test,</p>
+                <p>Test</p>
+                
+                <p>#scrollgang</p>
+                <p>END OF MESSAGE</p>
+  
+              </div>
+            </div>
+          </div>
+          <img src = "https://robertgehr.com/scroll/scroll_top_1_wax_seal_f1.png" class = 'scrolltopimage' id = "scrolltop">
+          <img src = "https://robertgehr.com/scroll/scroll_bottom_1_f1.png" class = 'scrollbottomimage' id = "scrollbottom">
+        </div>
+      </div>
+
+    </body>
+
+
+    <!-- State -->
+    <script>
+      let zoomIn = false;
+      let isOpen = false;
+    </script>
+
+    <!-- Scroll Events -->
+    <script>
+      const scrollBodyWrapper = document.getElementById("scrollbodyvisibilitywrapper");
+      const scrollObject = document.getElementById("scroll");
+      const scrollText = document.getElementById("scrolltext");
+      const scrollImage = document.getElementById("scrollclosed");
+      const scrollBody = document.getElementById("scrollbody");
+      const scrollTopImage = document.getElementById("scrolltop")
+      const scrollBottomImage = document.getElementById("scrollbottom")
+      const background = document.getElementById("background");
+      const bobble = document.getElementById("bobble");
+
+      let scrollBoundsHeight = 0;
+
+
+      scrollObject.addEventListener('mouseenter', () => {
+        background.classList.add('zoomIn');
+        scrollObject.classList.add('zoomIn');
+        scrollObject.style.transform = '';
+        zoomIn = true;
+      });
+
+      scrollObject.addEventListener('mouseleave', () => {
+        background.classList.remove('zoomIn');
+        scrollObject.classList.remove('zoomIn');
+        scrollObject.style.transform = `scale(1)`;
+        zoomIn = false;
+      });
+      
+      scrollObject.addEventListener('click', () => {
+
+        //change closed scroll source to give appropriate dimansions
+        scrollImage.src = "https://robertgehr.com/scroll/scroll_body.png";
+
+        //hide closed scroll
+        scrollImage.style.visibility = "hidden";
+
+        //display open scroll components
+        scrollBody.style.display = "flex";
+        scrollTopImage.style.display = "inline";
+        scrollBottomImage.style.display = "inline";
+
+        //make scroll text visible by setting values
+        scrollText.style.color = "rgb(255, 255, 255, 0.9)";
+        scrollText.style.textShadow = "0.5px 0.9px 0px rgba(0, 0, 0, 0.75)";
+
+        //set opened css
+        scrollObject.classList.add("opened");
+
+        //adjust scale to stay in screen
+        requestAnimationFrame(CalculateFinalScrollScale);
+
+        window.addEventListener("resize", CalculateFinalScrollScale);
+
+        isOpen = true;
+
+      });    
+    </script>
+
+    <!-- Recalculate Screen-Fitting Scroll Scale Function -->
+    <script>
+      //state and zoom
+      function getScale(el) {
+        const cs = getComputedStyle(el);
+
+        // Try individual transform property first (if supported)
+        if (cs.scale && cs.scale !== 'none') {
+          const first = cs.scale.toString().split(/\s+/)[0];
+          const v = parseFloat(first);
+          if (!Number.isNaN(v)) return v;
+        }
+
+        // Fallback: parse transform matrix
+        const t = cs.transform || cs.webkitTransform;
+        if (t && t !== 'none') {
+          let m = t.match(/matrix\(([^)]+)\)/);
+          if (m) {
+            const [a, b] = m[1].split(',').map(n => parseFloat(n));
+            const scaleX = Math.sqrt(a * a + b * b);
+            if (!Number.isNaN(scaleX)) return scaleX;
+          }
+          m = t.match(/matrix3d\(([^)]+)\)/);
+          if (m) {
+            const parts = m[1].split(',').map(n => parseFloat(n));
+            const a = parts[0], b = parts[1];
+            const scaleX = Math.sqrt(a * a + b * b);
+            if (!Number.isNaN(scaleX)) return scaleX;
+          }
+        }
+
+        return 1; // default if nothing is set
+      }
+
+      function CalculateFinalScrollScale() {
+
+        const baseHeight = scrollObject.getBoundingClientRect().height / getScale(scrollObject);
+
+        const proposedScale = 2.7;
+        
+        const proposedHeight = baseHeight * proposedScale;
+
+        const maxHeight = window.innerHeight * 0.98;
+
+        const newHeightMultiplier = maxHeight / baseHeight;
+        
+        console.log("fixed scale: " + newHeightMultiplier);
+
+        const newScale = (proposedHeight > maxHeight && baseHeight < maxHeight) ? 
+        newHeightMultiplier
+        : proposedScale;
+
+        scrollObject.style.setProperty('--opened-scale', newScale);
+
+        console.log("new scale applied: " + newScale)
+      }
+    </script>
+
+    <!-- Scrolling Script -->
+    <script>
+
+      //animate scroll and move text on scroll event
+      let scrollValue = 0;
+      let frameCount = 0;
+
+      const scrollTopWaxFrames = ["https://robertgehr.com/scroll/scroll_top_1_wax_seal_f1.png",
+                                  "https://robertgehr.com/scroll/scroll_top_1_wax_seal_f2.png",
+                                  "https://robertgehr.com/scroll/scroll_top_1_wax_seal_f3.png",
+                                  "https://robertgehr.com/scroll/scroll_top_1_wax_seal_f4.png"
+                                 ];
+
+      const scrollTopRepeatingFrames = ["https://robertgehr.com/scroll/scroll_top_1_repeating_f1.png",
+                                        "https://robertgehr.com/scroll/scroll_top_1_repeating_f2.png",
+                                        "https://robertgehr.com/scroll/scroll_top_1_repeating_f3.png",
+                                        "https://robertgehr.com/scroll/scroll_top_1_repeating_f4.png"
+                                       ];
+
+      const scrollBottomFrames = ["https://robertgehr.com/scroll/scroll_bottom_1_f1.png",
+                                  "https://robertgehr.com/scroll/scroll_bottom_1_f2.png",
+                                  "https://robertgehr.com/scroll/scroll_bottom_1_f3.png",
+                                  "https://robertgehr.com/scroll/scroll_bottom_1_f4.png"
+                                 ];
+
+      const scrollSpeed = 0.1;
+
+      document.addEventListener("wheel", (event) => {        
+        if(isOpen && zoomIn) {
+
+          //Animate Scroll Body and Translate Text
+
+          const wrapperHeight = scrollBodyWrapper.getBoundingClientRect().height / 2.7;
+          const textHeight = scrollText.getBoundingClientRect().height / 2.7;
+
+          // constants
+          const travel = textHeight - wrapperHeight;
+          const maxScroll = Math.max(0, travel);
+
+          // accumulate & clamp
+          const screenSizeMultiplier = wrapperHeight / window.innerHeight;
+          const scrollDelta = event.deltaY * scrollSpeed * screenSizeMultiplier;
+
+          const stepSize = 8.3997 / 2;
+          //this gives a pixel unit -> scrollBody.getBoundingClientRect().height / 28 / 2 / 2.7
+
+          scrollValue = Math.min(Math.max(0, scrollValue + scrollDelta), maxScroll / stepSize);
+
+          console.log("scroll value: " + scrollValue);
+          console.log("rounded value: " + Math.round(scrollValue));
+
+          // final pixel delta
+          const pixelDelta = -Math.round(scrollValue) * stepSize;
+
+          // apply
+          scrollText.style.transform = `translateY(${pixelDelta}px)`;
+          scrollBody.style.backgroundPositionY = `${pixelDelta}px`;
+
+
+          //Animate Top and Bottom of Scroll
+          frameCount = parseInt(Math.round(scrollValue) / 2); //parseInt(scrollValue * 0.1)
+
+          let topFrameSelection = frameCount < 4 ? scrollTopWaxFrames : scrollTopRepeatingFrames;
+
+          scrollTopImage.src = topFrameSelection[frameCount % 4];
+          scrollBottomImage.src = scrollBottomFrames[frameCount % 4];
+
+          console.log("frame count! " + frameCount);
+        }
+      });
+
+    </script>
+
+    <!-- Wait Until Scroll Load Function -->
+    <script>
+      async function waitUntilPainted(img) {
+        // If it already finished loading, still force a decode
+        if (img.complete && img.naturalWidth > 0) {
+          try { if (img.decode) await img.decode(); } catch {}
+        } else {
+          await new Promise(res => {
+            img.addEventListener('load', res, { once: true });
+            img.addEventListener('error', res, { once: true });
+          });
+          try { if (img.decode) await img.decode(); } catch {}
+        }
+        // Give the browser a frame (or two) to actually paint it
+        await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+      }
+    </script>
+
+    <!-- Delay Transition on Bobble so it Spawns in Center -->
+    <script>
+      requestAnimationFrame(() => {
+        bobble.style.transition = `transform 0.3s ease-in-out`;
+      });
+    </script>
+
+    <!-- Scroll Animation -->
+    <script>
+
+        function AnimateScroll(
+          timestamp,
+          lastTime = null,
+          value = 0,
+          speed = Math.PI * 0.6,
+          baseAmplitude = 0.5
+        ) {
+
+          //consistent amplitude setup
+          const relativeAmplitude = scrollBoundsHeight * baseAmplitude;
+
+          //consistent speed setup
+          if (!lastTime) lastTime = timestamp;
+          const delta = (timestamp - lastTime) / 1000; // seconds
+
+          //animation code begins
+          let amplitude = relativeAmplitude;
+          if (zoomIn && isOpen) amplitude /= 4;
+          else if (zoomIn) amplitude /= 2;
+
+          bobble.style.transform = `translateY(${amplitude * Math.sin(value)}px) translate(-50%, -50%)`;
+
+          value += speed * delta;
+
+          requestAnimationFrame((t) => AnimateScroll(t, timestamp, value));
+        }
+
+        requestAnimationFrame( function (timestamp) {
+          AnimateScroll(timestamp)
+        });
+
+    </script>
+
+    <!-- Fade In From Black and Zoom Scroll On Load-->
+    <script>
+      scrollObject.classList.add("no-transition");
+
+      const fadeObject = document.getElementById("fade");
+      fadeObject.style.backgroundColor = "rgba(0, 0, 0, 1)";
+
+      let startTime = null;
+      const duration = 1500;
+
+      function FadeInScene(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const elapsed = timestamp - startTime;
+
+        const progress = Math.min(elapsed / duration, 1); // 0 to 1
+        const newAlpha = 1 - progress; // 1 to 0
+
+        fadeObject.style.backgroundColor = `rgba(0, 0, 0, ${newAlpha})`;
+
+        if (progress < 1) {
+          requestAnimationFrame(FadeInScene);
+        } else {
+          fadeObject.remove();
+        }
+      }
+
+    waitUntilPainted(scrollImage)
+      .then(() => {
+        // wait until after image is loaded to set scrollBoundsHeight, so its not 0...
+        scrollBoundsHeight = scrollObject.getBoundingClientRect().height;
+        console.log("scrollbounds height: " + scrollBoundsHeight);
+
+        requestAnimationFrame(() => {
+          scrollObject.classList.remove("no-transition");
+          scrollObject.style.transform = `scale(1)`;
+        });
+      })
+      .then(() => {
+        requestAnimationFrame(FadeInScene);
+      });
+    </script>
+
+    <!-- Generate Background -->
+    <script>
+      function generateBackground({
+        steps = 20,
+        minStep = 8,
+        maxStep = 24,
+        innerLightness = 90,
+        outerLightness = 10,
+        hue = 0,
+        saturation = 0,
+        growth = 1.1 // multiplier per step — >1 means increasing
+      } = {}) {
+
+        const stops = [];
+        let radius = 0;
+
+        for (let i = 0; i < steps; i++) {
+          // Progressive spacing (grows with each ring)
+          const baseStep = Math.floor(Math.random() * (maxStep - minStep)) + minStep;
+          const progressiveStep = baseStep * Math.pow(growth, i);
+
+          // Lightness interpolation
+          const t = i / (steps - 1);
+          const lightness = innerLightness + t * (outerLightness - innerLightness);
+          const color = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+
+          stops.push(`${color} ${radius}px, ${color} ${radius + progressiveStep}px`);
+          radius += progressiveStep;
+        }
+
+        return `radial-gradient(circle at center, ${stops.join(', ')})`;
+      }
+
+      background.style.background = generateBackground({
+        steps: 35,
+        innerLightness: 30,
+        outerLightness: 0,
+        hue: 203,
+        saturation: 58,
+        growth: 1.03
+      });
+    </script>
+</html>
