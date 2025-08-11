@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
         <title> Scroll </title>
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
@@ -58,14 +62,14 @@
           .bobble {
             /* background-color: aqua; */
 
-            position: absolute;
+            position: fixed;
 
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
 
-            width: 35vw;
-            height: 35vh;
+            width: 35%;
+            height: 35%;
 
             display: flex;
             justify-content: center;  /* horizontal centering */
@@ -135,7 +139,7 @@
             top: 0%;
 
             width: 100%;
-            height: 193%;
+            height: 100%;
             pointer-events: none;
 
             background-image: url("https://robertgehr.com/scroll/scroll_body_repeating.png");
@@ -244,19 +248,7 @@
                 <p>This is a test message</p>
                 <p>This is a test message</p>
                 <p>This is a test message</p>
-                <p>This is a test message</p>
 
-                <p>This is a test message</p>
-                <p>This is a test message</p>
-                <p>This is a test message</p>
-
-                <p>This is a test message</p>
-                <p>This is a test message</p>
-                <p>This is a test message</p>
-
-                <p>This is a test message</p>
-                <p>This is a test message</p>
-                <p>This is a test message</p>
 
                 <p>Test,</p>
                 <p>Test</p>
@@ -377,17 +369,17 @@
       function CalculateFinalScrollScale() {
 
         const baseHeight = scrollObject.getBoundingClientRect().height / getScale(scrollObject);
-
+        
         const proposedScale = 2.7;
         
         const proposedHeight = baseHeight * proposedScale;
-
+        
         const maxHeight = window.innerHeight * 0.98;
 
         const newHeightMultiplier = maxHeight / baseHeight;
         
         console.log("fixed scale: " + newHeightMultiplier);
-
+        
         const newScale = (proposedHeight > maxHeight && baseHeight < maxHeight) ? 
         newHeightMultiplier
         : proposedScale;
@@ -423,15 +415,16 @@
                                   "https://robertgehr.com/scroll/scroll_bottom_1_f4.png"
                                  ];
 
-      const scrollSpeed = 0.1;
+      const scrollSpeed = 0.075;
 
       document.addEventListener("wheel", (event) => {        
         if(isOpen && zoomIn) {
 
           //Animate Scroll Body and Translate Text
+          const scrollScale = getScale(scrollObject)
 
-          const wrapperHeight = scrollBodyWrapper.getBoundingClientRect().height / 2.7;
-          const textHeight = scrollText.getBoundingClientRect().height / 2.7;
+          const wrapperHeight = scrollBodyWrapper.getBoundingClientRect().height / scrollScale;
+          const textHeight = scrollText.getBoundingClientRect().height / scrollScale;
 
           // constants
           const travel = textHeight - wrapperHeight;
@@ -451,6 +444,7 @@
 
           // final pixel delta
           const pixelDelta = -Math.round(scrollValue) * stepSize;
+          //const pixelDelta = -scrollValue;
 
           // apply
           scrollText.style.transform = `translateY(${pixelDelta}px)`;
@@ -458,7 +452,8 @@
 
 
           //Animate Top and Bottom of Scroll
-          frameCount = parseInt(Math.round(scrollValue) / 2); //parseInt(scrollValue * 0.1)
+          frameCount = parseInt(Math.round(scrollValue) / 2);
+          //frameCount = parseInt(scrollValue * 0.1);
 
           let topFrameSelection = frameCount < 4 ? scrollTopWaxFrames : scrollTopRepeatingFrames;
 
