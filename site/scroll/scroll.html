@@ -38,6 +38,20 @@
               overflow: hidden;
           }
 
+          .viewport {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100dvh;            /* dynamic visual viewport height */
+            padding:
+              env(safe-area-inset-top)
+              env(safe-area-inset-right)
+              env(safe-area-inset-bottom)
+              env(safe-area-inset-left);
+            display: grid;
+            place-items: center;        /* centers children (bobble) in the same box */
+          }
+
           .fade {
             position: fixed;
             height: 100%;
@@ -219,53 +233,56 @@
     </head>
     <body>
 
-      <div class = "fade" id = "fade"></div>
+      <div class = "viewport">
+        <div class = "fade" id = "fade"></div>
 
-      <div class = "background" id = "background"></div>
+        <div class = "background" id = "background"></div>
 
-      <div class = "bobble" id = "bobble">
-        <div class = "scroll" id = "scroll">
-          <img src = "https://robertgehr.com/scroll/scroll_closed_new_2_1.png" class = 'scrollimage' id = "scrollclosed">
-          <div class = "scrollbodyvisibilitywrapper" id = "scrollbodyvisibilitywrapper">
-            <div class = "scrollbody" id = "scrollbody">
-              <div class = "scrolltext" id = "scrolltext">
-                <p>Test Test,</p>
+        <div class = "bobble" id = "bobble">
+          <div class = "scroll" id = "scroll">
+            <img src = "https://robertgehr.com/scroll/scroll_closed_new_2_1.png" class = 'scrollimage' id = "scrollclosed">
+            <div class = "scrollbodyvisibilitywrapper" id = "scrollbodyvisibilitywrapper">
+              <div class = "scrollbody" id = "scrollbody">
+                <div class = "scrolltext" id = "scrolltext">
+                  <p>Test Test,</p>
 
-                <p>This is a test message</p>
-                <p>This is a test message</p>
-                <p>This is a test message</p>
-                <p>This is a test message</p>
-                <p>This is a test message</p>
-                <p>This is a test message</p>
-                <p>This is a test message</p>
-                <p>This is a test message</p>
-                <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
 
-                <p>.</p>
-                <p>.</p>
-                <p>.</p>
-                <p>.</p>
-                <p>.</p>
+                  <p>.</p>
+                  <p>.</p>
+                  <p>.</p>
+                  <p>.</p>
+                  <p>.</p>
 
-                <p>This is a test message</p>
-                <p>This is a test message</p>
-                <p>This is a test message</p>
-                <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
 
 
-                <p>Test,</p>
-                <p>Test</p>
-                
-                <p>#scrollgang</p>
-                <p>END OF MESSAGE</p>
-  
+                  <p>Test,</p>
+                  <p>Test</p>
+                  
+                  <p>#scrollgang</p>
+                  <p>END OF MESSAGE</p>
+    
+                </div>
               </div>
             </div>
+            <img src = "https://robertgehr.com/scroll/scroll_top_1_wax_seal_f1.png" class = 'scrolltopimage' id = "scrolltop">
+            <img src = "https://robertgehr.com/scroll/scroll_bottom_1_f1.png" class = 'scrollbottomimage' id = "scrollbottom">
           </div>
-          <img src = "https://robertgehr.com/scroll/scroll_top_1_wax_seal_f1.png" class = 'scrolltopimage' id = "scrolltop">
-          <img src = "https://robertgehr.com/scroll/scroll_bottom_1_f1.png" class = 'scrollbottomimage' id = "scrollbottom">
         </div>
       </div>
+
 
     </body>
 
