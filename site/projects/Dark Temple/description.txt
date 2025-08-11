@@ -1,1 +1,1 @@
-A VERY small vertical slice of a Dark Souls inspired action RPG.
+A small vertical slice of a Dark Souls inspired action RPG.

@@ -1,3 +1,3 @@
-Hyperspace drifter is an original game made in Unity in 1 night.
+Hyperspace Drifter is an original game made in Unity in 1 night. I made everything except the music, which I sourced to match the aesthetic. I'm including this project here because I'm satisfied with it's artistic atmosphere, and it's gameplay as a challenging "iPhone game"-scope experience. The game is actually really hard, though, but level three is pretty cool if you make it there! (It can be cheesed, but it's more fun to play the "right way").
 
 "Hyperspace is the bridge between worlds. Unknown dangers await. Survive to escape... the Hyperspace Rift!"

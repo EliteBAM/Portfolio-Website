@@ -66,7 +66,7 @@ Matrix4x4.prototype.transpose = function () {
 }
 
 Matrix4x4.prototype.subMatrix = function(removeRowIndex, removeColIndex) {
-    // hardcoded to avoid branching for performance
+    // hardcoded for performance
     switch (`${removeRowIndex}${removeColIndex}`) {
         case '00': return new Matrix3x3([this.getElement(1, 1), this.getElement(1, 2), this.getElement(1, 3), 
                                          this.getElement(2, 1), this.getElement(2, 2), this.getElement(2, 3),
@@ -178,9 +178,6 @@ Matrix4x4.getIdentity = function() {
         0, 0, 0, 1
     ]);
 }
-
-//Transformation functions:
-
 
 Matrix4x4.prototype.toString = function() {
     return `\n

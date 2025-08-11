@@ -1,7 +1,7 @@
-I created this asset for a game called Turtle Town, but it did not get used due to team dysfunction.
+I created this asset for a game called Turtle Town, where one controls a giant turtle while also managing and building a city on its back.
 
 I sculpted and retopologized the turtle model in ZBrush, painted the textures in Substance Painter, and rigged it in Maya LT.
 
-The screenshots you see are in Unity engine with orthographic projection, as was the intended display format for the game project.
+The screenshots you see are in Unity engine with orthographic projection, as was the intended display configuration for the game.
 
-The turtle is rendered using a stylized shader which gives an outline effect as well as quantized lighting bands. The shader was part of my art direction, but I did not code it.
+The turtle is rendered using a stylized shader which gives an outline effect as well as quantized lighting bands.

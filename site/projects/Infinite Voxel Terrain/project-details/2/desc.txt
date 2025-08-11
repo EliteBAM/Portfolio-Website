@@ -1,4 +1,4 @@
-Infinite Procedural Voxel Terrain. It's a very original concept, I'm calling it CraftMine.
+Infinite Procedural Voxel Terrain. A wildly original concept-- I can't believe no one's thought of it. I'm calling it CraftMine.
 
 Really though, I thought this was a great exercise and found it very enjoyable to work on.
 
@@ -6,7 +6,7 @@ I used 2D perlin noise and 2D chunking for this system.
 
 The system uses a world manager to handle the processing of loaded chunks and the scheduling of their mesh generation into off-main-thread jobs using Unity's Job system.
 
-Mesh data generation is handled on CPU threads using the Burst Compiler to create orders of magnitude faster mesh-gen machine code, and Unity's low-level mesh API to optimize mesh stream data handling and data-per vertex.
+Mesh data generation is handled on CPU threads using the Burst Compiler to create orders of magnitude faster mesh-gen machine code, and Unity's low-level mesh API to optimize mesh stream data handling and per-vertex data.
 
 Mesh data is then sent to the GPU to be drawn to the screen using Unity Mesh  API calls.
 
