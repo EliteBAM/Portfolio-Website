@@ -490,23 +490,30 @@
         }
       }
 
+      //PC event
+      document.addEventListener("wheel", e => {
+        unravelScroll(e.deltaY);
+      });
+
+      //Mobile events
       let lastY = null;
 
-      document.addEventListener("pointerdown", e => {
-        lastY = e.clientY;
-      });
+      document.addEventListener("touchstart", e => {
+        if (e.touches.length === 1) {
+          lastY = e.touches[0].clientY;
+        }
+      }, { passive: true });
 
-      document.addEventListener("pointerup", () => {
-        lastY = null;
-      });
+      document.addEventListener("touchmove", e => {
+        if (isOpen && zoomIn && e.touches.length === 1) {
+          const currentY = e.touches[0].clientY;
+          const deltaY = lastY - currentY; // same sign as wheel delta
+          lastY = currentY;
 
-      document.addEventListener("pointermove", e => {
-        if (isOpen && zoomIn) {
-          const deltaY = lastY - e.clientY;
-          lastY = e.clientY;
+          // reuse your wheel logic:
           unravelScroll(deltaY);
         }
-      });
+      }, { passive: true });
 
     </script>
 
