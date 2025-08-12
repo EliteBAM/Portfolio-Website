@@ -66,16 +66,16 @@
           }
 
           .background {
-              position: fixed;
+            position: fixed;
 
-              inset: 0;
+            inset: 0;
 
-              width: 100dvw;
-              height:100dvh;
-              
-              transform: scale(1);
-              transform-origin: 50% 50%;
-              transition: transform 0.8s ease-in-out;
+            width: 100dvw;
+            height:100dvh;
+            
+            transform: scale(1);
+            transform-origin: 50% 50%;
+            transition: transform 0.8s ease-in-out;
           }
 
           .background.zoomIn {
@@ -159,10 +159,6 @@
           }
 
           .scrollbody {
-
-            will-change: background-position;
-            backface-visibility: hidden;
-
             position: absolute;
             top: 0%;
 
@@ -172,11 +168,12 @@
 
             background-image: url("https://robertgehr.com/scroll/scroll_body_repeating.png");
             background-repeat: repeat-y;
-            background-size: 100% auto;
+            background-size: 100% 100%;
 
             image-rendering: pixelated;
 
-            z-index: 50;          }
+            z-index: 50;          
+          }
 
           .scrolltopimage {
             position: absolute;
@@ -212,7 +209,6 @@
 
           .scrolltext {
             /* background-color:yellowgreen; */
-            backface-visibility: hidden;
 
             position: absolute;
             top: 0px;
