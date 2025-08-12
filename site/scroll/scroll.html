@@ -159,6 +159,10 @@
           }
 
           .scrollbody {
+
+            will-change: background-position;
+            backface-visibility: hidden;
+
             position: absolute;
             top: 0%;
 
@@ -170,15 +174,9 @@
             background-repeat: repeat-y;
             background-size: 100% auto;
 
-            will-change: background-position;
-
-            z-index: 50;
-
-            transform: translateZ(-10);
-            backface-visibility: hidden;
-
             image-rendering: pixelated;
-          }
+
+            z-index: 50;          }
 
           .scrolltopimage {
             position: absolute;
@@ -214,6 +212,7 @@
 
           .scrolltext {
             /* background-color:yellowgreen; */
+            backface-visibility: hidden;
 
             position: absolute;
             top: 0px;
@@ -236,9 +235,6 @@
             pointer-events: none;
 
             z-index: 75;
-
-            transform: translateZ(0);
-            backface-visibility: hidden;
           }
       </style>
     </head>
