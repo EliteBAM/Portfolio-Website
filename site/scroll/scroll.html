@@ -444,9 +444,8 @@
 
       const scrollSpeed = 0.075;
 
-      document.addEventListener("wheel", (event) => {        
+      function unravelScroll(delta) {
         if(isOpen && zoomIn) {
-
           //Animate Scroll Body and Translate Text
           const scrollScale = getScale(scrollObject)
 
@@ -459,7 +458,7 @@
 
           // accumulate & clamp
           const screenSizeMultiplier = wrapperHeight / window.innerHeight;
-          const scrollDelta = event.deltaY * scrollSpeed * screenSizeMultiplier;
+          const scrollDelta = delta * scrollSpeed * screenSizeMultiplier;
 
           const stepSize = 8.3997 / 2;
           //this gives a pixel unit -> scrollBody.getBoundingClientRect().height / 28 / 2 / 2.7
@@ -488,6 +487,24 @@
           scrollBottomImage.src = scrollBottomFrames[frameCount % 4];
 
           console.log("frame count! " + frameCount);
+        }
+      }
+
+      let lastY = null;
+
+      document.addEventListener("pointerdown", e => {
+        lastY = e.clientY;
+      });
+
+      document.addEventListener("pointerup", () => {
+        lastY = null;
+      });
+
+      document.addEventListener("pointermove", e => {
+        if (isOpen && zoomIn) {
+          const deltaY = lastY - e.clientY;
+          lastY = e.clientY;
+          unravelScroll(deltaY);
         }
       });
 
