@@ -160,11 +160,6 @@
 
           .scrollbody {
 
-            -webkit-backface-visibility: hidden; 
-            -ms-transform: translateZ(0); /* IE 9 */
-            -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
-            transform: translateZ(0);
-
             position: absolute;
             top: 0%;
 
@@ -416,6 +411,35 @@
 
       });    
     </script>
+
+    <!-- Mobile Support Transition Resolution Fixer -->
+     <script>
+        function forceCrispFrame() {
+          // toggle a non-visual CSS property to force raster
+          scrollBody.style.imageRendering = 'auto';
+          scrollBody.offsetHeight; // force style flush
+          scrollBody.style.imageRendering = 'pixelated';
+        }
+
+        function watchScaleUntilDone(duration = 800) {
+          const start = performance.now();
+
+          function tick(now) {
+            forceCrispFrame(); // brute-force sharpness
+            if (now - start < duration) {
+              requestAnimationFrame(tick);
+            }
+          }
+          requestAnimationFrame(tick);
+        }
+
+        // Example: when adding your zoomIn class:
+        scrollObject.addEventListener('transitionstart', (e) => {
+          if (e.propertyName === 'transform') {
+            watchScaleUntilDone(800); // match your CSS duration
+          }
+        });
+     </script>
 
     <!-- Recalculate Screen-Fitting Scroll Scale Function -->
     <script>
