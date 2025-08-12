@@ -163,12 +163,12 @@
             top: 0%;
 
             width: 100%;
-            height: 100%;
+            height: 200%;
             pointer-events: none;
 
             background-image: url("https://robertgehr.com/scroll/scroll_body_repeating.png");
             background-repeat: repeat-y;
-            background-size: 100% 100%;
+            background-size: 100% auto;
 
             image-rendering: pixelated;
 
@@ -265,6 +265,63 @@
                   <p>.</p>
                   <p>.</p>
 
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
+                  <p>This is a test message</p>
                   <p>This is a test message</p>
                   <p>This is a test message</p>
                   <p>This is a test message</p>
@@ -444,6 +501,7 @@
         if(isOpen && zoomIn) {
           //Animate Scroll Body and Translate Text
           const scrollScale = getScale(scrollObject)
+          const scrollBodyHeight = scrollBody.getBoundingClientRect().height / scrollScale / 2;
 
           const wrapperHeight = scrollBodyWrapper.getBoundingClientRect().height / scrollScale;
           const textHeight = scrollText.getBoundingClientRect().height / scrollScale;
@@ -470,7 +528,11 @@
 
           // apply
           scrollText.style.transform = `translateY(${pixelDelta}px)`;
-          scrollBody.style.backgroundPositionY = `${pixelDelta}px`;
+          //scrollBody.style.backgroundPositionY = `${pixelDelta}px`;
+          const offset = Math.abs(pixelDelta) % scrollBodyHeight;
+          scrollBody.style.transform = `translateY(${-offset}px)`;
+          console.log("y pos: " + (offset));
+          console.log("scrollbody height: " + scrollBodyHeight);
 
 
           //Animate Top and Bottom of Scroll
