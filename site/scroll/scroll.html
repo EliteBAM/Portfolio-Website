@@ -470,6 +470,7 @@
 
           // final pixel delta
           const pixelDelta = -Math.round(scrollValue) * stepSize;
+          const snappedPx = snapForScaledElement(pixelDelta, scrollScale);
           //const pixelDelta = -scrollValue;
 
           // apply
@@ -488,6 +489,11 @@
 
           console.log("frame count! " + frameCount);
         }
+      }
+
+      function snapForScaledElement(yCssPx, scale) {
+        const dpr = window.devicePixelRatio || 1;
+        return Math.round(yCssPx * scale * dpr) / (scale * dpr);
       }
 
       //PC event
