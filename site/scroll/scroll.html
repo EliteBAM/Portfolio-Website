@@ -581,12 +581,12 @@
       }, { passive: true });
 
       //scroll intertia function
-      function mobileScrollInertia(initialVelocity, decayRate, limit = 0.5) {
+      function mobileScrollInertia(initialVelocity, decayRate, limit = 0.25) {
         const newVel = initialVelocity * decayRate;
         unravelScroll(newVel);
-        if(initialVelocity > limit) {
+        if(Math.abs(initialVelocity) > limit) {
           requestAnimationFrame(() => {
-            mobileScrollInertia(newVel, 0.8);
+            mobileScrollInertia(newVel, 0.7);
           });
         }
       }
