@@ -575,18 +575,18 @@
 
           //start scroll inertia
           requestAnimationFrame(() => {
-            mobileScrollInertia(deltaY, 0.8);
+            mobileScrollInertia(deltaY, 0.1);
           })
         }
       }, { passive: true });
 
       //scroll intertia function
       function mobileScrollInertia(initialVelocity, decayRate, limit = 0.25) {
-        const newVel = initialVelocity * decayRate;
+        const newVel = initialVelocity * (1- decayRate);
         unravelScroll(newVel);
         if(Math.abs(initialVelocity) > limit) {
           requestAnimationFrame(() => {
-            mobileScrollInertia(newVel, 0.7);
+            mobileScrollInertia(newVel, decayRate);
           });
         }
       }
