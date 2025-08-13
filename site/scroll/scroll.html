@@ -123,7 +123,6 @@
           }
 
           .scroll.zoomIn.opened {
-            --default-opened-scale: 2.7;
             transform: scale(var(--opened-scale, 2.7));
           }
 
@@ -167,6 +166,7 @@
             height: 200%;
             pointer-events: none;
 
+            background-color: transparent;
             background-image: url("https://robertgehr.com/scroll/scroll_body_repeating.png");
             background-repeat: repeat-y;
             background-size: 100% auto;
@@ -328,14 +328,12 @@
                   <p>This is a test message</p>
                   <p>This is a test message</p>
 
-
                   <p>Test,</p>
                   <p>Test</p>
                   
                   <p>#scrollgang</p>
                   <p>END OF MESSAGE</p>
-    
-                </div>
+              </div>
             </div>
             <img src = "https://robertgehr.com/scroll/scroll_top_1_wax_seal_f1.png" class = 'scrolltopimage' id = "scrolltop">
             <img src = "https://robertgehr.com/scroll/scroll_bottom_1_f1.png" class = 'scrollbottomimage' id = "scrollbottom">
@@ -353,7 +351,7 @@
       let isOpen = false;
     </script>
 
-    <!-- Scroll Events -->
+    <!-- Document References and Globals -->
     <script>
       const scrollBodyWrapper = document.getElementById("scrollbodyvisibilitywrapper");
       const scrollObject = document.getElementById("scroll");
@@ -366,8 +364,10 @@
       const bobble = document.getElementById("bobble");
 
       let scrollBoundsHeight = 0;
+    </script>
 
-
+    <!-- Scroll Events -->
+    <script>
       scrollObject.addEventListener('mouseenter', () => {
         background.classList.add('zoomIn');
         scrollObject.classList.add('zoomIn');
@@ -384,64 +384,37 @@
       
       scrollObject.addEventListener('click', () => {
 
-        //change closed scroll source to give appropriate dimansions
-        scrollImage.src = "https://robertgehr.com/scroll/scroll_body.png";
+        if(!isOpen) {
+          //change closed scroll source to give appropriate dimansions
+          scrollImage.src = "https://robertgehr.com/scroll/scroll_body.png";
 
-        //hide closed scroll
-        scrollImage.style.visibility = "hidden";
+          //hide closed scroll
+          scrollImage.style.visibility = "hidden";
 
-        //display open scroll components
-        scrollBody.style.display = "flex";
-        scrollTopImage.style.display = "inline";
-        scrollBottomImage.style.display = "inline";
+          //display open scroll components
+          scrollBody.style.display = "flex";
+          scrollTopImage.style.display = "inline";
+          scrollBottomImage.style.display = "inline";
 
-        //make scroll text visible by setting values
-        scrollText.style.color = "rgb(255, 255, 255, 0.9)";
-        scrollText.style.textShadow = "0.5px 0.9px 0px rgba(0, 0, 0, 0.75)";
+          //make scroll text visible by setting values
+          scrollText.style.color = "rgb(255, 255, 255, 0.9)";
+          scrollText.style.textShadow = "0.5px 0.9px 0px rgba(0, 0, 0, 0.75)";
 
-        //set opened css
-        scrollObject.classList.add("opened");
+          //set opened css
+          scrollObject.classList.add("opened");
 
-        //adjust scale to stay in screen
-        requestAnimationFrame(CalculateFinalScrollScale);
+          //adjust scale to stay in screen
+          requestAnimationFrame(CalculateFinalScrollScale);
 
-        window.addEventListener("resize", CalculateFinalScrollScale);
+          window.addEventListener("resize", CalculateFinalScrollScale);
 
-        isOpen = true;
+          isOpen = true;
+        }
 
       });    
     </script>
 
-    <!-- Mobile Support Transition Resolution Fixer -->
-     <script>
-        function forceCrispFrame() {
-          // toggle a non-visual CSS property to force raster
-          scrollBody.style.imageRendering = 'auto';
-          scrollBody.offsetHeight; // force style flush
-          scrollBody.style.imageRendering = 'pixelated';
-        }
-
-        function watchScaleUntilDone(duration = 800) {
-          const start = performance.now();
-
-          function tick(now) {
-            forceCrispFrame(); // brute-force sharpness
-            if (now - start < duration) {
-              requestAnimationFrame(tick);
-            }
-          }
-          requestAnimationFrame(tick);
-        }
-
-        // Example: when adding your zoomIn class:
-        scrollObject.addEventListener('transitionstart', (e) => {
-          if (e.propertyName === 'transform') {
-            watchScaleUntilDone(800); // match your CSS duration
-          }
-        });
-     </script>
-
-    <!-- Recalculate Screen-Fitting Scroll Scale Function -->
+    <!-- Recalculate Screen-Fitting Scroll Scale -->
     <script>
       //state and zoom
       function getScale(el) {
@@ -599,8 +572,24 @@
 
           // reuse your wheel logic:
           unravelScroll(deltaY);
+
+          //start scroll inertia
+          requestAnimationFrame(() => {
+            mobileScrollInertia(deltaY, 0.8);
+          })
         }
       }, { passive: true });
+
+      //scroll intertia function
+      function mobileScrollInertia(initialVelocity, decayRate, limit = 0.5) {
+        const newVel = initialVelocity * decayRate;
+        unravelScroll(newVel);
+        if(initialVelocity > limit) {
+          requestAnimationFrame(() => {
+            mobileScrollInertia(newVel, 0.8);
+          });
+        }
+      }
 
     </script>
 
