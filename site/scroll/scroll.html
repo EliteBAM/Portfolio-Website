@@ -573,18 +573,15 @@
 
           // reuse your wheel logic:
           unravelScroll(deltaY);
-        }
-      }, { passive: true });
 
-      document.addEventListener("touchend", () => {
-        if (isOpen && zoomIn) {
           //start scroll inertia
           const initialTime = performance.now();
           requestAnimationFrame(() => {
             mobileScrollInertia(deltaY, 0.1, initialTime, 2);
-          })        
+          })   
         }
-      });
+      }, { passive: true });
+
 
       //scroll intertia function
       function mobileScrollInertia(initialVelocity, decayRate, initialTime, speedFactor, limit = 0.25) {
