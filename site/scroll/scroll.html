@@ -575,25 +575,21 @@
           unravelScroll(deltaY);
 
           //start scroll inertia
-          const initialTime = performance.now();
           requestAnimationFrame(() => {
-            mobileScrollInertia(deltaY, 0.1, initialTime, 0.08);
+            mobileScrollInertia(deltaY, 0.1);
           })   
         }
       }, { passive: true });
 
-
       //scroll intertia function
-      function mobileScrollInertia(initialVelocity, decayRate, initialTime, speedFactor, limit = 0.25) {
-        const deltaTime = performance.now() - initialTime;
-        const newVel = initialVelocity * (1- decayRate) * deltaTime * speedFactor;
+      function mobileScrollInertia(initialVelocity, decayRate, limit = 0.25) {
+
+        const newVel = initialVelocity * (1- decayRate) * deltaTime;
         unravelScroll(newVel);
+        
         if(Math.abs(initialVelocity) > limit) {
-
-          const initialTime = performance.now();
-
           requestAnimationFrame(() => {
-            mobileScrollInertia(newVel, decayRate, initialTime, speedFactor);
+            mobileScrollInertia(newVel, decayRate);
           });
         }
       }
