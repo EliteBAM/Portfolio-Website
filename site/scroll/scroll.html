@@ -570,15 +570,18 @@
           const deltaY = lastY - currentY; // same sign as wheel delta
           lastY = currentY;
 
-          // reuse your wheel logic:
           unravelScroll(deltaY);
+        }
+      }, { passive: true });
 
+      document.addEventListener("touchend", e => {
+        
           //start scroll inertia
           requestAnimationFrame(() => {
             mobileScrollInertia(deltaY, 0.1);
           })
-        }
-      }, { passive: true });
+
+      });
 
       //scroll intertia function
       function mobileScrollInertia(initialVelocity, decayRate, limit = 0.25) {
