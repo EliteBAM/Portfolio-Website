@@ -557,7 +557,6 @@
 
       //Mobile events
       let lastY = null;
-      let deltaY = null;
 
       document.addEventListener("touchstart", e => {
         if (e.touches.length === 1) {
@@ -568,7 +567,7 @@
       document.addEventListener("touchmove", e => {
         if (isOpen && zoomIn && e.touches.length === 1) {
           const currentY = e.touches[0].clientY;
-          deltaY = lastY - currentY; // same sign as wheel delta
+          const deltaY = lastY - currentY; // same sign as wheel delta
           lastY = currentY;
 
           // reuse your wheel logic:
@@ -577,17 +576,15 @@
           //start scroll inertia
           requestAnimationFrame(() => {
             mobileScrollInertia(deltaY, 0.1);
-          })   
+          })
         }
       }, { passive: true });
 
       //scroll intertia function
       function mobileScrollInertia(initialVelocity, decayRate, limit = 0.25) {
-
-        const newVel = initialVelocity * (1- decayRate) * deltaTime;
+        const newVel = initialVelocity * (1 - decayRate);
         unravelScroll(newVel);
-        
-        if(Math.abs(initialVelocity) > limit) {
+        if(initialVelocity > limit) {
           requestAnimationFrame(() => {
             mobileScrollInertia(newVel, decayRate);
           });
