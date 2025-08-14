@@ -557,6 +557,7 @@
 
       //Mobile events
       let lastY = null;
+      let deltaY = null;
 
       document.addEventListener("touchstart", e => {
         if (e.touches.length === 1) {
@@ -567,26 +568,35 @@
       document.addEventListener("touchmove", e => {
         if (isOpen && zoomIn && e.touches.length === 1) {
           const currentY = e.touches[0].clientY;
-          const deltaY = lastY - currentY; // same sign as wheel delta
+          deltaY = lastY - currentY; // same sign as wheel delta
           lastY = currentY;
 
           // reuse your wheel logic:
           unravelScroll(deltaY);
-
-          //start scroll inertia
-          requestAnimationFrame(() => {
-            mobileScrollInertia(deltaY, 0.1);
-          })
         }
       }, { passive: true });
 
+      document.addEventListener("touchend", () => {
+        if (isOpen && zoomIn) {
+          //start scroll inertia
+          const initialTime = performance.now();
+          requestAnimationFrame(() => {
+            mobileScrollInertia(deltaY, 0.1, initialTime, 10);
+          })        
+        }
+      });
+
       //scroll intertia function
-      function mobileScrollInertia(initialVelocity, decayRate, limit = 0.25) {
-        const newVel = initialVelocity * (1- decayRate);
+      function mobileScrollInertia(initialVelocity, decayRate, initialTime, speedFactor, limit = 0.25) {
+        const deltaTime = performance.now() - initialTime;
+        const newVel = initialVelocity * (1- decayRate) * deltaTime * speedFactor;
         unravelScroll(newVel);
         if(Math.abs(initialVelocity) > limit) {
+
+          const initialTime = performance.now();
+
           requestAnimationFrame(() => {
-            mobileScrollInertia(newVel, decayRate);
+            mobileScrollInertia(newVel, decayRate, initialTime, speedFactor);
           });
         }
       }
