@@ -584,7 +584,7 @@
       function mobileScrollInertia(initialVelocity, decayRate, limit = 0.25) {
         const newVel = initialVelocity * (1 - decayRate);
         unravelScroll(newVel);
-        if(initialVelocity > limit) {
+        if(Math.abs(initialVelocity) > limit) {
           requestAnimationFrame(() => {
             mobileScrollInertia(newVel, decayRate);
           });
