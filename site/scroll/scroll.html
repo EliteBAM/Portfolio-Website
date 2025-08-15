@@ -513,20 +513,19 @@
           const maxScroll = Math.max(0, travel);
 
           // accumulate & clamp
-          const screenSizeMultiplier = wrapperHeight / window.innerHeight;
-          const scrollDelta = delta * scrollSpeed * screenSizeMultiplier;
+          const scrollDelta = delta * scrollSpeed;
 
           const stepSize = scrollBody.getBoundingClientRect().height / 28 / 2 / scrollScale / 2;
           //const stepSize = 8.3997 / 2;
           //this gives a pixel unit -> scrollBody.getBoundingClientRect().height / 28 / 2 / 2.7
 
-          scrollValue = Math.min(Math.max(0, scrollValue + scrollDelta), maxScroll / stepSize);
+          scrollValue = Math.min(Math.max(0, scrollValue + scrollDelta), maxScroll / stepSize / sensitivity);
 
           console.log("scroll value: " + scrollValue);
           console.log("rounded value: " + Math.round(scrollValue));
 
           // final pixel delta
-          const pixelDelta = -Math.round(scrollValue) * stepSize;
+          const pixelDelta = -Math.round(scrollValue) * stepSize * sensitivity;
           //const pixelDelta = -scrollValue;
 
           // apply
