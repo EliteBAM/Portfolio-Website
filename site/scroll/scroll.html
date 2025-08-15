@@ -569,7 +569,7 @@
       document.addEventListener("touchmove", e => {
         if (isOpen && zoomIn && e.touches.length === 1) {
           const currentY = e.touches[0].clientY;
-          deltaY = lastY - currentY; // same sign as wheel delta
+          deltaY = (lastY - currentY) / window.innerHeight;
           lastY = currentY;
           lastT = performance.now();
 
