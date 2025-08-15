@@ -516,7 +516,8 @@
           const screenSizeMultiplier = wrapperHeight / window.innerHeight;
           const scrollDelta = delta * scrollSpeed * screenSizeMultiplier;
 
-          const stepSize = 8.3997 / 2;
+          const stepSize = scrollBody.getBoundingClientRect().height / 28 / 2 / scrollScale / 2;
+          //const stepSize = 8.3997 / 2;
           //this gives a pixel unit -> scrollBody.getBoundingClientRect().height / 28 / 2 / 2.7
 
           scrollValue = Math.min(Math.max(0, scrollValue + scrollDelta), maxScroll / stepSize);
