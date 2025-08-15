@@ -124,8 +124,7 @@
           }
 
           .scroll.zoomIn {
-            --zoomed-scale: 2.3;
-            transform: scale(var(--zoomed-scale));
+            transform: scale(2.3);
           }
 
           .scroll.zoomIn.opened {
@@ -461,6 +460,8 @@
       }
 
       function CalculateFinalScrollScale() {
+
+        if(window.innerHeight > window.innerWidth) return;
 
         const baseHeight = scrollObject.getBoundingClientRect().height / getScale(scrollObject);
         
