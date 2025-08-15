@@ -555,6 +555,10 @@
         }
       }
 
+      window.addEventListener("resize", () => {
+        unravelScroll(0);
+      })
+
       //PC event
       document.addEventListener("wheel", e => {
         unravelScroll(e.deltaY);
