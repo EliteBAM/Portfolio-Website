@@ -557,6 +557,7 @@
 
       //Mobile events
       let lastY = null;
+      let lastT = null;
       let deltaY = null;
 
       document.addEventListener("touchstart", e => {
@@ -570,28 +571,40 @@
           const currentY = e.touches[0].clientY;
           deltaY = lastY - currentY; // same sign as wheel delta
           lastY = currentY;
+          lastT = performance.now();
 
           unravelScroll(deltaY);
         }
       }, { passive: true });
 
       document.addEventListener("touchend", e => {
-
           //start scroll inertia
           requestAnimationFrame(() => {
-            mobileScrollInertia(deltaY, 0.1);
+            mobileScrollInertia(deltaY, 4, lastT);
           })
 
       });
 
       //scroll intertia function
-      function mobileScrollInertia(initialVelocity, decayRate, limit = 0.25) {
-        const newVel = initialVelocity * (1 - decayRate);
-        unravelScroll(newVel);
+      function mobileScrollInertia(initialVelocity, decayRate, lastT, limit = 0.25) {
+
         if(Math.abs(initialVelocity) > limit) {
+
+          //create update constants
+          const currentT = performance.now();
+          const deltaTime = (currentT - lastT) / 1000;
+          lastT = currentT;
+
+          const newVel = initialVelocity * Math.exp(-decayRate * deltaTime);
+
+          //interate scroll
+          unravelScroll(newVel);
+
+          //recurse
           requestAnimationFrame(() => {
-            mobileScrollInertia(newVel, decayRate);
+            mobileScrollInertia(newVel, decayRate, lastT);
           });
+
         }
       }
 
