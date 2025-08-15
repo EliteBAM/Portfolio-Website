@@ -530,10 +530,15 @@
           //const pixelDelta = -scrollValue;
 
           // apply
+
+          //scroll background
           scrollText.style.transform = `translateY(${pixelDelta}px)`;
-          //scrollBody.style.backgroundPositionY = `${pixelDelta}px`;
+            //scrollBody.style.backgroundPositionY = `${pixelDelta}px`;
+
+          //repeat background for transformY method
           const offset = Math.abs(pixelDelta) % scrollBodyHeight;
           scrollBody.style.transform = `translateY(${-offset}px)`;
+
           console.log("y pos: " + (offset));
           console.log("scrollbody height: " + scrollBodyHeight);
 
@@ -575,7 +580,7 @@
           lastY = currentY;
           lastT = performance.now();
 
-          unravelScroll(deltaY * sensitivity);
+          unravelScroll(deltaY);
         }
       }, { passive: true });
 
@@ -600,7 +605,7 @@
           const newVel = initialVelocity * Math.exp(-decayRate * deltaTime);
 
           //interate scroll
-          unravelScroll(newVel * sensitivity);
+          unravelScroll(newVel);
 
           //recurse
           requestAnimationFrame(() => {
