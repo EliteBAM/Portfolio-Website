@@ -98,8 +98,7 @@
             justify-content: center;  /* horizontal centering */
             align-items: center;      /* vertical centering */
           }
-          
-          /* Override when viewport is taller than wide */
+
           @media (orientation: portrait) {
             .bobble {
               width: 96%;
@@ -131,6 +130,12 @@
 
           .scroll.zoomIn.opened {
             transform: scale(var(--opened-scale, 2.7));
+          }
+
+          @media (orientation: portrait) {
+            .scroll.zoomIn.opened {
+              transform: scale(var(--opened-scale, 2));
+            }
           }
 
           .scrollimage {
