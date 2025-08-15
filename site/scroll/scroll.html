@@ -461,7 +461,8 @@
 
       function CalculateFinalScrollScale() {
 
-        if(window.innerHeight > window.innerWidth) return;
+        if(window.innerHeight > window.innerWidth) scrollObject.style.setProperty('--opened-scale', 2);
+;
 
         const baseHeight = scrollObject.getBoundingClientRect().height / getScale(scrollObject);
         
