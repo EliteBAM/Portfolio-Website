@@ -288,7 +288,7 @@
 
                     <p>When my <i>DM</i>&nbsp;&nbsp;first reached <span style="color:aqua;">the Order of BitShift</span>, I was obliged by a <span style="color:violet;">BitKeeper</span> to answer three questions-- By tradition, I shall do so now...</p>
                     
-                    <p><span style="color:indianred; font-size:x-small;"><i><b>❖1&nbsp;&nbsp; What do you enjoy most about game development?</b></i></span></p>
+                    <p><span style="color:indianred; font-size:1.15em;"><i><b>❖1&nbsp;&nbsp; What do you enjoy most about game development?</b></i></span></p>
                     
                     <p>
                       In the abstract, it is the process of turning a high-level concept born of pure imagination into something concrete, quantified, and real. A shareable experience that uncovers people who resonate with your imagination. Further, I love the iterative process of distilling a concept into a fun system, implementing it, and discovering the gaps in one's human intuition along the way-- always gleaning new insights therein. This is very rewarding to me.
@@ -302,7 +302,7 @@
                       Most importantly, I think I have a good sense for understanding the "essence" of a game's intended identity. Discerning what ideas stray from it and what ideas support it. This insight is what makes my skillset valuable, and I'm ready to use it in an agile manner.
                     </p>
 
-                    <p><span style="color:indianred; font-size:x-small;"><i><b>❖2&nbsp;&nbsp; What would you like to get out of working at Bitshift?</b></i></span></p>
+                    <p><span style="color:indianred; font-size:1.15em;"><i><b>❖2&nbsp;&nbsp; What would you like to get out of working at Bitshift?</b></i></span></p>
 
                     <p>
                       In working at Bitshift-- and in my life as a guiding principle-- I'm looking to follow my passion and create something awesome. Something pure of intent-- truly fun and filled with wonder. That's what I've observed is the bedrock (heh) of Bitshift's ethos, and really is the reason why I'd love to work here. At Bitshift, I hope to create something I consider one of my life's works.
@@ -320,7 +320,7 @@
                       I don't want to work on just any big name title, or any studio that offers clout but is run by robots. I want to work at Bitshift for all the things that make Bitshift Bishift. If my application doesn't work out, I suppose I could order funny face paint and big red shoes, read a book on... the principles of gambling? and apply to the AAA games industry. (I'd cry)
                     </p>
 
-                    <p><span style="color:indianred; font-size:x-small;"><i><b>❖3&nbsp;&nbsp; What is your favorite video game?</b></i></span></p>
+                    <p><span style="color:indianred; font-size:1.15em;"><i><b>❖3&nbsp;&nbsp; What is your favorite video game?</b></i></span></p>
 
                     <p>My favorite game (if I had to choose) would have to be the original Dark Souls.</p>
 
@@ -407,6 +407,17 @@
       const lacLogo = document.getElementById("laclogo");
 
       let scrollBoundsHeight = 0;
+    </script>
+
+    <!-- Text Size Helper -->
+    <script>
+      function setTextSizeByWidth(element, fraction = 0.0335) {
+        if (!element || !element.parentElement) return;
+
+        const containerWidth = element.parentElement.clientWidth;
+        element.parentElement.style.fontSize = `${containerWidth * fraction}px`; //not sure this needs to be here will leave it for now
+        element.style.fontSize = `${containerWidth * fraction}px`;
+      }
     </script>
 
     <!-- Scroll Events -->
@@ -516,6 +527,8 @@
         : proposedScale;
 
         scrollObject.style.setProperty('--opened-scale', newScale);
+
+        setTextSizeByWidth(scrollText);
 
         console.log("new scale applied: " + newScale)
       }
