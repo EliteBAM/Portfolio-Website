@@ -458,9 +458,15 @@
           scrollObject.classList.add("opened");
 
           //adjust scale to stay in screen
-          requestAnimationFrame(CalculateFinalScrollScale);
+          requestAnimationFrame(() => {
+            CalculateFinalScrollScale();
+            setTextSizeByWidth(scrollText);
+          });
 
-          window.addEventListener("resize", CalculateFinalScrollScale);
+          window.addEventListener("resize", () => {
+            CalculateFinalScrollScale();
+            setTextSizeByWidth(scrollText);
+          });
 
           isOpen = true;
         }
@@ -527,8 +533,6 @@
         : proposedScale;
 
         scrollObject.style.setProperty('--opened-scale', newScale);
-
-        setTextSizeByWidth(scrollText);
 
         console.log("new scale applied: " + newScale)
       }
